@@ -274,10 +274,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       try {
         const formData = new FormData(form);
-        const response = await fetch('/', {
+        const response = await fetch('https://formspree.io/f/xkopydnb', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(formData).toString()
+          headers: { 'Accept': 'application/json' },
+          body: formData
         });
 
         if (response.ok) {
