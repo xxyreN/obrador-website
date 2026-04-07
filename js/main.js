@@ -189,7 +189,38 @@ document.addEventListener('DOMContentLoaded', () => {
     document.title = currentLang === 'en'
       ? 'Obrador — Websites for cafés in Madrid'
       : 'Obrador — Webs para cafeterías en Madrid';
+
+    updateValidationMessages();
   });
+
+  // ── Custom form validation messages ──
+  function updateValidationMessages() {
+    const emailInput = document.getElementById('email');
+    const nombreInput = document.getElementById('nombre');
+
+    if (currentLang === 'es') {
+      emailInput.setAttribute('title', 'Introduce un email válido');
+      nombreInput.setAttribute('title', 'Este campo es obligatorio');
+      emailInput.oninvalid = function() {
+        this.setCustomValidity('Por favor, introduce un email válido.');
+      };
+      emailInput.oninput = function() { this.setCustomValidity(''); };
+      nombreInput.oninvalid = function() {
+        this.setCustomValidity('Por favor, introduce tu nombre.');
+      };
+      nombreInput.oninput = function() { this.setCustomValidity(''); };
+    } else {
+      emailInput.oninvalid = function() {
+        this.setCustomValidity('Please enter a valid email address.');
+      };
+      emailInput.oninput = function() { this.setCustomValidity(''); };
+      nombreInput.oninvalid = function() {
+        this.setCustomValidity('Please enter your name.');
+      };
+      nombreInput.oninput = function() { this.setCustomValidity(''); };
+    }
+  }
+  updateValidationMessages();
 
   // ── Before/After Sliders ──
   document.querySelectorAll('.ba-slider').forEach(initSlider);
