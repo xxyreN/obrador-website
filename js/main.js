@@ -5,7 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── Scroll Animations (Intersection Observer) ──
-  const animElements = document.querySelectorAll('.anim-fade-up');
+  const animElements = document.querySelectorAll('.anim-fade-up, .anim-slide-left');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -19,16 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Navbar scroll effect ──
   const navbar = document.getElementById('navbar');
-  let lastScroll = 0;
 
   window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 60) {
+    if (window.scrollY > 60) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
-    lastScroll = currentScroll;
   }, { passive: true });
 
   // ── Mobile nav toggle ──
@@ -41,12 +38,95 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
   });
 
-  // Close mobile nav on link click
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navToggle.classList.remove('active');
       navLinks.classList.remove('open');
       document.body.style.overflow = '';
+    });
+  });
+
+  // ── Parallax on scroll ──
+  const coffeeRings = document.querySelectorAll('.coffee-ring');
+  const steamContainer = document.querySelector('.steam-container');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+
+    coffeeRings.forEach(ring => {
+      const speed = 0.03;
+      const rect = ring.parentElement.getBoundingClientRect();
+      const offset = (rect.top + rect.height / 2) * speed;
+      ring.style.transform = `translateY(${offset}px) rotate(${offset * 0.5}deg)`;
+    });
+
+    if (steamContainer) {
+      steamContainer.style.transform = `translateY(${scrollY * -0.08}px)`;
+    }
+  }, { passive: true });
+
+  // ── 3D Tilt effect on cards ──
+  document.querySelectorAll('.tilt-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `perspective(800px) rotateY(${x * 6}deg) rotateX(${y * -6}deg) translateY(-4px)`;
+      card.style.boxShadow = `${x * -10}px ${12 + y * 10}px 40px rgba(26, 23, 21, 0.12)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+      card.style.boxShadow = '';
+    });
+  });
+
+  // ── Animated price counters ──
+  const priceObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const text = el.textContent;
+        // Extract the number (e.g., "€650" → 650, "€1.000" → 1000, "€1.500" → 1500)
+        const match = text.match(/[\d.]+/);
+        if (!match) return;
+        const targetNum = parseInt(match[0].replace('.', ''), 10);
+        const prefix = '€';
+        const duration = 1200;
+        const start = performance.now();
+
+        function animate(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease out quart
+          const eased = 1 - Math.pow(1 - progress, 4);
+          const current = Math.round(targetNum * eased);
+          // Format with dots for thousands
+          el.textContent = prefix + current.toLocaleString('es-ES');
+          if (progress < 1) requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
+        priceObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.plan-amount').forEach(el => priceObserver.observe(el));
+
+  // ── Magnetic buttons ──
+  document.querySelectorAll('.magnetic').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+    });
+
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+      btn.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
+      setTimeout(() => { btn.style.transition = ''; }, 400);
     });
   });
 
@@ -67,21 +147,13 @@ document.addEventListener('DOMContentLoaded', () => {
       pos = Math.max(0.02, Math.min(0.98, pos));
       const pct = pos * 100;
 
-      // ba-before = antes (old site) overlay, shows LEFT portion
-      // ba-after = después (mockup) background, shows RIGHT portion
-      // inset(0 RIGHT% 0 0) — clips RIGHT% from the right, showing left portion
-      // handle at 50% → clip 50% from right → left half visible (antes)
-      // handle at 80% → clip 20% from right → 80% antes visible
       before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
       handle.style.left = `${pct}%`;
 
-      // ANTES label (left side): fade when slider near left (antes shrinks)
       labelBefore.style.opacity = Math.min(1, pct / 20);
-      // DESPUÉS label (right side): fade when slider near right (después shrinks)
       labelAfter.style.opacity = Math.min(1, (100 - pct) / 20);
     }
 
-    // Mouse events
     wrapper.addEventListener('mousedown', (e) => {
       e.preventDefault();
       isDragging = true;
@@ -100,7 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
       wrapper.style.cursor = '';
     });
 
-    // Touch events
     wrapper.addEventListener('touchstart', (e) => {
       isDragging = true;
       updatePosition(e.touches[0].clientX);

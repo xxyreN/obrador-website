@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Obrador — Webs para cafeterías en Madrid</title>
   <meta name="description" content="Diseñamos webs que llenan mesas. Sitios web a medida para cafeterías y restaurantes en Madrid.">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/png" href="img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -36,6 +38,14 @@
   <!-- Hero -->
   <section class="hero" id="hero">
     <div class="hero-bg"></div>
+    <!-- Coffee steam wisps -->
+    <div class="steam-container">
+      <div class="steam steam-1"></div>
+      <div class="steam steam-2"></div>
+      <div class="steam steam-3"></div>
+    </div>
+    <!-- Decorative coffee ring -->
+    <div class="coffee-ring coffee-ring-hero"></div>
     <div class="hero-content">
       <div class="hero-badge anim-fade-up">Webs para cafeterías en Madrid</div>
       <h1 class="hero-title anim-fade-up delay-1">
@@ -45,8 +55,8 @@
         Diseñamos sitios web que reflejan la identidad de tu local y convierten visitas en reservas.
       </p>
       <div class="hero-actions anim-fade-up delay-3">
-        <a href="#portfolio" class="btn btn-primary">Ver proyectos</a>
-        <a href="#contacto" class="btn btn-outline">Contactar</a>
+        <a href="#portfolio" class="btn btn-primary magnetic">Ver proyectos</a>
+        <a href="#contacto" class="btn btn-outline magnetic">Contactar</a>
       </div>
     </div>
     <div class="hero-scroll-indicator anim-fade-up delay-4">
@@ -56,6 +66,14 @@
 
   <!-- Portfolio -->
   <section class="section portfolio" id="portfolio">
+    <div class="coffee-ring coffee-ring-portfolio"></div>
+    <div class="coffee-dots">
+      <span class="dot dot-1"></span>
+      <span class="dot dot-2"></span>
+      <span class="dot dot-3"></span>
+      <span class="dot dot-4"></span>
+      <span class="dot dot-5"></span>
+    </div>
     <div class="container">
       <div class="section-header anim-fade-up">
         <span class="section-label">Nuestros diseños</span>
@@ -222,21 +240,21 @@
       </div>
 
       <div class="proceso-steps">
-        <div class="paso anim-fade-up">
+        <div class="paso anim-slide-left">
           <div class="paso-number">01</div>
           <div class="paso-content">
             <h3>Nos escribes</h3>
             <p>Cuéntanos sobre tu cafetería. Analizamos tu presencia online actual y te enviamos un concepto de diseño personalizado — gratis, sin compromiso.</p>
           </div>
         </div>
-        <div class="paso anim-fade-up">
+        <div class="paso anim-slide-left" style="transition-delay: 0.15s">
           <div class="paso-number">02</div>
           <div class="paso-content">
             <h3>Diseñamos tu web</h3>
             <p>Creamos un sitio web a medida con tu carta, tu historia y tu estética. Responsive, rápido, bilingüe y optimizado para Google.</p>
           </div>
         </div>
-        <div class="paso anim-fade-up">
+        <div class="paso anim-slide-left" style="transition-delay: 0.3s">
           <div class="paso-number">03</div>
           <div class="paso-content">
             <h3>Lanzamos</h3>
@@ -258,14 +276,14 @@
 
       <div class="planes-grid">
 
-        <div class="plan-card anim-fade-up">
+        <div class="plan-card anim-fade-up tilt-card">
           <div class="plan-header">
             <h3 class="plan-name">Presencia</h3>
             <p class="plan-desc">Para cafeterías que necesitan estar online con lo esencial.</p>
           </div>
           <div class="plan-price">
             <span class="plan-desde">desde</span>
-            <span class="plan-amount">&euro;500</span>
+            <span class="plan-amount">&euro;650</span>
           </div>
           <ul class="plan-features">
             <li>Landing page a medida</li>
@@ -280,15 +298,15 @@
           <a href="#contacto" class="btn btn-outline btn-block">Empezar</a>
         </div>
 
-        <div class="plan-card plan-featured anim-fade-up">
-          <div class="plan-badge">Popular</div>
+        <div class="plan-card plan-featured anim-fade-up tilt-card">
+          <div class="plan-badge">Recomendado</div>
           <div class="plan-header">
             <h3 class="plan-name">Carta Completa</h3>
             <p class="plan-desc">Web completa con carta interactiva y tu historia.</p>
           </div>
           <div class="plan-price">
             <span class="plan-desde">desde</span>
-            <span class="plan-amount">&euro;900</span>
+            <span class="plan-amount">&euro;1.000</span>
           </div>
           <ul class="plan-features">
             <li>Todo en Presencia +</li>
@@ -302,7 +320,7 @@
           <a href="#contacto" class="btn btn-primary btn-block">Empezar</a>
         </div>
 
-        <div class="plan-card anim-fade-up">
+        <div class="plan-card anim-fade-up tilt-card">
           <div class="plan-header">
             <h3 class="plan-name">Marca Completa</h3>
             <p class="plan-desc">La solución completa para cafeterías ambiciosas.</p>
@@ -325,12 +343,13 @@
 
       </div>
 
-      <p class="planes-note anim-fade-up">Mantenimiento desde <strong>&euro;30/mes</strong> — actualizaciones, hosting y soporte incluidos.</p>
+      <p class="planes-note anim-fade-up">Mantenimiento desde <strong>&euro;50/mes</strong> — actualizaciones, hosting y soporte incluidos.</p>
     </div>
   </section>
 
   <!-- Contacto -->
   <section class="section contacto" id="contacto">
+    <div class="coffee-ring coffee-ring-contacto"></div>
     <div class="container">
       <div class="contacto-wrapper">
         <div class="contacto-text anim-fade-up">
