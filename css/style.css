@@ -864,15 +864,28 @@ body::before {
   font-size: 15px;
   color: var(--dark-muted);
 }
-.planes-note-secondary {
-  margin-top: 12px;
-  font-size: 14px;
+/* E-commerce banner */
+.ecommerce-banner {
+  padding: 48px 0;
+  background: var(--cream-dark);
+  border-top: 1px solid rgba(26, 23, 21, 0.06);
+  border-bottom: 1px solid rgba(26, 23, 21, 0.06);
+  text-align: center;
 }
-.planes-note-secondary a {
+.ecommerce-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--dark);
+}
+.ecommerce-text a {
   color: var(--copper);
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
+  transition: color 0.3s;
+}
+.ecommerce-text a:hover {
+  color: var(--copper-dark);
 }
 
 /* ============================================
