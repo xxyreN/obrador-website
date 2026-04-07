@@ -193,6 +193,19 @@ document.addEventListener('DOMContentLoaded', () => {
     updateValidationMessages();
   });
 
+  // ── Auto-scroll pricing to featured card on mobile ──
+  if (window.innerWidth <= 900) {
+    const planesGrid = document.querySelector('.planes-grid');
+    const featuredCard = document.querySelector('.plan-featured');
+    if (planesGrid && featuredCard) {
+      // Wait for layout to settle
+      setTimeout(() => {
+        const scrollLeft = featuredCard.offsetLeft - planesGrid.offsetLeft - (planesGrid.clientWidth - featuredCard.clientWidth) / 2;
+        planesGrid.scrollLeft = scrollLeft;
+      }, 100);
+    }
+  }
+
   // ── Custom form validation messages ──
   function updateValidationMessages() {
     const emailInput = document.getElementById('email');

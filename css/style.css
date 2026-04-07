@@ -859,6 +859,9 @@ body::before {
 .plan-featured .btn-primary:hover {
   background: var(--copper-light);
 }
+.planes-swipe-hint {
+  display: none;
+}
 .planes-note {
   text-align: center;
   font-size: 15px;
@@ -1130,6 +1133,14 @@ body::before {
   .plan-featured {
     transform: none;
     order: 0;
+  }
+  .planes-swipe-hint {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: var(--dark-muted);
+    margin-bottom: 16px;
+    opacity: 0.7;
   }
   .plan-featured:hover {
     transform: translateY(-8px);
