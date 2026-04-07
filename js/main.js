@@ -155,6 +155,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
 
+  // ── Language Toggle ──
+  const langToggle = document.getElementById('langToggle');
+  let currentLang = 'es';
+
+  langToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    document.documentElement.lang = currentLang;
+
+    // Update toggle UI
+    langToggle.querySelectorAll('.lang-option').forEach(opt => {
+      opt.classList.toggle('lang-active', opt.dataset.lang === currentLang);
+    });
+
+    // Swap all text with data-en attributes
+    document.querySelectorAll('[data-en]').forEach(el => {
+      if (!el.dataset.es) {
+        // Store original Spanish on first switch
+        el.dataset.es = el.innerHTML;
+      }
+      el.innerHTML = currentLang === 'en' ? el.dataset.en : el.dataset.es;
+    });
+
+    // Swap placeholders
+    document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+      if (!el.dataset.esPlaceholder) {
+        el.dataset.esPlaceholder = el.placeholder;
+      }
+      el.placeholder = currentLang === 'en' ? el.dataset.enPlaceholder : el.dataset.esPlaceholder;
+    });
+
+    // Update page title
+    document.title = currentLang === 'en'
+      ? 'Obrador — Websites for cafés in Madrid'
+      : 'Obrador — Webs para cafeterías en Madrid';
+  });
+
   // ── Before/After Sliders ──
   document.querySelectorAll('.ba-slider').forEach(initSlider);
 

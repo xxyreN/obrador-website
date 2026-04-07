@@ -305,6 +305,36 @@ body::before {
   box-shadow: 0 4px 20px rgba(26, 23, 21, 0.15);
 }
 
+/* Language toggle */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--dark-muted);
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 100px;
+  border: 1.5px solid var(--cream-dark);
+  transition: border-color 0.3s;
+  z-index: 1001;
+  margin-left: 8px;
+}
+.lang-toggle:hover {
+  border-color: var(--copper);
+}
+.lang-option {
+  transition: color 0.3s;
+}
+.lang-active {
+  color: var(--dark);
+}
+.lang-divider {
+  color: var(--cream-dark);
+}
+
 /* Mobile nav toggle */
 .nav-toggle {
   display: none;
