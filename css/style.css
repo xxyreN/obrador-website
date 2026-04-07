@@ -991,7 +991,7 @@ body::before {
   text-transform: uppercase;
   color: var(--dark-muted);
   white-space: nowrap;
-  padding-right: 20px;
+  flex-shrink: 0;
 }
 .marquee-dark .marquee-track span {
   color: rgba(245, 237, 228, 0.3);
