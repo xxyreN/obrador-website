@@ -193,13 +193,14 @@ document.addEventListener('DOMContentLoaded', () => {
     updateValidationMessages();
   });
 
-  // ── Auto-scroll pricing to featured card on mobile ──
+  // ── Auto-scroll pricing to featured card on mobile (horizontal only) ──
   if (window.innerWidth <= 900) {
     const planesGrid = document.querySelector('.planes-grid');
     const featuredCard = document.querySelector('.plan-featured');
     if (planesGrid && featuredCard) {
       setTimeout(() => {
-        featuredCard.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'instant' });
+        const scrollLeft = featuredCard.offsetLeft - planesGrid.offsetLeft - (planesGrid.clientWidth - featuredCard.offsetWidth) / 2;
+        planesGrid.scrollLeft = Math.max(0, scrollLeft);
       }, 200);
     }
   }
