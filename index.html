@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obrador — Webs para cafeterías en Madrid</title>
+  <meta name="description" content="Diseñamos webs que llenan mesas. Sitios web a medida para cafeterías y restaurantes en Madrid.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="img/logo.png" alt="Obrador" class="nav-logo-img">
+        <span class="nav-logo-text">obrador<span class="accent">.web</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#portfolio">Proyectos</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#planes">Planes</a>
+        <a href="#contacto" class="nav-cta">Hablemos</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge anim-fade-up">Webs para cafeterías en Madrid</div>
+      <h1 class="hero-title anim-fade-up delay-1">
+        Tu café merece más<br>que un <span class="strikethrough">Linktree</span>
+      </h1>
+      <p class="hero-subtitle anim-fade-up delay-2">
+        Diseñamos sitios web que reflejan la identidad de tu local y convierten visitas en reservas.
+      </p>
+      <div class="hero-actions anim-fade-up delay-3">
+        <a href="#portfolio" class="btn btn-primary">Ver proyectos</a>
+        <a href="#contacto" class="btn btn-outline">Contactar</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator anim-fade-up delay-4">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="section portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header anim-fade-up">
+        <span class="section-label">Nuestros diseños</span>
+        <h2 class="section-title">Webs que llenan mesas</h2>
+        <p class="section-subtitle">Desliza para comparar el antes y después de cada proyecto.</p>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <!-- Project 1: HanSo -->
+        <div class="project-card anim-fade-up">
+          <div class="project-info">
+            <h3 class="project-name">HanSo Café</h3>
+            <span class="project-disclaimer">Concepto de diseño — no es trabajo oficial</span>
+            <p class="project-desc">Café de especialidad asiático con 3 locales en Madrid. Web con carta interactiva bilingüe y tienda online.</p>
+            <div class="project-tags">
+              <span>Carta digital</span>
+              <span>Bilingüe</span>
+              <span>Multi-local</span>
+            </div>
+          </div>
+          <div class="ba-slider" data-before="img/hanso-before.png" data-after="img/hanso-after.png">
+            <div class="ba-wrapper">
+              <div class="ba-after">
+                <img src="img/hanso-after.png" alt="HanSo — Después">
+              </div>
+              <div class="ba-before">
+                <img src="img/hanso-before.png" alt="HanSo — Antes">
+              </div>
+              <div class="ba-handle">
+                <div class="ba-handle-line"></div>
+                <div class="ba-handle-circle">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4L3 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13 4L17 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="ba-handle-line"></div>
+              </div>
+              <div class="ba-label ba-label-before">ANTES</div>
+              <div class="ba-label ba-label-after">DESPUÉS</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Pum Pum -->
+        <div class="project-card anim-fade-up">
+          <div class="project-info">
+            <h3 class="project-name">Pum Pum Café</h3>
+            <span class="project-disclaimer">Concepto de diseño — no es trabajo oficial</span>
+            <p class="project-desc">Cafetería de barrio con identidad brick-red. Landing con carta completa, historia familiar y galería.</p>
+            <div class="project-tags">
+              <span>Carta digital</span>
+              <span>Galería</span>
+              <span>Historia</span>
+            </div>
+          </div>
+          <div class="ba-slider" data-before="img/pumpum-before.png" data-after="img/pumpum-after.png">
+            <div class="ba-wrapper">
+              <div class="ba-after">
+                <img src="img/pumpum-after.png" alt="Pum Pum — Después">
+              </div>
+              <div class="ba-before">
+                <img src="img/pumpum-before.png" alt="Pum Pum — Antes">
+              </div>
+              <div class="ba-handle">
+                <div class="ba-handle-line"></div>
+                <div class="ba-handle-circle">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4L3 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13 4L17 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="ba-handle-line"></div>
+              </div>
+              <div class="ba-label ba-label-before">ANTES</div>
+              <div class="ba-label ba-label-after">DESPUÉS</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Naji -->
+        <div class="project-card anim-fade-up">
+          <div class="project-info">
+            <h3 class="project-name">Naji</h3>
+            <span class="project-disclaimer">Concepto de diseño — no es trabajo oficial</span>
+            <p class="project-desc">Specialty coffee & brunch con estética minimalista. Web oscura con carta bilingüe y sección de historia.</p>
+            <div class="project-tags">
+              <span>Carta digital</span>
+              <span>Bilingüe</span>
+              <span>Minimalista</span>
+            </div>
+          </div>
+          <div class="ba-slider" data-before="img/naji-before.png" data-after="img/naji-after.png">
+            <div class="ba-wrapper">
+              <div class="ba-after">
+                <img src="img/naji-after.png" alt="Naji — Después">
+              </div>
+              <div class="ba-before">
+                <img src="img/naji-before.png" alt="Naji — Antes">
+              </div>
+              <div class="ba-handle">
+                <div class="ba-handle-line"></div>
+                <div class="ba-handle-circle">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4L3 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13 4L17 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="ba-handle-line"></div>
+              </div>
+              <div class="ba-label ba-label-before">ANTES</div>
+              <div class="ba-label ba-label-after">DESPUÉS</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Beik Beik -->
+        <div class="project-card anim-fade-up">
+          <div class="project-info">
+            <h3 class="project-name">Beik Beik</h3>
+            <span class="project-disclaimer">Concepto de diseño — no es trabajo oficial</span>
+            <p class="project-desc">Obrador artesanal en Chamberí. Web cálida con carta visual, historia de los fundadores y galería del obrador.</p>
+            <div class="project-tags">
+              <span>Carta visual</span>
+              <span>Galería</span>
+              <span>Historia</span>
+            </div>
+          </div>
+          <div class="ba-slider" data-before="img/beikbeik-before.png" data-after="img/beikbeik-after.png">
+            <div class="ba-wrapper">
+              <div class="ba-after">
+                <img src="img/beikbeik-after.png" alt="Beik Beik — Después">
+              </div>
+              <div class="ba-before">
+                <img src="img/beikbeik-before.png" alt="Beik Beik — Antes">
+              </div>
+              <div class="ba-handle">
+                <div class="ba-handle-line"></div>
+                <div class="ba-handle-circle">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4L3 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13 4L17 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="ba-handle-line"></div>
+              </div>
+              <div class="ba-label ba-label-before">ANTES</div>
+              <div class="ba-label ba-label-after">DESPUÉS</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section class="section proceso" id="proceso">
+    <div class="container">
+      <div class="section-header anim-fade-up">
+        <span class="section-label">Cómo trabajamos</span>
+        <h2 class="section-title">De idea a web en 3 pasos</h2>
+      </div>
+
+      <div class="proceso-steps">
+        <div class="paso anim-fade-up">
+          <div class="paso-number">01</div>
+          <div class="paso-content">
+            <h3>Nos escribes</h3>
+            <p>Cuéntanos sobre tu cafetería. Analizamos tu presencia online actual y te enviamos un concepto de diseño personalizado — gratis, sin compromiso.</p>
+          </div>
+        </div>
+        <div class="paso anim-fade-up">
+          <div class="paso-number">02</div>
+          <div class="paso-content">
+            <h3>Diseñamos tu web</h3>
+            <p>Creamos un sitio web a medida con tu carta, tu historia y tu estética. Responsive, rápido, bilingüe y optimizado para Google.</p>
+          </div>
+        </div>
+        <div class="paso anim-fade-up">
+          <div class="paso-number">03</div>
+          <div class="paso-content">
+            <h3>Lanzamos</h3>
+            <p>Tu web lista para recibir clientes. Dominio propio, SSL, Google Business y todo lo que necesitas para que te encuentren.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planes -->
+  <section class="section planes" id="planes">
+    <div class="container">
+      <div class="section-header anim-fade-up">
+        <span class="section-label">Planes</span>
+        <h2 class="section-title">Elige tu plan</h2>
+        <p class="section-subtitle">Todos los planes incluyen diseño responsive, SEO básico y soporte.</p>
+      </div>
+
+      <div class="planes-grid">
+
+        <div class="plan-card anim-fade-up">
+          <div class="plan-header">
+            <h3 class="plan-name">Presencia</h3>
+            <p class="plan-desc">Para cafeterías que necesitan estar online con lo esencial.</p>
+          </div>
+          <div class="plan-price">
+            <span class="plan-desde">desde</span>
+            <span class="plan-amount">&euro;500</span>
+          </div>
+          <ul class="plan-features">
+            <li>Landing page a medida</li>
+            <li>Responsive (móvil + desktop)</li>
+            <li>Carta básica</li>
+            <li>Bilingüe (ES/EN)</li>
+            <li>WhatsApp + formulario</li>
+            <li>Google Maps integrado</li>
+            <li>SEO básico</li>
+          </ul>
+          <div class="plan-time">~ 1 semana</div>
+          <a href="#contacto" class="btn btn-outline btn-block">Empezar</a>
+        </div>
+
+        <div class="plan-card plan-featured anim-fade-up">
+          <div class="plan-badge">Popular</div>
+          <div class="plan-header">
+            <h3 class="plan-name">Carta Completa</h3>
+            <p class="plan-desc">Web completa con carta interactiva y tu historia.</p>
+          </div>
+          <div class="plan-price">
+            <span class="plan-desde">desde</span>
+            <span class="plan-amount">&euro;900</span>
+          </div>
+          <ul class="plan-features">
+            <li>Todo en Presencia +</li>
+            <li>Carta completa interactiva</li>
+            <li>Página de historia</li>
+            <li>Galería de fotos</li>
+            <li>Google Business optimizado</li>
+            <li>Múltiples secciones</li>
+          </ul>
+          <div class="plan-time">~ 2 semanas</div>
+          <a href="#contacto" class="btn btn-primary btn-block">Empezar</a>
+        </div>
+
+        <div class="plan-card anim-fade-up">
+          <div class="plan-header">
+            <h3 class="plan-name">Marca Completa</h3>
+            <p class="plan-desc">La solución completa para cafeterías ambiciosas.</p>
+          </div>
+          <div class="plan-price">
+            <span class="plan-desde">desde</span>
+            <span class="plan-amount">&euro;1.500</span>
+          </div>
+          <ul class="plan-features">
+            <li>Todo en Carta Completa +</li>
+            <li>Pedidos online</li>
+            <li>Multi-local</li>
+            <li>QR carta digital</li>
+            <li>Dominio + SSL incluido</li>
+            <li>Diseño de marca</li>
+          </ul>
+          <div class="plan-time">~ 3 semanas</div>
+          <a href="#contacto" class="btn btn-outline btn-block">Empezar</a>
+        </div>
+
+      </div>
+
+      <p class="planes-note anim-fade-up">Mantenimiento desde <strong>&euro;30/mes</strong> — actualizaciones, hosting y soporte incluidos.</p>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="section contacto" id="contacto">
+    <div class="container">
+      <div class="contacto-wrapper">
+        <div class="contacto-text anim-fade-up">
+          <span class="section-label">Contacto</span>
+          <h2 class="section-title">Hablemos de tu web</h2>
+          <p>Escríbenos y te enviamos un concepto de diseño personalizado para tu cafetería. Sin compromiso.</p>
+          <div class="contacto-channels">
+            <a href="https://instagram.com/obrador.web" target="_blank" class="channel">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+              <span>@obrador.web</span>
+            </a>
+            <a href="mailto:hola@obradorweb.com" class="channel">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13L2 4"/></svg>
+              <span>hola@obradorweb.com</span>
+            </a>
+          </div>
+        </div>
+        <form class="contacto-form anim-fade-up" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden" style="display:none"><input name="bot-field"></p>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre o el de tu cafetería">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="hola@tucafe.com">
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu cafetería..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="nav-logo-text">obrador<span class="accent">.web</span></span>
+          <p>Webs para cafeterías en Madrid</p>
+        </div>
+        <div class="footer-links">
+          <a href="#portfolio">Proyectos</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#planes">Planes</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://instagram.com/obrador.web" target="_blank" aria-label="Instagram">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Obrador. Madrid.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
