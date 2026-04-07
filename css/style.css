@@ -991,7 +991,8 @@ body::before {
   color: var(--cream);
 }
 .footer-brand p {
-  font-size: 14px;
+  font-family: var(--font-serif);
+  font-size: 15px;
   margin-top: 6px;
 }
 .footer-links {
@@ -999,7 +1000,8 @@ body::before {
   gap: 32px;
 }
 .footer-links a {
-  font-size: 14px;
+  font-family: var(--font-serif);
+  font-size: 15px;
   transition: color 0.3s;
 }
 .footer-links a:hover { color: var(--cream); }
