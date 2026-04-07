@@ -1114,7 +1114,7 @@ body::before {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 12px;
-    padding: 0 16px 16px;
+    padding: 20px 16px 16px;
     -webkit-overflow-scrolling: touch;
   }
   .planes-grid::-webkit-scrollbar {
