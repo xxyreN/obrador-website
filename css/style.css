@@ -962,6 +962,94 @@ body::before {
 }
 
 /* ============================================
+   MARQUEE STRIP
+   ============================================ */
+
+.marquee-strip {
+  overflow: hidden;
+  padding: 18px 0;
+  background: var(--cream-dark);
+  border-top: 1px solid rgba(26, 23, 21, 0.06);
+  border-bottom: 1px solid rgba(26, 23, 21, 0.06);
+}
+.marquee-dark {
+  background: var(--dark);
+  border-color: rgba(245, 237, 228, 0.06);
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 25s linear infinite;
+}
+.marquee-reverse {
+  animation-name: marqueeScrollReverse;
+}
+.marquee-track span {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dark-muted);
+  white-space: nowrap;
+  padding-right: 20px;
+}
+.marquee-dark .marquee-track span {
+  color: rgba(245, 237, 228, 0.3);
+}
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marqueeScrollReverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* ============================================
+   STATS BAR
+   ============================================ */
+
+.stats-bar {
+  padding: 80px 0;
+  background: var(--cream-light);
+  border-top: 1px solid rgba(26, 23, 21, 0.06);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+.stat-number {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 48px;
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.stat-label {
+  font-size: 14px;
+  color: var(--dark-muted);
+  font-weight: 500;
+}
+
+/* ============================================
+   PROJECT TAG HOVER
+   ============================================ */
+
+.project-tags span {
+  transition: background 0.3s, color 0.3s, transform 0.3s var(--ease-out-quart);
+  cursor: default;
+}
+.project-tags span:hover {
+  background: var(--copper);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ============================================
    MOBILE
    ============================================ */
 
@@ -1020,6 +1108,10 @@ body::before {
 
   .paso { flex-direction: column; gap: 16px; }
   .paso-number { font-size: 36px; width: auto; }
+
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .stat-number { font-size: 36px; }
+  .steam-container { display: none; }
 
   .footer-inner {
     flex-direction: column;
