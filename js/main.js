@@ -2,6 +2,10 @@
    OBRADOR.WEB — Main JavaScript
    ============================================ */
 
+// Force scroll to top on page load (fix IG in-app browser)
+window.scrollTo(0, 0);
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── Scroll Animations (Intersection Observer) ──
