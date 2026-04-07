@@ -193,15 +193,21 @@ document.addEventListener('DOMContentLoaded', () => {
     updateValidationMessages();
   });
 
-  // ── Auto-scroll pricing to featured card on mobile (horizontal only) ──
+  // ── Auto-scroll pricing to featured card on mobile (only when visible) ──
   if (window.innerWidth <= 900) {
     const planesGrid = document.querySelector('.planes-grid');
     const featuredCard = document.querySelector('.plan-featured');
     if (planesGrid && featuredCard) {
-      setTimeout(() => {
-        const scrollLeft = featuredCard.offsetLeft - planesGrid.offsetLeft - (planesGrid.clientWidth - featuredCard.offsetWidth) / 2;
-        planesGrid.scrollLeft = Math.max(0, scrollLeft);
-      }, 200);
+      const snapObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const scrollLeft = featuredCard.offsetLeft - planesGrid.offsetLeft - (planesGrid.clientWidth - featuredCard.offsetWidth) / 2;
+            planesGrid.scrollLeft = Math.max(0, scrollLeft);
+            snapObserver.unobserve(planesGrid);
+          }
+        });
+      }, { threshold: 0.1 });
+      snapObserver.observe(planesGrid);
     }
   }
 
