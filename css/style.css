@@ -1110,14 +1110,24 @@ body::before {
     direction: ltr;
   }
   .planes-grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .planes-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .plan-card {
+    min-width: 300px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
   }
   .plan-featured {
     transform: none;
-    order: -1;
+    order: 0;
   }
   .plan-featured:hover {
     transform: translateY(-8px);
