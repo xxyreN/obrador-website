@@ -864,27 +864,22 @@ body::before {
   font-size: 15px;
   color: var(--dark-muted);
 }
-/* E-commerce banner */
-.ecommerce-banner {
-  padding: 48px 0;
-  background: var(--cream-dark);
-  border-top: 1px solid rgba(26, 23, 21, 0.06);
-  border-bottom: 1px solid rgba(26, 23, 21, 0.06);
+/* E-commerce note */
+.ecommerce-note {
   text-align: center;
-}
-.ecommerce-text {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 500;
   color: var(--dark);
+  margin-top: 60px;
 }
-.ecommerce-text a {
+.ecommerce-note a {
   color: var(--copper);
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 4px;
   transition: color 0.3s;
 }
-.ecommerce-text a:hover {
+.ecommerce-note a:hover {
   color: var(--copper-dark);
 }
 
