@@ -13,8 +13,8 @@
   --copper-light: #D4AA82;
   --copper-dark: #A87B52;
   --white: #FFFFFF;
-  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Libre Caslon Display', Georgia, serif;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -413,6 +413,7 @@ input, textarea { font-family: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
   pointer-events: none;
   -webkit-user-drag: none;
   user-select: none;
