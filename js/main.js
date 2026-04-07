@@ -198,11 +198,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const planesGrid = document.querySelector('.planes-grid');
     const featuredCard = document.querySelector('.plan-featured');
     if (planesGrid && featuredCard) {
-      // Wait for layout to settle
       setTimeout(() => {
-        const scrollLeft = featuredCard.offsetLeft - planesGrid.offsetLeft - (planesGrid.clientWidth - featuredCard.clientWidth) / 2;
-        planesGrid.scrollLeft = scrollLeft;
-      }, 100);
+        featuredCard.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'instant' });
+      }, 200);
     }
   }
 
