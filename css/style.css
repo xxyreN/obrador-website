@@ -864,6 +864,16 @@ body::before {
   font-size: 15px;
   color: var(--dark-muted);
 }
+.planes-note-secondary {
+  margin-top: 12px;
+  font-size: 14px;
+}
+.planes-note-secondary a {
+  color: var(--copper);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
 /* ============================================
    CONTACTO
