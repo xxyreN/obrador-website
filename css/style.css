@@ -43,6 +43,34 @@ input, textarea { font-family: inherit; }
 }
 
 /* ============================================
+   DECORATIVE SIDE BARS
+   ============================================ */
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, transparent 5%, var(--copper) 20%, var(--copper-light) 50%, var(--copper) 80%, transparent 95%);
+  opacity: 0.18;
+  z-index: 9998;
+  pointer-events: none;
+}
+.side-bar-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, transparent 5%, var(--copper) 20%, var(--copper-light) 50%, var(--copper) 80%, transparent 95%);
+  opacity: 0.18;
+  z-index: 9998;
+  pointer-events: none;
+}
+
+/* ============================================
    GRAIN TEXTURE OVERLAY
    ============================================ */
 
@@ -583,6 +611,27 @@ body::before {
   font-size: 13px;
   font-weight: 500;
   color: var(--dark-muted);
+}
+
+/* Portfolio triangle layout — 1 big on top, 2 side-by-side below */
+.portfolio-triangle {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  flex-direction: unset;
+}
+.portfolio-triangle .project-card {
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+.portfolio-triangle .project-card:first-child {
+  grid-column: 1 / -1;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: center;
+}
+.portfolio-triangle .project-card:nth-child(even) {
+  direction: ltr;
 }
 
 /* ============================================
@@ -1127,6 +1176,14 @@ body::before {
    ============================================ */
 
 @media (max-width: 900px) {
+  .portfolio-triangle {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-triangle .project-card:first-child {
+    grid-column: 1;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
   .project-card {
     grid-template-columns: 1fr;
     gap: 24px;

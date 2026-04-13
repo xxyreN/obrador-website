@@ -60,6 +60,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="side-bar-right" aria-hidden="true"></div>
 
   <!-- Navbar -->
   <nav class="navbar" id="navbar">
@@ -69,7 +70,7 @@
         <span class="nav-logo-text">obrador<span class="accent">.web</span></span>
       </a>
       <div class="nav-links" id="navLinks">
-        <a href="#portfolio" data-en="Projects">Proyectos</a>
+        <a href="proyectos.html" data-en="Projects">Proyectos</a>
         <a href="#proceso" data-en="Process">Proceso</a>
         <a href="#planes" data-en="Plans">Planes</a>
         <a href="#contacto" class="nav-cta" data-en="Let's talk">Hablemos</a>
@@ -105,7 +106,7 @@
         Diseñamos sitios web que reflejan la identidad de tu local y convierten visitas en reservas.
       </p>
       <div class="hero-actions anim-fade-up delay-3">
-        <a href="#portfolio" class="btn btn-primary magnetic" data-en="See projects">Ver proyectos</a>
+        <a href="proyectos.html" class="btn btn-primary magnetic" data-en="See projects">Ver proyectos</a>
         <a href="#contacto" class="btn btn-outline magnetic" data-en="Contact">Contactar</a>
       </div>
     </div>
@@ -139,27 +140,27 @@
         <p class="section-subtitle" data-en="Slide to compare the before and after of each project.">Desliza para comparar el antes y después de cada proyecto.</p>
       </div>
 
-      <div class="portfolio-grid">
+      <div class="portfolio-grid portfolio-triangle">
 
-        <!-- Project 1: HanSo -->
+        <!-- Project 1: Beik Beik -->
         <div class="project-card anim-fade-up">
           <div class="project-info">
-            <h3 class="project-name">HanSo Café</h3>
+            <h3 class="project-name">Beik Beik</h3>
             <span class="project-disclaimer" data-en="Design concept — not official work">Concepto de diseño — no es trabajo oficial</span>
-            <p class="project-desc" data-en="Asian specialty café with 3 locations in Madrid. Website with bilingual interactive menu and online shop.">Café de especialidad asiático con 3 locales en Madrid. Web con carta interactiva bilingüe y tienda online.</p>
+            <p class="project-desc" data-en="Artisan bakery in Chamberí. Warm website with visual menu, founders' story and bakery gallery.">Obrador artesanal en Chamberí. Web cálida con carta visual, historia de los fundadores y galería del obrador.</p>
             <div class="project-tags">
-              <span data-en="Digital menu">Carta digital</span>
-              <span data-en="Bilingual">Bilingüe</span>
-              <span data-en="Multi-location">Multi-local</span>
+              <span data-en="Visual menu">Carta visual</span>
+              <span data-en="Gallery">Galería</span>
+              <span data-en="Story">Historia</span>
             </div>
           </div>
-          <div class="ba-slider" data-before="img/hanso-before.png" data-after="img/hanso-after.png">
+          <div class="ba-slider" data-before="img/beikbeik-before.png" data-after="img/beikbeik-after.png">
             <div class="ba-wrapper">
               <div class="ba-after">
-                <img src="img/hanso-after.png" alt="HanSo — Después">
+                <img src="img/beikbeik-after.png" alt="Beik Beik — Después">
               </div>
               <div class="ba-before">
-                <img src="img/hanso-before.png" alt="HanSo — Antes">
+                <img src="img/beikbeik-before.png" alt="Beik Beik — Antes">
               </div>
               <div class="ba-handle">
                 <div class="ba-handle-line"></div>
@@ -182,10 +183,10 @@
           <div class="project-info">
             <h3 class="project-name">Pum Pum Café</h3>
             <span class="project-disclaimer" data-en="Design concept — not official work">Concepto de diseño — no es trabajo oficial</span>
-            <p class="project-desc" data-en="Neighbourhood café with brick-red identity. Landing page with full menu, family story and gallery.">Cafetería de barrio con identidad brick-red. Landing con carta completa, historia familiar y galería.</p>
+            <p class="project-desc" data-en="6-brand restaurant group in Lavapiés. Hub site connecting all venues with group portal.">Grupo de 6 marcas en Lavapiés. Web flagship con portal de grupo conectando todos los locales.</p>
             <div class="project-tags">
+              <span data-en="Restaurant group">Grupo</span>
               <span data-en="Digital menu">Carta digital</span>
-              <span data-en="Gallery">Galería</span>
               <span data-en="Story">Historia</span>
             </div>
           </div>
@@ -218,11 +219,11 @@
           <div class="project-info">
             <h3 class="project-name">Naji</h3>
             <span class="project-disclaimer" data-en="Design concept — not official work">Concepto de diseño — no es trabajo oficial</span>
-            <p class="project-desc" data-en="Specialty coffee & brunch with minimalist aesthetic. Dark website with bilingual menu and story section.">Specialty coffee & brunch con estética minimalista. Web oscura con carta bilingüe y sección de historia.</p>
+            <p class="project-desc" data-en="Best café in Spain 2025 & 2026. Dark website with bilingual menu and Iraqi heritage story.">Mejor café de España 2025 y 2026. Web oscura con carta bilingüe y historia de herencia iraquí.</p>
             <div class="project-tags">
               <span data-en="Digital menu">Carta digital</span>
               <span data-en="Bilingual">Bilingüe</span>
-              <span data-en="Minimalist">Minimalista</span>
+              <span data-en="Awards">Premios</span>
             </div>
           </div>
           <div class="ba-slider" data-before="img/naji-before.png" data-after="img/naji-after.png">
@@ -232,42 +233,6 @@
               </div>
               <div class="ba-before">
                 <img src="img/naji-before.png" alt="Naji — Antes">
-              </div>
-              <div class="ba-handle">
-                <div class="ba-handle-line"></div>
-                <div class="ba-handle-circle">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M7 4L3 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M13 4L17 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <div class="ba-handle-line"></div>
-              </div>
-              <div class="ba-label ba-label-before" data-en="BEFORE">ANTES</div>
-              <div class="ba-label ba-label-after" data-en="AFTER">DESPUÉS</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4: Beik Beik -->
-        <div class="project-card anim-fade-up">
-          <div class="project-info">
-            <h3 class="project-name">Beik Beik</h3>
-            <span class="project-disclaimer" data-en="Design concept — not official work">Concepto de diseño — no es trabajo oficial</span>
-            <p class="project-desc" data-en="Artisan bakery in Chamberí. Warm website with visual menu, founders' story and bakery gallery.">Obrador artesanal en Chamberí. Web cálida con carta visual, historia de los fundadores y galería del obrador.</p>
-            <div class="project-tags">
-              <span data-en="Visual menu">Carta visual</span>
-              <span data-en="Gallery">Galería</span>
-              <span data-en="Story">Historia</span>
-            </div>
-          </div>
-          <div class="ba-slider" data-before="img/beikbeik-before.png" data-after="img/beikbeik-after.png">
-            <div class="ba-wrapper">
-              <div class="ba-after">
-                <img src="img/beikbeik-after.png" alt="Beik Beik — Después">
-              </div>
-              <div class="ba-before">
-                <img src="img/beikbeik-before.png" alt="Beik Beik — Antes">
               </div>
               <div class="ba-handle">
                 <div class="ba-handle-line"></div>
@@ -488,6 +453,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>
