@@ -219,6 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateValidationMessages() {
     const emailInput = document.getElementById('email');
     const nombreInput = document.getElementById('nombre');
+    if (!emailInput || !nombreInput) return;
 
     if (currentLang === 'es') {
       emailInput.setAttribute('title', 'Introduce un email válido');
@@ -305,9 +306,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Smooth scroll for anchor links ──
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
+      const href = this.getAttribute('href');
+      // Skip if it's just "#" with no target
+      if (href === '#') return;
+      const target = document.querySelector(href);
       if (target) {
+        e.preventDefault();
         const offset = 80;
         const top = target.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top, behavior: 'smooth' });

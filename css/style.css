@@ -680,6 +680,25 @@ body::before {
   color: white;
 }
 
+/* Portfolio CTA */
+.portfolio-cta {
+  text-align: center;
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid rgba(26, 23, 21, 0.08);
+}
+.btn-ver-todos {
+  padding: 18px 48px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.portfolio-cta-sub {
+  margin-top: 16px;
+  font-size: 15px;
+  color: var(--dark-muted);
+}
+
 /* ============================================
    PROCESO
    ============================================ */
