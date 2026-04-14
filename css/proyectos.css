@@ -82,6 +82,10 @@
 .proj-preview:hover img {
   transform: scale(1.03);
 }
+.proj-preview--full img {
+  aspect-ratio: auto;
+  object-fit: contain;
+}
 .proj-preview-overlay {
   position: absolute;
   inset: 0;
