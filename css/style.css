@@ -613,26 +613,6 @@ body::before {
   color: var(--dark-muted);
 }
 
-/* Portfolio triangle layout — 1 big on top, 2 side-by-side below */
-.portfolio-triangle {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  flex-direction: unset;
-}
-.portfolio-triangle .project-card {
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-.portfolio-triangle .project-card:first-child {
-  grid-column: 1 / -1;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 48px;
-  align-items: center;
-}
-.portfolio-triangle .project-card:nth-child(even) {
-  direction: ltr;
-}
 
 /* ============================================
    BEFORE/AFTER SLIDER
@@ -1176,14 +1156,6 @@ body::before {
    ============================================ */
 
 @media (max-width: 900px) {
-  .portfolio-triangle {
-    grid-template-columns: 1fr;
-  }
-  .portfolio-triangle .project-card:first-child {
-    grid-column: 1;
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
   .project-card {
     grid-template-columns: 1fr;
     gap: 24px;
