@@ -4,22 +4,22 @@
    ============================================ */
 
 :root {
-  /* Palette — warm terracotta + cream */
+  /* Palette — neutral editorial: cream + warm stone + ink */
   --cream: #F3E9D5;
   --cream-soft: #F9F2E1;
   --cream-deep: #E7D7B5;
-  --terra: #B85C3F;
-  --terra-deep: #8F4228;
-  --terra-soft: #D48565;
+  --terra: #6B5847;            /* was terracotta, now warm stone */
+  --terra-deep: #3E3328;
+  --terra-soft: #9E8B78;
   --wood: #6B4423;
   --wood-light: #A78662;
   --ink: #2A1913;
   --ink-soft: #6A4E3E;
-  --sky: #7AA8B8;
-  --sun: #E8B04E;
+  --sky: #8A9AA5;              /* muted slate blue */
+  --sun: #B89861;              /* muted gold, not bright yellow */
 
-  /* Type */
-  --font-display: 'Fraunces', 'Instrument Serif', Georgia, serif;
+  /* Type — editorial, restrained */
+  --font-display: 'Cormorant Garamond', 'Libre Caslon Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 
@@ -52,9 +52,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 /* =========== TYPOGRAPHY =========== */
 h1, h2, h3, h4, h5 {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-variation-settings: "opsz" 120, "SOFT" 30;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  letter-spacing: -0.015em;
   line-height: 1.05;
   color: var(--ink);
 }
@@ -87,7 +86,7 @@ h3 { font-weight: 600; }
 .display-xl em {
   font-style: italic;
   color: var(--terra);
-  font-variation-settings: "opsz" 120, "SOFT" 50;
+  font-weight: 500;
 }
 
 /* =========== DEMO BANNER =========== */
@@ -135,11 +134,10 @@ h3 { font-weight: 600; }
 .nav-logo {
   display: flex; align-items: baseline; gap: 10px;
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 26px;
-  font-style: italic;
-  color: var(--terra);
-  font-variation-settings: "opsz" 120, "SOFT" 50;
+  color: var(--ink);
+  letter-spacing: -0.01em;
 }
 .nav-logo small {
   font-family: var(--font-mono);
@@ -227,8 +225,7 @@ h3 { font-weight: 600; }
 .mobile-menu a {
   padding: 16px 4px;
   font-family: var(--font-display);
-  font-weight: 600;
-  font-style: italic;
+  font-weight: 500;
   font-size: 28px;
   color: var(--cream);
   border-bottom: 1px solid rgba(243, 233, 213, 0.15);
@@ -315,13 +312,11 @@ h3 { font-weight: 600; }
 }
 .footer-wordmark .big {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-style: italic;
+  font-weight: 500;
   font-size: clamp(72px, 13vw, 200px);
   line-height: 0.9;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   color: var(--terra);
-  font-variation-settings: "opsz" 120, "SOFT" 80;
 }
 .footer-wordmark .tag {
   font-family: var(--font-mono);
@@ -342,11 +337,10 @@ h3 { font-weight: 600; }
 }
 .footer-brand {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-style: italic;
+  font-weight: 600;
   font-size: 38px;
   line-height: 0.9;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   color: var(--cream);
 }
 .footer-brand small {
@@ -461,33 +455,30 @@ html.lang-en div.en-only, html.lang-en p.en-only, html.lang-en li.en-only { disp
 }
 .hero-card .badge {
   position: absolute;
-  top: -14px; right: -14px;
-  width: 120px; height: 120px;
-  background: var(--sun);
-  color: var(--ink);
-  border-radius: 50%;
-  display: grid; place-items: center;
-  text-align: center;
+  top: 16px; left: 16px;
+  padding: 8px 14px;
+  background: var(--ink);
+  color: var(--cream);
+  border-radius: 4px;
+  text-align: left;
   font-family: var(--font-mono);
   font-weight: 500;
   font-size: 10px;
-  letter-spacing: 0.2em;
-  line-height: 1.5;
-  padding: 14px;
-  transform: rotate(12deg);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
   z-index: 3;
-  box-shadow: 0 10px 28px rgba(42, 25, 19, 0.22);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 .hero-card .badge strong {
-  display: block;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-style: italic;
-  font-size: 20px;
-  color: var(--terra-deep);
-  margin: 2px 0;
-  text-transform: none;
-  letter-spacing: -0.02em;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 10px;
+  color: var(--sun);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
 }
 
 /* ============================================
@@ -522,12 +513,11 @@ html.lang-en div.en-only, html.lang-en p.en-only, html.lang-en li.en-only { disp
 }
 .manifesto-stats .n {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-style: italic;
+  font-weight: 500;
   font-size: 44px;
   color: var(--terra);
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 }
 .manifesto-stats .l {
   font-family: var(--font-mono);
@@ -777,9 +767,9 @@ html.lang-en div.en-only, html.lang-en p.en-only, html.lang-en li.en-only { disp
 .item:hover { background: #FDF6E6; border-color: rgba(184, 92, 63, 0.3); }
 .item .name {
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 21px;
-  letter-spacing: -0.015em;
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 .item .name .tag {
