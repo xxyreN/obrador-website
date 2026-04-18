@@ -319,6 +319,11 @@ body::before {
   transition: width 0.3s var(--ease-out-quart);
 }
 .nav-links a:hover::after { width: 100%; }
+.nav-links a.nav-active {
+  color: var(--dark);
+  font-weight: 600;
+}
+.nav-links a.nav-active::after { width: 100%; }
 .nav-cta {
   background: var(--dark) !important;
   color: var(--cream) !important;
