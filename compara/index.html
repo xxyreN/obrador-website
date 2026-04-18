@@ -480,18 +480,61 @@
   .reveal, .reveal-stagger > *, .tier-card .tier-pages .bar { opacity: 1; transform: none; transition: none; }
 }
 
-@media (max-width: 1080px) {
+/* Swipe hint, mobile only */
+.tiers-swipe-hint {
+  display: none;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dark-muted);
+  margin: 32px auto -8px;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+@media (max-width: 1080px) and (min-width: 769px) {
   .tiers-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .tier-card.featured { transform: none; }
   .progression-strip { grid-template-columns: repeat(2, 1fr); }
   .compara-meta { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 }
-@media (max-width: 600px) {
-  .tiers-grid { grid-template-columns: 1fr; }
-  .progression-strip { grid-template-columns: 1fr; }
-  .compara-meta { grid-template-columns: 1fr; }
+
+@media (max-width: 768px) {
   .compara-hero { padding-top: 110px; }
+  .compara-meta { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .progression-strip { grid-template-columns: 1fr; }
   .compara-cta { padding: 48px 24px; margin-top: 60px; }
+
+  .tiers-swipe-hint { display: block; }
+
+  .tiers-grid {
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    padding: 24px 12vw 28px;
+    margin-top: 24px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tiers-grid::-webkit-scrollbar { display: none; }
+
+  .tier-card {
+    min-width: 78vw;
+    max-width: 78vw;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    padding: 32px 24px 28px;
+  }
+  .tier-card.featured { transform: none; }
+  .tier-card.featured:hover { transform: none; }
+  .tier-card:hover { transform: none; }
+
+  .tier-name { font-size: 32px; }
+  .tier-price { font-size: 46px; }
 }
 </style>
 </head>
@@ -553,6 +596,7 @@
 </section>
 
 <!-- THE 4 TIER CARDS, main comparison -->
+<p class="tiers-swipe-hint"><span class="es-only">← Desliza para ver los 4 planes →</span><span class="en-only">← Swipe to see all 4 plans →</span></p>
 <section class="tiers-grid">
 
   <!-- PRESENCIA -->
