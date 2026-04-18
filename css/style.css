@@ -795,6 +795,47 @@ body::before {
 @media (max-width: 1100px) and (min-width: 769px) {
   .planes-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 }
+.hero-new-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  margin-bottom: 24px;
+  background: var(--white);
+  border: 1px solid var(--copper-dark);
+  color: var(--copper-dark);
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s var(--ease-out-expo), background 0.3s, color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 16px rgba(196, 149, 106, 0.15);
+}
+.hero-new-pill:hover {
+  background: var(--copper-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(196, 149, 106, 0.3);
+}
+.hero-new-pill .pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--copper-dark);
+  border-radius: 50%;
+  animation: pill-pulse 2s infinite;
+  flex-shrink: 0;
+}
+.hero-new-pill:hover .pulse-dot { background: var(--white); }
+@keyframes pill-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(168, 123, 82, 0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(168, 123, 82, 0); }
+}
+@media (max-width: 600px) {
+  .hero-new-pill { font-size: 10px; padding: 8px 16px; letter-spacing: 0.1em; }
+}
 .launch-ribbon {
   display: inline-flex;
   align-items: center;
