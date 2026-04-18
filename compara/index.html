@@ -448,6 +448,38 @@
 }
 .compara-cta a:hover { background: var(--copper); }
 
+/* ============================================
+   SCROLL REVEAL + COUNTERS
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)),
+              transform 0.9s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
+  will-change: opacity, transform;
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-stagger > * { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)), transform 0.9s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)); }
+.reveal-stagger.in > * { opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger.in > *:nth-child(2) { transition-delay: 90ms; }
+.reveal-stagger.in > *:nth-child(3) { transition-delay: 180ms; }
+.reveal-stagger.in > *:nth-child(4) { transition-delay: 270ms; }
+.reveal-stagger.in > *:nth-child(5) { transition-delay: 360ms; }
+
+/* Animated bars in tier-pages: scale-up on reveal */
+.tier-card .tier-pages .bar { transform-origin: bottom; transform: scaleY(0); transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1); }
+.tier-card.in .tier-pages .bar { transform: scaleY(1); }
+.tier-card.in .tier-pages .bar:nth-child(1) { transition-delay: 200ms; }
+.tier-card.in .tier-pages .bar:nth-child(2) { transition-delay: 280ms; }
+.tier-card.in .tier-pages .bar:nth-child(3) { transition-delay: 360ms; }
+.tier-card.in .tier-pages .bar:nth-child(4) { transition-delay: 440ms; }
+.tier-card.in .tier-pages .bar:nth-child(5) { transition-delay: 520ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-stagger > *, .tier-card .tier-pages .bar { opacity: 1; transform: none; transition: none; }
+}
+
 @media (max-width: 1080px) {
   .tiers-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .tier-card.featured { transform: none; }
@@ -507,9 +539,9 @@
     <span class="en-only">We built the same fictional café (Café Cierzo) at all four plans. See exactly what changes between €490 and €2,490.</span>
   </p>
 
-  <div class="compara-meta">
-    <div><span class="n">4</span><span class="l">Tiers</span></div>
-    <div><span class="n">€490 → €2.490</span><span class="l"><span class="es-only">Rango de precio</span><span class="en-only">Price range</span></span></div>
+  <div class="compara-meta reveal-stagger">
+    <div><span class="n" data-count="4">0</span><span class="l">Tiers</span></div>
+    <div><span class="n">€<span data-count="490">0</span> → €<span data-count="2490" data-format="dot">0</span></span><span class="l"><span class="es-only">Rango de precio</span><span class="en-only">Price range</span></span></div>
     <div><span class="n">1–4 <span class="l" style="display:inline">sem.</span></span><span class="l"><span class="es-only">Entrega</span><span class="en-only">Delivery</span></span></div>
     <div><span class="n">Madrid</span><span class="l"><span class="es-only">Hecho en</span><span class="en-only">Made in</span></span></div>
   </div>
@@ -524,12 +556,12 @@
 <section class="tiers-grid">
 
   <!-- PRESENCIA -->
-  <article class="tier-card">
+  <article class="tier-card reveal">
     <div class="tier-num">01 · Presencia</div>
     <h3 class="tier-name">Presencia</h3>
     <p class="tier-tagline"><span class="es-only">Lo mínimo para existir en Google.</span><span class="en-only">The minimum to exist on Google.</span></p>
     <div class="tier-pages"><span class="bar on"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
-    <div class="tier-price">€490</div>
+    <div class="tier-price">€<span data-count="490">0</span></div>
     <div class="tier-price-sub"><span class="es-only">desde · 1 semana · <strong>+ €50/mes mant.</strong></span><span class="en-only">from · 1 week · <strong>+ €50/mo maint.</strong></span></div>
 
     <ul class="tier-features">
@@ -548,12 +580,12 @@
   </article>
 
   <!-- CARTA COMPLETA -->
-  <article class="tier-card">
+  <article class="tier-card reveal">
     <div class="tier-num">02 · Carta Completa</div>
     <h3 class="tier-name"><span class="es-only">Carta <em>Completa</em></span><span class="en-only"><em>Full</em> Menu</span></h3>
     <p class="tier-tagline"><span class="es-only">Carta inline, historia y QR imprimible.</span><span class="en-only">Inline menu, story and printable QR.</span></p>
     <div class="tier-pages"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span><span class="bar"></span></div>
-    <div class="tier-price">€890</div>
+    <div class="tier-price">€<span data-count="890">0</span></div>
     <div class="tier-price-sub"><span class="es-only">desde · 2 semanas · <strong>+ €50/mes mant.</strong></span><span class="en-only">from · 2 weeks · <strong>+ €50/mo maint.</strong></span></div>
 
     <div class="tier-what-new">
@@ -579,13 +611,13 @@
   </article>
 
   <!-- MARCA COMPLETA, FEATURED -->
-  <article class="tier-card featured">
+  <article class="tier-card featured reveal">
     <div class="tier-badge-top"><span class="es-only">Recomendado</span><span class="en-only">Recommended</span></div>
     <div class="tier-num">03 · Marca Completa</div>
     <h3 class="tier-name"><span class="es-only">Marca <em>Completa</em></span><span class="en-only"><em>Full</em> Brand</span></h3>
     <p class="tier-tagline"><span class="es-only">Cuando la web es la marca. Para cafés con personalidad.</span><span class="en-only">When the website IS the brand. For cafés with personality.</span></p>
     <div class="tier-pages"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div>
-    <div class="tier-price">€1.290</div>
+    <div class="tier-price">€<span data-count="1290" data-format="dot">0</span></div>
     <div class="tier-price-sub"><span class="es-only">desde · 3 semanas · <strong>+ €50/mes mant.</strong></span><span class="en-only">from · 3 weeks · <strong>+ €50/mo maint.</strong></span></div>
 
     <div class="tier-what-new">
@@ -611,12 +643,12 @@
   </article>
 
   <!-- TIENDA -->
-  <article class="tier-card">
+  <article class="tier-card reveal">
     <div class="tier-num">04 · Tienda</div>
     <h3 class="tier-name">Tienda</h3>
     <p class="tier-tagline"><span class="es-only">Marca Completa + vendes más allá de la barra.</span><span class="en-only">Full Brand + sell beyond the bar.</span></p>
     <div class="tier-pages"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div>
-    <div class="tier-price">€2.490</div>
+    <div class="tier-price">€<span data-count="2490" data-format="dot">0</span></div>
     <div class="tier-price-sub"><span class="es-only">desde · 4 semanas · <strong>+ €90/mes mant.</strong></span><span class="en-only">from · 4 weeks · <strong>+ €90/mo maint.</strong></span></div>
 
     <div class="tier-what-new">
@@ -649,7 +681,7 @@
     <h2><span class="es-only">Base común, <em>subes de nivel</em>.</span><span class="en-only">Shared base, <em>level up</em>.</span></h2>
     <p><span class="es-only">Todos los tiers arrancan desde la misma base. Cada uno añade capacidad, no complejidad.</span><span class="en-only">All tiers start from the same base. Each one adds capability, not complexity.</span></p>
   </div>
-  <div class="progression-strip">
+  <div class="progression-strip reveal-stagger">
     <div class="prog-card base">
       <div class="tier-label">01 · Presencia</div>
       <div class="tier-price-inline">€490</div>
@@ -700,7 +732,7 @@
   </div>
 </section>
 
-<section class="compara-cta">
+<section class="compara-cta reveal">
   <span class="eyebrow"><span class="es-only">Concepto gratis</span><span class="en-only">Free concept</span></span>
   <h2><span class="es-only">¿No sabes cuál te <em>encaja</em>?</span><span class="en-only">Not sure which <em>fits</em>?</span></h2>
   <p><span class="es-only">Escríbenos y te hacemos un concepto de diseño gratis para TU café. Sin compromiso. Así decides con una web real delante, no con una tabla.</span><span class="en-only">Write us and we'll build a free design concept for YOUR café. No strings. Decide with a real website in front of you, not a table.</span></p>
@@ -730,6 +762,65 @@
         applyLang();
       });
     });
+
+    // ============================================
+    //  SCROLL REVEAL + COUNTERS
+    // ============================================
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function formatNum(n, format) {
+      if (format === 'dot') {
+        return n.toLocaleString('es-ES');
+      }
+      return String(n);
+    }
+
+    function animateCount(el) {
+      const target = parseInt(el.dataset.count, 10);
+      const format = el.dataset.format;
+      if (isNaN(target) || el.dataset.counted) return;
+      el.dataset.counted = '1';
+      if (reduce) { el.textContent = formatNum(target, format); return; }
+      const duration = 1400;
+      const start = performance.now();
+      function tick(now) {
+        const t = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        const value = Math.round(target * eased);
+        el.textContent = formatNum(value, format);
+        if (t < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    function startCountersInside(scope) {
+      scope.querySelectorAll('[data-count]').forEach(animateCount);
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => el.classList.add('in'));
+      document.querySelectorAll('[data-count]').forEach(animateCount);
+    } else {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            startCountersInside(entry.target);
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.18, rootMargin: '0px 0px -60px 0px' });
+      document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
+      // Hero meta is above the fold — kick its counters immediately
+      const heroMeta = document.querySelector('.compara-hero .compara-meta');
+      if (heroMeta) {
+        setTimeout(() => {
+          heroMeta.classList.add('in');
+          startCountersInside(heroMeta);
+        }, 250);
+      }
+    }
   })();
 </script>
 <script src="../js/main.js" defer></script>
