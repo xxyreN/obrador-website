@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compara los planes · obrador.web — ver la diferencia con demos reales</title>
+<meta name="description" content="Mismo café, cuatro tiers. Compara Presencia, Carta Completa, Marca Completa y Tienda con demos reales — obrador.web, webs para cafeterías en Madrid.">
+<link rel="icon" type="image/png" href="../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+:root {
+  --cream: #F4ECD8;
+  --cream-light: #F9F3E3;
+  --dark: #1A1715;
+  --dark-soft: #3F342C;
+  --terra: #B85C3F;
+  --terra-deep: #8F4228;
+  --wood: #6B4423;
+  --sun: #E8B04E;
+}
+body { background: var(--cream-light); }
+.compara-hero {
+  padding: 80px 28px 40px;
+  max-width: 1320px;
+  margin: 0 auto;
+  text-align: center;
+}
+.compara-hero .eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terra);
+  font-weight: 500;
+}
+.compara-hero h1 {
+  font-family: 'Libre Caslon Display', Georgia, serif;
+  font-size: clamp(40px, 6vw, 84px);
+  letter-spacing: -0.025em;
+  line-height: 1;
+  color: var(--dark);
+  margin: 18px 0;
+  max-width: 18ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.compara-hero h1 em {
+  font-style: italic;
+  color: var(--terra);
+}
+.compara-hero p {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(16px, 1.6vw, 19px);
+  color: var(--dark-soft);
+  max-width: 58ch;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.tiers-grid {
+  max-width: 1320px;
+  margin: 56px auto 0;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.tier {
+  background: #fff;
+  border: 1px solid rgba(26, 23, 21, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.tier:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(26, 23, 21, 0.1);
+}
+.tier.featured {
+  border: 2px solid var(--terra);
+  background: linear-gradient(180deg, #fff 0%, #fff8ee 100%);
+}
+.tier-iframe-wrap {
+  aspect-ratio: 4/3;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(26, 23, 21, 0.08);
+}
+.tier-iframe-wrap iframe {
+  width: 300%;
+  height: 300%;
+  transform: scale(0.333);
+  transform-origin: 0 0;
+  border: 0;
+  pointer-events: none;
+}
+.tier-iframe-wrap a.view-demo {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 23, 21, 0);
+  display: grid;
+  place-items: center;
+  transition: background 0.3s;
+  z-index: 2;
+}
+.tier-iframe-wrap a.view-demo:hover { background: rgba(26, 23, 21, 0.55); }
+.tier-iframe-wrap a.view-demo span {
+  opacity: 0;
+  padding: 12px 24px;
+  background: var(--terra);
+  color: var(--cream);
+  border-radius: 999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+.tier-iframe-wrap a.view-demo:hover span { opacity: 1; }
+.tier-badge {
+  position: absolute;
+  top: 14px; left: 14px;
+  padding: 6px 12px;
+  background: var(--dark);
+  color: var(--cream);
+  border-radius: 999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  z-index: 3;
+}
+.tier.featured .tier-badge { background: var(--terra); }
+.tier-body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
+.tier-name {
+  font-family: 'Libre Caslon Display', Georgia, serif;
+  font-size: 28px;
+  color: var(--dark);
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.tier-desc {
+  font-size: 13px;
+  color: var(--dark-soft);
+  line-height: 1.5;
+  margin-bottom: 18px;
+  font-family: 'Outfit', sans-serif;
+  min-height: 40px;
+}
+.tier-price {
+  font-family: 'Libre Caslon Display', Georgia, serif;
+  font-size: 32px;
+  color: var(--terra);
+  letter-spacing: -0.02em;
+  font-weight: normal;
+}
+.tier-price small {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--dark-soft);
+  text-transform: uppercase;
+  margin-right: 6px;
+  font-weight: 500;
+}
+.tier-meta {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(26, 23, 21, 0.15);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--dark-soft);
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+.tier-cta {
+  margin-top: 18px;
+  display: block;
+  text-align: center;
+  padding: 12px 18px;
+  background: var(--dark);
+  color: var(--cream);
+  border-radius: 999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+.tier.featured .tier-cta { background: var(--terra); }
+.tier-cta:hover { background: var(--terra-deep); }
+
+.compara-matrix-wrap {
+  max-width: 1200px;
+  margin: 100px auto 80px;
+  padding: 0 28px;
+}
+.compara-matrix-wrap .matrix-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.compara-matrix-wrap h2 {
+  font-family: 'Libre Caslon Display', Georgia, serif;
+  font-size: clamp(32px, 4vw, 52px);
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.compara-matrix-wrap h2 em { font-style: italic; color: var(--terra); }
+.compara-matrix-wrap .matrix-sub {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  color: var(--dark-soft);
+  max-width: 56ch;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.matrix-table {
+  margin-top: 40px;
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(26, 23, 21, 0.06);
+}
+.matrix-table th, .matrix-table td {
+  padding: 18px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(26, 23, 21, 0.08);
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+}
+.matrix-table thead th {
+  background: var(--dark);
+  color: var(--cream);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 20px 16px;
+  border-bottom: 0;
+}
+.matrix-table thead th.featured { background: var(--terra); }
+.matrix-table thead .price {
+  display: block;
+  margin-top: 4px;
+  font-family: 'Libre Caslon Display', Georgia, serif;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: var(--sun);
+  text-transform: none;
+  font-weight: normal;
+}
+.matrix-table tbody td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: var(--dark);
+  background: rgba(184, 92, 63, 0.03);
+  font-size: 14px;
+}
+.matrix-table .yes { color: var(--terra); font-size: 18px; font-weight: 600; }
+.matrix-table .no { color: rgba(26, 23, 21, 0.25); font-size: 16px; }
+.matrix-table .partial { color: var(--sun); font-size: 14px; font-weight: 500; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.08em; }
+.matrix-table tr:last-child td { border-bottom: 0; }
+.matrix-table .cat-row td {
+  background: var(--cream);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--dark);
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: 500;
+  padding: 14px 20px;
+}
+
+.compara-cta {
+  background: var(--dark);
+  color: var(--cream);
+  padding: 80px 28px;
+  text-align: center;
+  margin-top: 60px;
+}
+.compara-cta h2 {
+  font-family: 'Libre Caslon Display', Georgia, serif;
+  font-size: clamp(30px, 4vw, 48px);
+  color: var(--cream);
+  letter-spacing: -0.02em;
+  max-width: 20ch;
+  margin: 0 auto 20px;
+}
+.compara-cta h2 em { font-style: italic; color: var(--sun); }
+.compara-cta p {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  color: rgba(244, 236, 216, 0.75);
+  max-width: 52ch;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+.compara-cta a {
+  display: inline-block;
+  padding: 16px 32px;
+  background: var(--terra);
+  color: var(--cream);
+  border-radius: 999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.compara-cta a:hover { background: var(--terra-deep); }
+
+/* Back-to-obrador button top */
+.compara-nav {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 28px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.compara-nav .back {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dark-soft);
+  text-decoration: none;
+  padding: 10px 18px;
+  border: 1px solid rgba(26, 23, 21, 0.15);
+  border-radius: 999px;
+  transition: all 0.2s;
+}
+.compara-nav .back:hover { background: var(--dark); color: var(--cream); border-color: var(--dark); }
+.compara-nav .brand {
+  font-family: 'Libre Caslon Display', Georgia, serif;
+  font-size: 22px;
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+/* Fictional café note */
+.ficticio-note {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 28px;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dark-soft);
+}
+
+@media (max-width: 1080px) {
+  .tiers-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .tiers-grid { grid-template-columns: 1fr; }
+  .matrix-table { font-size: 12px; }
+  .matrix-table th, .matrix-table td { padding: 12px 8px; }
+  .matrix-table thead .price { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="compara-nav">
+  <a href="../" class="brand">obrador<span style="color: var(--terra)">.</span>web</a>
+  <a href="../" class="back">← <span class="es-only">volver</span><span class="en-only">back</span></a>
+</div>
+
+<section class="compara-hero">
+  <span class="eyebrow"><span class="es-only">Compara los planes</span><span class="en-only">Compare the plans</span></span>
+  <h1>
+    <span class="es-only">Mismo café, <em>cuatro tiers</em>.</span>
+    <span class="en-only">Same café, <em>four tiers</em>.</span>
+  </h1>
+  <p>
+    <span class="es-only">Hemos construido el mismo café ficticio (Café Cierzo) en nuestros cuatro tiers. Mira la diferencia real entre €490 y €2.490 — no con una tabla de texto, con webs reales.</span>
+    <span class="en-only">We built the same fictional café (Café Cierzo) at all four tiers. See the real difference between €490 and €2,490 — not with a feature table, with actual sites.</span>
+  </p>
+</section>
+
+<div class="ficticio-note">
+  <span class="es-only">⚠ Café Cierzo es un café ficticio construido como ejemplo. Los 4 tiers usan el mismo contenido, diferente estructura.</span>
+  <span class="en-only">⚠ Café Cierzo is a fictional café built as an example. All 4 tiers share the same content, different structure.</span>
+</div>
+
+<section class="tiers-grid">
+
+  <article class="tier">
+    <div class="tier-iframe-wrap">
+      <span class="tier-badge">01 · Presencia</span>
+      <iframe src="../demos/cierzo-presencia/index.html" loading="lazy" title="Presencia demo"></iframe>
+      <a href="../demos/cierzo-presencia/" target="_blank" class="view-demo"><span><span class="es-only">Abrir demo →</span><span class="en-only">Open demo →</span></span></a>
+    </div>
+    <div class="tier-body">
+      <h3 class="tier-name">Presencia</h3>
+      <p class="tier-desc"><span class="es-only">Landing de 1 página. Lo mínimo para existir en Google.</span><span class="en-only">1-page landing. The minimum to exist on Google.</span></p>
+      <div class="tier-price"><small>desde</small>€490</div>
+      <div class="tier-meta">
+        <span class="es-only">1 página · Bilingüe<br>Form + WhatsApp · Mapa<br>~ 1 semana</span>
+        <span class="en-only">1 page · Bilingual<br>Form + WhatsApp · Map<br>~ 1 week</span>
+      </div>
+      <a href="../demos/cierzo-presencia/" target="_blank" class="tier-cta"><span class="es-only">Ver demo →</span><span class="en-only">See demo →</span></a>
+    </div>
+  </article>
+
+  <article class="tier featured">
+    <div class="tier-iframe-wrap">
+      <span class="tier-badge">02 · <span class="es-only">Recomendado</span><span class="en-only">Recommended</span></span>
+      <iframe src="../demos/cierzo-carta/index.html" loading="lazy" title="Carta Completa demo"></iframe>
+      <a href="../demos/cierzo-carta/" target="_blank" class="view-demo"><span><span class="es-only">Abrir demo →</span><span class="en-only">Open demo →</span></span></a>
+    </div>
+    <div class="tier-body">
+      <h3 class="tier-name">Carta Completa</h3>
+      <p class="tier-desc"><span class="es-only">3 páginas, carta inline y QR imprimible. El sweet spot.</span><span class="en-only">3 pages, inline menu and printable QR. The sweet spot.</span></p>
+      <div class="tier-price"><small>desde</small>€890</div>
+      <div class="tier-meta">
+        <span class="es-only">3 páginas · Carta inline<br>Historia + galería · QR carta<br>~ 2 semanas</span>
+        <span class="en-only">3 pages · Inline menu<br>Story + gallery · QR card<br>~ 2 weeks</span>
+      </div>
+      <a href="../demos/cierzo-carta/" target="_blank" class="tier-cta"><span class="es-only">Ver demo →</span><span class="en-only">See demo →</span></a>
+    </div>
+  </article>
+
+  <article class="tier">
+    <div class="tier-iframe-wrap">
+      <span class="tier-badge">03 · Marca Completa</span>
+      <iframe src="../demos/cierzo-marca/index.html" loading="lazy" title="Marca Completa demo"></iframe>
+      <a href="../demos/cierzo-marca/" target="_blank" class="view-demo"><span><span class="es-only">Abrir demo →</span><span class="en-only">Open demo →</span></span></a>
+    </div>
+    <div class="tier-body">
+      <h3 class="tier-name">Marca Completa</h3>
+      <p class="tier-desc"><span class="es-only">4 páginas + cultura + multi-local. Para marcas reales.</span><span class="en-only">4 pages + culture + multi-location. For real brands.</span></p>
+      <div class="tier-price"><small>desde</small>€1.290</div>
+      <div class="tier-meta">
+        <span class="es-only">4-5 páginas · Cultura<br>Multi-local · Animaciones<br>~ 3 semanas</span>
+        <span class="en-only">4-5 pages · Culture<br>Multi-location · Animations<br>~ 3 weeks</span>
+      </div>
+      <a href="../demos/cierzo-marca/" target="_blank" class="tier-cta"><span class="es-only">Ver demo →</span><span class="en-only">See demo →</span></a>
+    </div>
+  </article>
+
+  <article class="tier">
+    <div class="tier-iframe-wrap">
+      <span class="tier-badge">04 · Tienda</span>
+      <iframe src="../demos/cierzo-tienda/index.html" loading="lazy" title="Tienda demo"></iframe>
+      <a href="../demos/cierzo-tienda/" target="_blank" class="view-demo"><span><span class="es-only">Abrir demo →</span><span class="en-only">Open demo →</span></span></a>
+    </div>
+    <div class="tier-body">
+      <h3 class="tier-name">Tienda</h3>
+      <p class="tier-desc"><span class="es-only">Todo lo anterior + pedidos online, suscripciones, checkout.</span><span class="en-only">Everything + online orders, subscriptions, checkout.</span></p>
+      <div class="tier-price"><small>desde</small>€2.490</div>
+      <div class="tier-meta">
+        <span class="es-only">5 páginas · Snipcart + Stripe<br>Productos · Suscripciones<br>~ 4 semanas</span>
+        <span class="en-only">5 pages · Snipcart + Stripe<br>Products · Subscriptions<br>~ 4 weeks</span>
+      </div>
+      <a href="../demos/cierzo-tienda/" target="_blank" class="tier-cta"><span class="es-only">Ver demo →</span><span class="en-only">See demo →</span></a>
+    </div>
+  </article>
+
+</section>
+
+<!-- MATRIX -->
+<section class="compara-matrix-wrap">
+  <div class="matrix-head">
+    <h2><span class="es-only">Qué incluye <em>cada tier</em></span><span class="en-only">What each <em>tier</em> includes</span></h2>
+    <p class="matrix-sub"><span class="es-only">Todos los tiers incluyen dominio, SSL, mobile responsive y SEO básico. Mantenimiento desde €50/mes aparte.</span><span class="en-only">All tiers include domain, SSL, mobile responsive, and basic SEO. Maintenance from €50/month separate.</span></p>
+  </div>
+
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th style="text-align: left;"><span class="es-only">Característica</span><span class="en-only">Feature</span></th>
+        <th>Presencia<span class="price">€490</span></th>
+        <th class="featured">Carta Completa<span class="price">€890</span></th>
+        <th>Marca Completa<span class="price">€1.290</span></th>
+        <th>Tienda<span class="price">€2.490</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="cat-row"><td colspan="5"><span class="es-only">Estructura</span><span class="en-only">Structure</span></td></tr>
+      <tr><td><span class="es-only">Páginas</span><span class="en-only">Pages</span></td><td>1</td><td>3</td><td>4–5</td><td>5+</td></tr>
+      <tr><td><span class="es-only">Bilingüe ES/EN</span><span class="en-only">Bilingual ES/EN</span></td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td><span class="es-only">Mobile responsive</span><span class="en-only">Mobile responsive</span></td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td><span class="es-only">Dominio + SSL</span><span class="en-only">Domain + SSL</span></td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+
+      <tr class="cat-row"><td colspan="5"><span class="es-only">Contenido</span><span class="en-only">Content</span></td></tr>
+      <tr><td><span class="es-only">Carta interactiva inline</span><span class="en-only">Inline interactive menu</span></td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td><span class="es-only">Página de historia</span><span class="en-only">Story page</span></td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td><span class="es-only">Galería de fotos</span><span class="en-only">Photo gallery</span></td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td><span class="es-only">Cultura / eventos</span><span class="en-only">Culture / events</span></td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td><span class="es-only">Multi-local</span><span class="en-only">Multi-location</span></td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+
+      <tr class="cat-row"><td colspan="5"><span class="es-only">Herramientas</span><span class="en-only">Tools</span></td></tr>
+      <tr><td>WhatsApp + form</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>Google Maps</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>Google Business</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td><span class="es-only">Tarjeta QR carta</span><span class="en-only">QR menu card</span></td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td><span class="es-only">Animaciones + UI custom</span><span class="en-only">Animations + custom UI</span></td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+
+      <tr class="cat-row"><td colspan="5">SEO</td></tr>
+      <tr><td><span class="es-only">SEO básico</span><span class="en-only">Basic SEO</span></td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td><span class="es-only">SEO avanzado</span><span class="en-only">Advanced SEO</span></td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>Search Console + analytics</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+
+      <tr class="cat-row"><td colspan="5">E-commerce</td></tr>
+      <tr><td><span class="es-only">Tienda online (Snipcart)</span><span class="en-only">Online shop (Snipcart)</span></td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td><span class="es-only">Checkout Stripe</span><span class="en-only">Stripe checkout</span></td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td><span class="es-only">Suscripciones</span><span class="en-only">Subscriptions</span></td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td><span class="es-only">Gestión de inventario</span><span class="en-only">Inventory mgmt</span></td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+
+      <tr class="cat-row"><td colspan="5"><span class="es-only">Entrega</span><span class="en-only">Delivery</span></td></tr>
+      <tr><td><span class="es-only">Rondas de revisiones</span><span class="en-only">Revision rounds</span></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+      <tr><td><span class="es-only">Tiempo de entrega</span><span class="en-only">Delivery time</span></td><td>~1 sem.</td><td>~2 sem.</td><td>~3 sem.</td><td>~4 sem.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="compara-cta">
+  <h2><span class="es-only">¿Cuál te <em>encaja</em>?</span><span class="en-only">Which one <em>fits</em>?</span></h2>
+  <p><span class="es-only">Todos los tiers son concepto gratis sin compromiso. Escríbenos y te hacemos un mockup de TU café — así ves cómo quedaría antes de decidir.</span><span class="en-only">All tiers include a free concept mockup, no strings. Write us and we'll build a demo for YOUR café — see how it looks before you decide.</span></p>
+  <a href="../#contacto"><span class="es-only">Pedir concepto gratis →</span><span class="en-only">Request free concept →</span></a>
+</section>
+
+<script>
+  // Simple lang toggle — reuse pattern from obradorweb.com
+  (function(){
+    const root = document.documentElement;
+    const saved = localStorage.getItem('obrador-lang');
+    if (saved === 'en') root.classList.add('lang-en');
+    document.querySelectorAll('.en-only').forEach(el => el.style.display = 'none');
+    if (root.classList.contains('lang-en')) {
+      document.querySelectorAll('.es-only').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.en-only').forEach(el => {
+        el.style.display = el.tagName === 'SPAN' ? 'inline' : 'block';
+      });
+    }
+  })();
+</script>
+</body>
+</html>

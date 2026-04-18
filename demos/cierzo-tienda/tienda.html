@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tienda · Café Cierzo — Demo Tienda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../cierzo-shared/css/style.css">
+</head>
+<body>
+
+<div class="demo-banner">
+  <span class="es-only"><b>DEMO · TIENDA</b> <span>·</span> €2.490 <span>·</span> 5 páginas + e-commerce + Snipcart <span>·</span> <a href="../../compara/">ver los 4 tiers</a></span>
+  <span class="en-only"><b>DEMO · TIENDA</b> <span>·</span> €2,490 <span>·</span> 5 pages + e-commerce + Snipcart <span>·</span> <a href="../../compara/">see all 4 tiers</a></span>
+</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Cierzo <small>café</small></a>
+    <div class="nav-links">
+      <a href="index.html"><span class="es-only">Inicio</span><span class="en-only">Home</span></a>
+      <a href="carta.html"><span class="es-only">Carta</span><span class="en-only">Menu</span></a>
+      <a href="cultura.html"><span class="es-only">Cultura</span><span class="en-only">Culture</span></a>
+      <a href="tienda.html" class="active"><span class="es-only">Tienda</span><span class="en-only">Shop</span></a>
+      <a href="visitanos.html"><span class="es-only">Visítanos</span><span class="en-only">Visit</span></a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-toggle"><button data-lang="es" class="active">ES</button><button data-lang="en">EN</button></div>
+      <a href="visitanos.html" class="nav-cta"><span class="es-only">Escríbenos</span><span class="en-only">Contact</span></a>
+      <button class="nav-burger" aria-label="menu"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html"><span class="es-only">Inicio</span><span class="en-only">Home</span></a>
+  <a href="carta.html"><span class="es-only">Carta</span><span class="en-only">Menu</span></a>
+  <a href="cultura.html"><span class="es-only">Cultura</span><span class="en-only">Culture</span></a>
+  <a href="tienda.html"><span class="es-only">Tienda</span><span class="en-only">Shop</span></a>
+  <a href="visitanos.html"><span class="es-only">Visítanos</span><span class="en-only">Visit</span></a>
+</div>
+
+<section class="tienda-head">
+  <span class="eyebrow"><span class="es-only">Tienda · Envío nacional</span><span class="en-only">Shop · Spain-wide shipping</span></span>
+  <h1 class="display-xl" style="margin-top: 14px;"><span class="es-only">El <em>cierzo</em><br>en casa.</span><span class="en-only">The <em>cierzo</em><br>at home.</span></h1>
+  <p class="lede"><span class="es-only">Granos recién tostados, cajas brunch, suscripciones mensuales y merch. Envío en 48–72h dentro de España. Recogida gratis en tienda.</span><span class="en-only">Freshly roasted beans, brunch boxes, monthly subscriptions and merch. Spain shipping in 48–72h. Free pickup in store.</span></p>
+</section>
+
+<div class="tienda-filters">
+  <button class="active" data-cat="todo"><span class="es-only">Todo</span><span class="en-only">All</span></button>
+  <button data-cat="cafe"><span class="es-only">Café</span><span class="en-only">Coffee</span></button>
+  <button data-cat="brunch">Brunch</button>
+  <button data-cat="suscripcion"><span class="es-only">Suscripciones</span><span class="en-only">Subscriptions</span></button>
+  <button data-cat="merch">Merch</button>
+</div>
+
+<div class="tienda-grid">
+
+  <article class="product">
+    <div class="product-img"><div class="emoji">☕</div></div>
+    <div class="product-body">
+      <span class="cat"><span class="es-only">Café · grano</span><span class="en-only">Coffee · beans</span></span>
+      <h3>Cierzo Blend · 250g</h3>
+      <p class="product-desc"><span class="es-only">Nuestro blend del mes. Colombia + Etiopía. Notas de panela, chocolate con leche y naranja madura.</span><span class="en-only">Our blend of the month. Colombia + Ethiopia. Panela, milk chocolate, ripe orange.</span></p>
+      <div class="product-foot">
+        <div class="product-price">€14 <small>250g</small></div>
+        <button class="add-to-cart" data-name="Cierzo Blend 250g" onclick="addToCart('Cierzo Blend 250g', 14)"><span class="es-only">Añadir</span><span class="en-only">Add</span></button>
+      </div>
+    </div>
+  </article>
+
+  <article class="product">
+    <div class="product-img"><div class="emoji">☕</div></div>
+    <div class="product-body">
+      <span class="cat"><span class="es-only">Café · molido</span><span class="en-only">Coffee · ground</span></span>
+      <h3>Cierzo Blend · Molido · 250g</h3>
+      <p class="product-desc"><span class="es-only">Mismo blend, molido el día del envío. Especifica método (V60, espresso, prensa francesa) en checkout.</span><span class="en-only">Same blend, ground on ship day. Pick your method (V60, espresso, press) at checkout.</span></p>
+      <div class="product-foot">
+        <div class="product-price">€14 <small>250g</small></div>
+        <button class="add-to-cart" data-name="Cierzo Blend Molido" onclick="addToCart('Cierzo Blend Molido', 14)"><span class="es-only">Añadir</span><span class="en-only">Add</span></button>
+      </div>
+    </div>
+  </article>
+
+  <article class="product">
+    <div class="product-img"><div class="emoji">🌞</div></div>
+    <div class="product-body">
+      <span class="cat"><span class="es-only">Café · single origin</span><span class="en-only">Coffee · single origin</span></span>
+      <h3>Huila · Colombia · 250g</h3>
+      <p class="product-desc"><span class="es-only">Finca La Noria, lavado, secado al sol. Lote mensual rotativo. Fresa, miel, chocolate blanco.</span><span class="en-only">La Noria farm, washed, sun-dried. Monthly rotation. Strawberry, honey, white chocolate.</span></p>
+      <div class="product-foot">
+        <div class="product-price">€16 <small>250g</small></div>
+        <button class="add-to-cart" data-name="Huila Single Origin" onclick="addToCart('Huila Single Origin', 16)"><span class="es-only">Añadir</span><span class="en-only">Add</span></button>
+      </div>
+    </div>
+  </article>
+
+  <article class="product">
+    <div class="product-img"><div class="emoji">🥐</div></div>
+    <div class="product-body">
+      <span class="cat">Brunch Box</span>
+      <h3><span class="es-only">Brunch Box para 2</span><span class="en-only">Brunch Box for 2</span></h3>
+      <p class="product-desc"><span class="es-only">2 cocas de aceite, 2 croissants, 250g café, mermelada casera, miel. Recogida los sábados.</span><span class="en-only">2 olive oil cocas, 2 croissants, 250g coffee, house jam, honey. Pickup Saturdays.</span></p>
+      <div class="product-foot">
+        <div class="product-price">€38</div>
+        <button class="add-to-cart" data-name="Brunch Box" onclick="addToCart('Brunch Box', 38)"><span class="es-only">Añadir</span><span class="en-only">Add</span></button>
+      </div>
+    </div>
+  </article>
+
+  <article class="product">
+    <div class="product-img"><div class="emoji">📦</div></div>
+    <div class="product-body">
+      <span class="cat"><span class="es-only">Suscripción</span><span class="en-only">Subscription</span></span>
+      <h3><span class="es-only">Suscripción mensual café</span><span class="en-only">Monthly coffee subscription</span></h3>
+      <p class="product-desc"><span class="es-only">250g del blend del mes + lote single origin rotativo. Envío el primer lunes de cada mes.</span><span class="en-only">250g monthly blend + rotating single origin. Ships first Monday of each month.</span></p>
+      <div class="product-foot">
+        <div class="product-price">€28 <small><span class="es-only">/ mes</span><span class="en-only">/ month</span></small></div>
+        <button class="add-to-cart" data-name="Suscripción café" onclick="addToCart('Suscripción café', 28)"><span class="es-only">Suscribirse</span><span class="en-only">Subscribe</span></button>
+      </div>
+    </div>
+  </article>
+
+  <article class="product">
+    <div class="product-img"><div class="emoji">🍞</div></div>
+    <div class="product-body">
+      <span class="cat"><span class="es-only">Suscripción</span><span class="en-only">Subscription</span></span>
+      <h3><span class="es-only">Cocas los sábados</span><span class="en-only">Cocas on Saturdays</span></h3>
+      <p class="product-desc"><span class="es-only">4 cocas de aceite recién horneadas cada sábado durante un mes. Recogida en tienda o envío.</span><span class="en-only">4 olive oil cocas, freshly baked every Saturday for a month. Pickup or delivery.</span></p>
+      <div class="product-foot">
+        <div class="product-price">€36 <small><span class="es-only">/ mes</span><span class="en-only">/ month</span></small></div>
+        <button class="add-to-cart" data-name="Cocas sábados" onclick="addToCart('Cocas sábados', 36)"><span class="es-only">Suscribirse</span><span class="en-only">Subscribe</span></button>
+      </div>
+    </div>
+  </article>
+
+  <article class="product">
+    <div class="product-img"><div class="emoji">🫖</div></div>
+    <div class="product-body">
+      <span class="cat">Merch</span>
+      <h3><span class="es-only">Taza cerámica Cierzo</span><span class="en-only">Cierzo ceramic mug</span></h3>
+      <p class="product-desc"><span class="es-only">Cerámica artesanal, 260ml. Logo Cierzo en tinta roja. Hecha a mano en Segovia.</span><span class="en-only">Artisan ceramic, 260ml. Cierzo logo in red ink. Hand-made in Segovia.</span></p>
+      <div class="product-foot">
+        <div class="product-price">€18</div>
+        <button class="add-to-cart" data-name="Taza Cierzo" onclick="addToCart('Taza Cierzo', 18)"><span class="es-only">Añadir</span><span class="en-only">Add</span></button>
+      </div>
+    </div>
+  </article>
+
+  <article class="product">
+    <div class="product-img"><div class="emoji">👕</div></div>
+    <div class="product-body">
+      <span class="cat">Merch</span>
+      <h3><span class="es-only">Tote bag Cierzo</span><span class="en-only">Cierzo tote bag</span></h3>
+      <p class="product-desc"><span class="es-only">Algodón 300g, logo serigrafiado, asas largas. Perfecta para llevar el brunch box.</span><span class="en-only">300g cotton, screen-printed logo, long handles. Perfect for your brunch box.</span></p>
+      <div class="product-foot">
+        <div class="product-price">€14</div>
+        <button class="add-to-cart" data-name="Tote Cierzo" onclick="addToCart('Tote Cierzo', 14)"><span class="es-only">Añadir</span><span class="en-only">Add</span></button>
+      </div>
+    </div>
+  </article>
+
+  <article class="product">
+    <div class="product-img"><div class="emoji">🎁</div></div>
+    <div class="product-body">
+      <span class="cat"><span class="es-only">Regalo</span><span class="en-only">Gift</span></span>
+      <h3><span class="es-only">Kit Regalo · Cierzo</span><span class="en-only">Gift Kit · Cierzo</span></h3>
+      <p class="product-desc"><span class="es-only">Taza + 250g blend + tarjeta escrita a mano. Se envía envuelto en papel kraft.</span><span class="en-only">Mug + 250g blend + hand-written card. Ships wrapped in kraft paper.</span></p>
+      <div class="product-foot">
+        <div class="product-price">€34</div>
+        <button class="add-to-cart" data-name="Kit Regalo" onclick="addToCart('Kit Regalo', 34)"><span class="es-only">Añadir</span><span class="en-only">Add</span></button>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+<section style="background: var(--ink); color: var(--cream); padding: 72px 28px; text-align: center;">
+  <div style="max-width: 640px; margin: 0 auto;">
+    <span class="eyebrow" style="color: var(--sun);"><span class="es-only">Envío · devoluciones</span><span class="en-only">Shipping · returns</span></span>
+    <h2 style="color: var(--cream); margin-top: 16px; font-size: clamp(28px, 3.4vw, 44px);"><span class="es-only">Envío en <em style="color: var(--sun); font-style: italic;">48–72h</em>. Recogida gratis en tienda.</span><span class="en-only">Shipping in <em style="color: var(--sun); font-style: italic;">48–72h</em>. Free in-store pickup.</span></h2>
+    <p style="margin: 20px 0 0; color: rgba(243,233,213,0.75); font-size: 15px; line-height: 1.6;"><span class="es-only">Envíos a toda España con Correos Express. Europa consultar. Devoluciones en 14 días (no aplica a café recién tostado y productos frescos).</span><span class="en-only">Spain shipping via Correos Express. EU on request. 14-day returns (excludes freshly roasted coffee and fresh goods).</span></p>
+    <p style="margin-top: 24px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--sun); text-transform: uppercase;"><span class="es-only">Checkout seguro con Snipcart + Stripe</span><span class="en-only">Secure checkout with Snipcart + Stripe</span></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div><div class="footer-brand">Cierzo<small>café · est. 2023</small></div><p class="footer-tag"><span class="es-only">Café de especialidad, cocas de aceite y envío a toda España.</span><span class="en-only">Specialty coffee, olive oil cocas and Spain-wide shipping.</span></p></div>
+    <div><h4>Chamberí</h4><p>C/ Fuencarral, 125<br>28004 Madrid</p></div>
+    <div><h4>Conde Duque</h4><p>C/ de la Palma, 18<br>28004 Madrid</p></div>
+    <div><h4><span class="es-only">Contacto</span><span class="en-only">Contact</span></h4><p><a href="mailto:tienda@cafecierzo.com">tienda@cafecierzo.com</a><br><a href="#">@cafe.cierzo</a></p></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Café Cierzo (ficticio) · Demo</span><span><span class="es-only">Ejemplo tier Tienda · obrador.web</span><span class="en-only">Tienda tier example · obrador.web</span></span><span><a href="../../compara/"><span class="es-only">Ver los 4 tiers →</span><span class="en-only">See all tiers →</span></a></span></div>
+</footer>
+
+<div class="cart-fab" onclick="toggleCart()">
+  <span>🛒</span>
+  <span class="count">0</span>
+</div>
+<script src="../cierzo-shared/js/lang.js"></script>
+</body>
+</html>
