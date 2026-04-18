@@ -75,7 +75,10 @@
     const shipping = subtotal >= 30 || subtotal === 0 ? 0 : 4.90;
     const total = subtotal + shipping;
 
-    document.querySelectorAll('.cart-fab .count').forEach(e => e.textContent = count);
+    document.querySelectorAll('.cart-fab .count, .nav-cart .count').forEach(e => {
+      e.textContent = count;
+      e.setAttribute('data-count', count);
+    });
 
     const drawer = document.querySelector('.cart-drawer');
     if (!drawer) return;
@@ -161,7 +164,7 @@
 
   // Inject cart drawer on DOM ready if cart FAB exists
   document.addEventListener('DOMContentLoaded', function () {
-    if (!document.querySelector('.cart-fab')) return;
+    if (!document.querySelector('.cart-fab') && !document.querySelector('.nav-cart')) return;
     const backdrop = document.createElement('div');
     backdrop.className = 'cart-backdrop';
     backdrop.onclick = window.closeCart;

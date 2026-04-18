@@ -29,6 +29,7 @@
     <div class="nav-right">
       <div class="lang-toggle"><button data-lang="es" class="active">ES</button><button data-lang="en">EN</button></div>
       <button class="nav-account" onclick="accountDemo()" aria-label="Mi cuenta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg></button>
+      <button class="nav-cart" onclick="toggleCart()" aria-label="Carrito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 3h2l.4 2M7 13h10l3-8H6.4"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg><span class="count" data-count="0"></span></button>
       <a href="visitanos.html" class="nav-cta"><span class="es-only">Escríbenos</span><span class="en-only">Contact</span></a>
       <button class="nav-burger" aria-label="menu"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" stroke-width="1.5"/></svg></button>
     </div>
@@ -149,10 +150,6 @@
   <div class="footer-bottom"><span>© 2026 Café Cierzo (ficticio) · Demo</span><span><span class="es-only">Ejemplo tier Marca Completa · obrador.web</span><span class="en-only">Marca Completa tier example · obrador.web</span></span><span><a href="../../compara/"><span class="es-only">Ver los 4 tiers →</span><span class="en-only">See all tiers →</span></a></span></div>
 </footer>
 
-<div class="cart-fab" onclick="toggleCart()">
-  <span>🛒</span>
-  <span class="count">0</span>
-</div>
 <script src="../cierzo-shared/js/lang.js"></script>
 </body>
 </html>
