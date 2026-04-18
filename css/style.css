@@ -783,9 +783,39 @@ body::before {
 }
 .planes-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
   margin-bottom: 40px;
+}
+@media (max-width: 1100px) and (min-width: 769px) {
+  .planes-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+.launch-ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: rgba(184, 92, 63, 0.08);
+  color: #B85C3F;
+  border: 1px solid rgba(184, 92, 63, 0.28);
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.launch-ribbon::before {
+  content: '';
+  width: 7px; height: 7px;
+  background: #B85C3F;
+  border-radius: 50%;
+  animation: ribbon-pulse 2s infinite;
+}
+@keyframes ribbon-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(1.2); }
 }
 .plan-card {
   background: var(--white);
