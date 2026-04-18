@@ -161,41 +161,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Language Toggle ──
   const langToggle = document.getElementById('langToggle');
-  let currentLang = 'es';
+  let currentLang = localStorage.getItem('obrador-lang') === 'en' ? 'en' : 'es';
 
-  langToggle.addEventListener('click', () => {
-    currentLang = currentLang === 'es' ? 'en' : 'es';
-    document.documentElement.lang = currentLang;
+  function applyLang(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.classList.toggle('lang-en', lang === 'en');
 
-    // Update toggle UI
-    langToggle.querySelectorAll('.lang-option').forEach(opt => {
-      opt.classList.toggle('lang-active', opt.dataset.lang === currentLang);
-    });
+    if (langToggle) {
+      langToggle.querySelectorAll('.lang-option').forEach(opt => {
+        opt.classList.toggle('lang-active', opt.dataset.lang === lang);
+      });
+    }
 
-    // Swap all text with data-en attributes
     document.querySelectorAll('[data-en]').forEach(el => {
-      if (!el.dataset.es) {
-        // Store original Spanish on first switch
-        el.dataset.es = el.innerHTML;
-      }
-      el.innerHTML = currentLang === 'en' ? el.dataset.en : el.dataset.es;
+      if (!el.dataset.es) el.dataset.es = el.innerHTML;
+      el.innerHTML = lang === 'en' ? el.dataset.en : el.dataset.es;
     });
 
-    // Swap placeholders
     document.querySelectorAll('[data-en-placeholder]').forEach(el => {
-      if (!el.dataset.esPlaceholder) {
-        el.dataset.esPlaceholder = el.placeholder;
-      }
-      el.placeholder = currentLang === 'en' ? el.dataset.enPlaceholder : el.dataset.esPlaceholder;
+      if (!el.dataset.esPlaceholder) el.dataset.esPlaceholder = el.placeholder;
+      el.placeholder = lang === 'en' ? el.dataset.enPlaceholder : el.dataset.esPlaceholder;
     });
 
-    // Update page title
-    document.title = currentLang === 'en'
-      ? 'Obrador — Websites for cafés in Madrid'
-      : 'Obrador — Webs para cafeterías en Madrid';
+    document.title = lang === 'en'
+      ? 'Obrador, Websites for cafés in Madrid'
+      : 'Obrador, Webs para cafeterías en Madrid';
 
-    updateValidationMessages();
-  });
+    if (typeof updateValidationMessages === 'function') updateValidationMessages();
+  }
+
+  // Apply persisted lang on page load
+  if (currentLang === 'en') applyLang('en');
+
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      currentLang = currentLang === 'es' ? 'en' : 'es';
+      localStorage.setItem('obrador-lang', currentLang);
+      applyLang(currentLang);
+    });
+  }
 
   // ── Auto-scroll pricing to featured card on mobile (only when visible) ──
   if (window.innerWidth <= 900) {
