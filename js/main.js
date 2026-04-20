@@ -184,8 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.title = lang === 'en'
-      ? 'Obrador, Websites for cafés in Madrid'
-      : 'Obrador, Webs para cafeterías en Madrid';
+      ? 'Obrador · Websites for cafés in Madrid'
+      : 'Obrador · Webs para cafeterías en Madrid';
 
     if (typeof updateValidationMessages === 'function') updateValidationMessages();
   }
