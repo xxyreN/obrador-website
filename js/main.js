@@ -1,5 +1,5 @@
 /* ============================================
-   OBRADOR.WEB — Main JavaScript
+   OBRADOR.WEB · Main JavaScript
    ============================================ */
 
 // Force scroll to top on page load (fix IG in-app browser)
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
           throw new Error('Form submission failed');
         }
       } catch (err) {
-        btn.textContent = 'Error — intenta de nuevo';
+        btn.textContent = 'Error, intenta de nuevo';
         btn.disabled = false;
         setTimeout(() => { btn.textContent = originalText; }, 3000);
       }

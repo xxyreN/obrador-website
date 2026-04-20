@@ -1,10 +1,10 @@
 /* ============================================
-   Café Cierzo — Demo · obrador.web
+   Café Cierzo · Demo · obrador.web
    Warm terracotta + cream palette
    ============================================ */
 
 :root {
-  /* Palette — neutral editorial: cream + warm stone + ink */
+  /* Palette: neutral editorial, cream + warm stone + ink */
   --cream: #F3E9D5;
   --cream-soft: #F9F2E1;
   --cream-deep: #E7D7B5;
@@ -18,7 +18,7 @@
   --sky: #8A9AA5;              /* muted slate blue */
   --sun: #B89861;              /* muted gold, not bright yellow */
 
-  /* Type — editorial, restrained */
+  /* Type: editorial, restrained */
   --font-display: 'Cormorant Garamond', 'Libre Caslon Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
@@ -264,7 +264,7 @@ h3 { font-weight: 600; }
   pointer-events: none;
 }
 
-/* Wind line — signature Cierzo motif */
+/* Wind line: signature Cierzo motif */
 .wind-line {
   display: block;
   width: 80px; height: 24px;
