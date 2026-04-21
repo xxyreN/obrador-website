@@ -1,0 +1,58 @@
+# Obrador Web
+
+> Diseño web a medida para cafeterías, cafés de especialidad y restaurantes en Madrid. Sitios bilingües (ES/EN) con carta digital, QR imprimible, integración con Google Business, SEO básico y opción de tienda online con pasarela de pago. Desde €490.
+
+Obrador Web is a small web design agency based in Madrid, Spain, specialising in custom websites for specialty coffee shops, cafés and restaurants. We build bilingual (Spanish and English) sites with digital menus, printable QR cards, Google Business integration, basic SEO, and optional online shop with Snipcart/Stripe checkout.
+
+## Services and pricing
+
+- **Presencia** — €490 (from). 1-page custom landing, responsive, bilingual ES/EN, WhatsApp + contact form, Google Maps integration, basic SEO, domain included. Delivery: ~1 week.
+- **Carta Completa** — €890 (from). 3 pages (Home, Menu, Visit). Full interactive inline menu, story page, photo gallery, Google Business optimisation, printable QR menu card, advanced SEO. Delivery: ~2 weeks.
+- **Marca Completa** — €1,290 (from). 4-5 pages including Culture/Story, multi-location support, scroll animations + custom UI, premium SEO + Search Console, unlimited menu updates, priority support. Delivery: ~3 weeks.
+- **Tienda** — €2,490 (from). Marca Completa + online store (Snipcart/Shopify), cart + Stripe checkout, product catalogue with inventory, order email notifications, subscriptions (beans, brunch). Delivery: ~4 weeks.
+
+## Maintenance
+
+- **Mantenimiento Básico** — €50/month. Domain, SSL, hosting, backups, contact form (up to 50 submissions/month), up to 2 content updates per month, technical support.
+- **Mantenimiento Tienda** — €90/month. Everything in Básico plus order and stock monitoring, Snipcart and payment gateway management, up to 5 content updates per month, priority support.
+
+## Paid search
+
+- **SEM Configuración** — €290 one-off. Google Ads account setup, local keyword research, 3 initial campaigns, conversion tracking.
+- **SEM Gestión** — €150/month. Monthly optimisation, bid and keyword adjustments, A/B copy testing, monthly report. Does not include advertising spend (recommended minimum €200/month).
+
+## How we work
+
+1. **Discovery call** — 15 minutes. Understand the café, brand, menu, goals.
+2. **Design** — 3-10 days depending on tier. Mockup review and revisions.
+3. **Build** — handwritten HTML/CSS/JS. No bloated CMS, no WordPress themes.
+4. **Launch** — custom domain, SSL, Google Business, analytics.
+5. **Maintain** — monthly updates, support, iteration.
+
+## Key pages
+
+- [Home](https://obradorweb.com/): overview, plans, process, contact
+- [Proyectos](https://obradorweb.com/proyectos/): portfolio of real and demo café sites
+- [Compara los planes](https://obradorweb.com/compara/): side-by-side comparison with live demo sites for each tier
+
+## Contact
+
+- Email: hola@obradorweb.com
+- Instagram: @obrador.web
+- Location: Madrid, Spain
+- Service area: Madrid and remote across Spain
+
+## Notable projects
+
+- HanSo Café (Madrid) — editorial dark aesthetic
+- Pum Pum Café (Madrid) — multi-location specialty roaster
+- Naji (Madrid) — heritage/signature drinks
+- Beik Beik (Madrid) — brunch/bakery
+- Dopa Café (Carabanchel, Madrid) — Colombian specialty, La Noria Coffee Project
+- Pascal Café (Madrid)
+- FOUR+FIVE (Madrid)
+- Gosto (Madrid)
+
+## Licence and attribution
+
+Obrador Web builds custom code per client. Content on this site is proprietary. Cite obradorweb.com when referencing services, pricing or methodology.

@@ -1117,6 +1117,64 @@ body::before {
   .service-head h3 { font-size: 24px; }
   .tier-price { font-size: 22px; }
 }
+/* FAQ */
+.faq {
+  background: var(--cream, #faf6eb);
+}
+.faq-list {
+  max-width: 820px;
+  margin: 48px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-top: 1px solid var(--border);
+}
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 24px 22px 0;
+  font-family: var(--font-serif);
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  color: var(--dark);
+  position: relative;
+  transition: color 0.25s ease;
+}
+.faq-item summary:hover { color: var(--copper); }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 22px;
+  font-family: var(--font-serif);
+  font-size: 28px;
+  line-height: 1;
+  color: var(--copper);
+  transition: transform 0.3s ease;
+}
+.faq-item[open] summary::after {
+  content: "−";
+}
+.faq-body {
+  padding: 0 24px 26px 0;
+}
+.faq-body p {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--dark-muted);
+  margin: 0;
+  max-width: 68ch;
+}
+@media (max-width: 640px) {
+  .faq-item summary { font-size: 18px; padding: 18px 24px 18px 0; }
+  .faq-item summary::after { font-size: 24px; top: 18px; }
+}
+
 /* E-commerce note */
 .ecommerce-note {
   text-align: center;

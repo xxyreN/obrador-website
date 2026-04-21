@@ -28,29 +28,138 @@
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="icon" type="image/png" href="img/logo.png">
 
-  <!-- Structured Data -->
+  <!-- Structured Data: ProfessionalService -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Obrador Web",
-    "description": "Diseño web a medida para cafeterías y restaurantes en Madrid",
+    "description": "Diseño web a medida para cafeterías, cafés de especialidad y restaurantes en Madrid. Sitios web bilingües con carta digital, QR imprimible y SEO. Desde €490.",
     "url": "https://obradorweb.com",
     "logo": "https://obradorweb.com/img/logo.png",
     "image": "https://obradorweb.com/img/logo.png",
+    "email": "hola@obradorweb.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Madrid",
       "addressCountry": "ES"
     },
-    "areaServed": {
-      "@type": "City",
-      "name": "Madrid"
-    },
-    "serviceType": ["Diseño web", "Desarrollo web", "Carta digital", "QR carta"],
+    "areaServed": [
+      { "@type": "City", "name": "Madrid" },
+      { "@type": "Country", "name": "España" }
+    ],
+    "serviceType": ["Diseño web", "Desarrollo web", "Carta digital", "QR carta", "SEO", "SEM", "Google Ads", "Tienda online"],
     "priceRange": "€490 - €2490",
     "sameAs": [
       "https://instagram.com/obrador.web"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Planes y servicios",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Presencia",
+          "description": "Landing page a medida (1 página), bilingüe ES/EN, WhatsApp, Google Maps, SEO básico, dominio incluido. Entrega ~1 semana.",
+          "price": "490",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Carta Completa",
+          "description": "3 páginas (Inicio, Carta, Visítanos), carta interactiva inline, galería, QR imprimible, SEO avanzado. Entrega ~2 semanas.",
+          "price": "890",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Marca Completa",
+          "description": "4-5 páginas, Cultura/Historia, multi-local, animaciones y UI custom, SEO premium, Search Console, actualizaciones ilimitadas de carta. Entrega ~3 semanas.",
+          "price": "1290",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Tienda",
+          "description": "Marca Completa más tienda online (Snipcart/Shopify), checkout Stripe, catálogo con inventario, notificaciones de pedido, suscripciones. Entrega ~4 semanas.",
+          "price": "2490",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Mantenimiento Básico",
+          "description": "Dominio, SSL, hosting, copias, formulario, hasta 2 actualizaciones/mes, soporte.",
+          "price": "50",
+          "priceCurrency": "EUR",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" } }
+        },
+        {
+          "@type": "Offer",
+          "name": "Mantenimiento Tienda",
+          "description": "Básico más monitorización de pedidos, Snipcart/pasarela, hasta 5 actualizaciones/mes, prioridad.",
+          "price": "90",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "SEM · Google Ads · Configuración",
+          "description": "Cuenta Google Ads, keywords, 3 campañas iniciales, tracking.",
+          "price": "290",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "SEM · Google Ads · Gestión mensual",
+          "description": "Optimización, ajuste de pujas, A/B copy, reporte. Excluye inversión publicitaria.",
+          "price": "150",
+          "priceCurrency": "EUR"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta una web para una cafetería?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nuestros planes parten de €490 (Presencia, 1 página), €890 (Carta Completa, 3 páginas con carta inline), €1.290 (Marca Completa, multi-local y cultura) y €2.490 (Tienda, con e-commerce). Todos incluyen diseño responsive, bilingüe ES/EN, dominio y SEO básico." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tarda en estar lista?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Presencia ~1 semana, Carta Completa ~2 semanas, Marca Completa ~3 semanas, Tienda ~4 semanas. Los plazos dependen del volumen de contenido que tengáis listo (fotos, carta, copy)." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué incluye el mantenimiento de €50 al mes?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Dominio y SSL, hosting y copias de seguridad, formulario de contacto operativo (hasta 50 envíos/mes), hasta 2 actualizaciones de contenido al mes (horarios, precios, carta, eventos) y soporte técnico ante incidencias." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Hacéis SEO y SEM?",
+        "acceptedAnswer": { "@type": "Answer", "text": "SEO básico viene incluido en todos los planes (meta, schema, sitemap, performance). SEM (Google Ads) es un servicio aparte: €290 de configuración + €150/mes de gestión. La inversión publicitaria la paga el cliente directamente a Google (recomendamos mínimo €200/mes)." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Podéis editar la carta vosotros después del lanzamiento?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. En Carta Completa y Marca Completa las actualizaciones de carta están incluidas en el mantenimiento. Nos enviáis los cambios por WhatsApp o email y los publicamos en 24-48h." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La web es bilingüe?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Todos los planes son bilingües español e inglés por defecto. Incluye selector de idioma en el menú y traducciones gestionadas por nosotros." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Dónde trabajáis?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Somos de Madrid y trabajamos con cafés de especialidad y restaurantes en Madrid y remoto para el resto de España." }
+      }
     ]
   }
   </script>
@@ -75,6 +184,7 @@
         <a href="compara/" data-en="Compare">Compara</a>
         <a href="#proceso" data-en="Process">Proceso</a>
         <a href="#planes" data-en="Plans">Planes</a>
+        <a href="#faq" data-en="FAQ">Preguntas</a>
         <a href="#contacto" class="nav-cta" data-en="Let's talk">Hablemos</a>
       </div>
       <button class="lang-toggle" id="langToggle" aria-label="Switch language">
@@ -485,6 +595,69 @@
       </div>
 
       <p class="ecommerce-note anim-fade-up" data-en="Not sure which plan fits? <a href='compara/'>Compare the plans side-by-side</a> with real demo sites.">¿No sabes qué plan encaja? <a href="compara/">Compara los planes</a> con sitios de demo reales.</p>
+    </div>
+  </section>
+
+  <!-- Preguntas frecuentes -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section-header anim-fade-up">
+        <span class="section-label" data-en="FAQ">Preguntas</span>
+        <h2 class="section-title" data-en="Frequently asked questions">Preguntas frecuentes</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="How much does a website for a café cost?">¿Cuánto cuesta una web para una cafetería?</summary>
+          <div class="faq-body">
+            <p data-en="Our plans start at €490 (Presencia, 1 page), €890 (Carta Completa, 3 pages with inline menu), €1,290 (Marca Completa, multi-location and culture) and €2,490 (Tienda, with e-commerce). All include responsive design, bilingual ES/EN, domain and basic SEO.">Los planes parten de €490 (Presencia, 1 página), €890 (Carta Completa, 3 páginas con carta inline), €1.290 (Marca Completa, multi-local y cultura) y €2.490 (Tienda, con e-commerce). Todos incluyen diseño responsive, bilingüe ES/EN, dominio y SEO básico.</p>
+          </div>
+        </details>
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="How long does it take?">¿Cuánto tarda en estar lista?</summary>
+          <div class="faq-body">
+            <p data-en="Presencia ~1 week, Carta Completa ~2 weeks, Marca Completa ~3 weeks, Tienda ~4 weeks. Timelines depend on the volume of content you have ready (photos, menu, copy).">Presencia ~1 semana, Carta Completa ~2 semanas, Marca Completa ~3 semanas, Tienda ~4 semanas. Los plazos dependen del volumen de contenido que tengáis listo (fotos, carta, copy).</p>
+          </div>
+        </details>
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="What does the €50 maintenance include?">¿Qué incluye el mantenimiento de €50 al mes?</summary>
+          <div class="faq-body">
+            <p data-en="Domain and SSL, hosting and backups, contact form (up to 50 submissions/month), up to 2 content updates/month (hours, prices, menu, events) and technical support.">Dominio y SSL, hosting y copias de seguridad, formulario de contacto (hasta 50 envíos/mes), hasta 2 actualizaciones de contenido al mes (horarios, precios, carta, eventos) y soporte técnico.</p>
+          </div>
+        </details>
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="Do you do SEO and SEM?">¿Hacéis SEO y SEM?</summary>
+          <div class="faq-body">
+            <p data-en="Basic SEO is included in all plans (meta, schema, sitemap, performance). SEM (Google Ads) is a separate service: €290 setup + €150/month management. Advertising spend is paid directly by the client to Google (we recommend a minimum of €200/month).">SEO básico viene incluido en todos los planes (meta, schema, sitemap, performance). SEM (Google Ads) es un servicio aparte: €290 de configuración + €150/mes de gestión. La inversión publicitaria la paga el cliente directamente a Google (recomendamos mínimo €200/mes).</p>
+          </div>
+        </details>
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="Can you edit the menu after launch?">¿Podéis editar la carta después del lanzamiento?</summary>
+          <div class="faq-body">
+            <p data-en="Yes. In Carta Completa and Marca Completa, menu updates are included in maintenance. Send us changes via WhatsApp or email and we publish them within 24-48h.">Sí. En Carta Completa y Marca Completa las actualizaciones de carta están incluidas en el mantenimiento. Nos enviáis los cambios por WhatsApp o email y los publicamos en 24-48h.</p>
+          </div>
+        </details>
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="Is the site bilingual?">¿La web es bilingüe?</summary>
+          <div class="faq-body">
+            <p data-en="All plans are bilingual Spanish and English by default. Includes language toggle in the nav and translations managed by us.">Todos los planes son bilingües español e inglés por defecto. Incluye selector de idioma en el menú y traducciones gestionadas por nosotros.</p>
+          </div>
+        </details>
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="Where do you work?">¿Dónde trabajáis?</summary>
+          <div class="faq-body">
+            <p data-en="We're based in Madrid and work with specialty cafés and restaurants in Madrid and remotely across Spain.">Somos de Madrid y trabajamos con cafés de especialidad y restaurantes en Madrid y remoto para el resto de España.</p>
+          </div>
+        </details>
+
+      </div>
     </div>
   </section>
 
