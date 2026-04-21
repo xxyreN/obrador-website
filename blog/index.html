@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog · Obrador Web</title>
+  <meta name="description" content="Guías y artículos sobre diseño web para cafeterías de especialidad, SEO, SEM, cartas digitales y más.">
+  <link rel="canonical" href="https://obradorweb.com/blog/">
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+  <link rel="icon" type="image/png" href="../img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .blog-hero {
+      padding: 160px 0 48px;
+      background: var(--cream, #faf6eb);
+    }
+    .blog-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+      color: var(--dark);
+    }
+    .blog-hero p {
+      font-size: 19px;
+      color: var(--dark-muted);
+      max-width: 58ch;
+    }
+    .blog-list {
+      padding: 48px 0 96px;
+      background: #fff;
+    }
+    .blog-list .container { max-width: 860px; }
+    .blog-item {
+      display: block;
+      padding: 36px 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: padding-left 0.25s ease;
+    }
+    .blog-item:first-child { border-top: 1px solid var(--border); }
+    .blog-item:hover { padding-left: 12px; background: var(--cream, #faf6eb); }
+    .blog-item .meta {
+      display: flex;
+      gap: 14px;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--dark-muted);
+      margin-bottom: 12px;
+    }
+    .blog-item .meta .cat { color: var(--copper); font-weight: 600; }
+    .blog-item h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      letter-spacing: -0.015em;
+      margin-bottom: 10px;
+      color: var(--dark);
+      line-height: 1.15;
+    }
+    .blog-item p {
+      font-size: 16px;
+      color: var(--dark-muted);
+      line-height: 1.5;
+      max-width: 70ch;
+    }
+  </style>
+</head>
+<body>
+  <div class="side-bar-right" aria-hidden="true"></div>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="../" class="nav-logo">
+        <img src="../img/logo.png" alt="Obrador" class="nav-logo-img">
+        <span class="nav-logo-text">obrador<span class="accent">.web</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="../">Inicio</a>
+        <a href="../proyectos/">Proyectos</a>
+        <a href="../compara/">Compara</a>
+        <a href="../#planes">Planes</a>
+        <a href="../#faq">Preguntas</a>
+        <a href="../#contacto" class="nav-cta">Hablemos</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="blog-hero">
+    <div class="container">
+      <span class="section-label">Blog</span>
+      <h1>Guías para cafeterías que quieren vender más que café.</h1>
+      <p>Artículos sobre diseño web, SEO, SEM, cartas digitales y todo lo que debería saber una cafetería antes de contratar una agencia.</p>
+    </div>
+  </section>
+
+  <section class="blog-list">
+    <div class="container">
+
+      <a href="como-elegir-web-cafeteria/" class="blog-item">
+        <div class="meta">
+          <span class="cat">Guía</span>
+          <span>21 abril 2026</span>
+          <span>~ 7 min</span>
+        </div>
+        <h2>Cómo elegir una web para tu cafetería de especialidad en Madrid</h2>
+        <p>Linktree, plantilla barata, o web a medida. Guía práctica para decidir sin pagar de más, pagar de menos, o pagar dos veces.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>© 2026 Obrador Web</p>
+        <div class="footer-links">
+          <a href="../">Inicio</a>
+          <a href="../proyectos/">Proyectos</a>
+          <a href="../#planes">Planes</a>
+          <a href="../#contacto">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
