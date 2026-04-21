@@ -948,13 +948,17 @@ body::before {
   color: var(--dark);
 }
 .plan-amount .currency {
-  font-family: var(--font-serif);
-  font-size: 0.55em;
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 24px;
   font-weight: 400;
   color: var(--copper);
-  margin-right: 2px;
-  vertical-align: 0.15em;
+  margin-right: 6px;
+  vertical-align: 0.55em;
   letter-spacing: 0;
+  line-height: 1;
+}
+@media (max-width: 900px) {
+  .plan-amount .currency { font-size: 18px; vertical-align: 0.45em; }
 }
 .plan-features {
   flex: 1;
@@ -1064,14 +1068,14 @@ body::before {
   font-weight: 600;
   color: var(--copper);
 }
-.tier-price {
+.services-row .tier-price {
   font-family: var(--font-serif, 'Fraunces', serif);
   font-size: 26px;
   font-weight: 500;
   color: var(--dark);
   letter-spacing: -0.01em;
 }
-.tier-price span {
+.services-row .tier-price > span {
   font-size: 13px;
   font-weight: 400;
   color: var(--dark-muted);
