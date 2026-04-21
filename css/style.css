@@ -992,6 +992,125 @@ body::before {
   font-size: 15px;
   color: var(--dark-muted);
 }
+/* Services row (Mantenimiento + SEM) */
+.services-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 72px;
+  margin-bottom: 40px;
+}
+.service-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 36px 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.service-head h3 {
+  font-family: var(--font-serif, 'Fraunces', serif);
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+  color: var(--dark);
+}
+.service-head p {
+  font-size: 15px;
+  color: var(--dark-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+.service-tiers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+.service-tier {
+  padding: 22px 0;
+  padding-right: 24px;
+}
+.service-tier + .service-tier {
+  border-left: 1px solid var(--border);
+  padding-left: 24px;
+  padding-right: 0;
+}
+.service-tier-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 14px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tier-name {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--copper);
+}
+.tier-price {
+  font-family: var(--font-serif, 'Fraunces', serif);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--dark);
+  letter-spacing: -0.01em;
+}
+.tier-price span {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--dark-muted);
+  margin-left: 2px;
+  font-family: inherit;
+  letter-spacing: 0;
+}
+.service-tier ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.service-tier ul li {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--dark);
+  padding: 6px 0;
+  padding-left: 18px;
+  position: relative;
+}
+.service-tier ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 8px;
+  height: 1px;
+  background: var(--copper);
+}
+.service-tier ul li.tier-note {
+  margin-top: 10px;
+  font-size: 11.5px;
+  color: var(--dark-muted);
+  font-style: italic;
+  padding-left: 0;
+}
+.service-tier ul li.tier-note::before { display: none; }
+
+@media (max-width: 900px) {
+  .services-row { grid-template-columns: 1fr; gap: 20px; margin-top: 48px; }
+  .service-tiers { grid-template-columns: 1fr; }
+  .service-tier + .service-tier {
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding-left: 0;
+    padding-top: 22px;
+  }
+  .service-tier { padding-right: 0; }
+  .service-card { padding: 28px 24px; }
+  .service-head h3 { font-size: 24px; }
+  .tier-price { font-size: 22px; }
+}
 /* E-commerce note */
 .ecommerce-note {
   text-align: center;
