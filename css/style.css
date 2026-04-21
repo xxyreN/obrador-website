@@ -943,8 +943,8 @@ body::before {
   font-size: 56px;
   letter-spacing: -0.02em;
   line-height: 1;
-  display: inline-block;
-  vertical-align: baseline;
+  display: inline-flex;
+  align-items: flex-start;
   color: var(--dark);
 }
 .plan-amount .currency {
@@ -953,12 +953,15 @@ body::before {
   font-weight: 400;
   color: var(--copper);
   margin-right: 6px;
-  vertical-align: 0.55em;
+  margin-top: 0.4em;
   letter-spacing: 0;
   line-height: 1;
+  display: inline-block;
 }
+.plan-featured .plan-amount { color: var(--cream, #faf6eb); }
+.plan-featured .plan-amount .currency { color: var(--copper); }
 @media (max-width: 900px) {
-  .plan-amount .currency { font-size: 18px; vertical-align: 0.45em; }
+  .plan-amount .currency { font-size: 18px; margin-top: 0.35em; }
 }
 .plan-features {
   flex: 1;
