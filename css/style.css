@@ -942,6 +942,12 @@ body::before {
   font-family: var(--font-serif);
   font-size: 42px;
   letter-spacing: -0.02em;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-variant-position: normal;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: baseline;
 }
 .plan-features {
   flex: 1;
