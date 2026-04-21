@@ -940,14 +940,21 @@ body::before {
 }
 .plan-amount {
   font-family: var(--font-serif);
-  font-size: 42px;
+  font-size: 56px;
   letter-spacing: -0.02em;
-  font-feature-settings: "lnum" 1, "tnum" 1;
-  font-variant-numeric: lining-nums tabular-nums;
-  font-variant-position: normal;
   line-height: 1;
   display: inline-block;
   vertical-align: baseline;
+  color: var(--dark);
+}
+.plan-amount .currency {
+  font-family: var(--font-serif);
+  font-size: 0.55em;
+  font-weight: 400;
+  color: var(--copper);
+  margin-right: 2px;
+  vertical-align: 0.15em;
+  letter-spacing: 0;
 }
 .plan-features {
   flex: 1;
