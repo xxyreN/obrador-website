@@ -958,7 +958,7 @@ body::before {
   line-height: 1;
   display: inline-block;
 }
-.plan-featured .plan-amount { color: var(--cream, #faf6eb); }
+.plan-featured .plan-amount { color: var(--copper); }
 .plan-featured .plan-amount .currency { color: var(--copper); }
 @media (max-width: 900px) {
   .plan-amount .currency { font-size: 18px; margin-top: 0.35em; }
