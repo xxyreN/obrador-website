@@ -206,10 +206,15 @@
   font-size: 52px;
   letter-spacing: -0.03em;
   line-height: 1;
-  color: var(--copper-dark);
+  color: var(--dark);
   margin-bottom: 4px;
+  font-variant-numeric: lining-nums tabular-nums;
+  display: inline-flex;
+  align-items: baseline;
 }
-.tier-card.featured .tier-price { color: var(--copper-light); }
+.tier-price > span { font-family: inherit; font-size: inherit; color: inherit; line-height: inherit; }
+.tier-card.featured .tier-price { color: var(--copper); }
+.tier-card.featured .tier-price > span { color: var(--copper); }
 .tier-price-sub {
   font-family: var(--font-sans);
   font-size: 12px;
