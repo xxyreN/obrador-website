@@ -8,6 +8,34 @@
   <link rel="canonical" href="https://obradorweb.com/blog/">
   <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
   <link rel="icon" type="image/png" href="../img/logo.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Obrador", "item": "https://obradorweb.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Obrador Web · Blog",
+    "url": "https://obradorweb.com/blog/",
+    "description": "Guías sobre diseño web, SEO, SEM y cartas digitales para cafeterías de especialidad.",
+    "publisher": { "@id": "https://obradorweb.com/#organization" },
+    "inLanguage": "es-ES",
+    "blogPost": [
+      { "@type": "BlogPosting", "headline": "Cuánto cuesta una web para cafetería en Madrid en 2026", "url": "https://obradorweb.com/blog/cuanto-cuesta-web-cafeteria-madrid/", "datePublished": "2026-04-22" },
+      { "@type": "BlogPosting", "headline": "SEO vs SEM para cafés: ¿dónde pongo €200 al mes?", "url": "https://obradorweb.com/blog/seo-vs-sem-cafes/", "datePublished": "2026-04-21" },
+      { "@type": "BlogPosting", "headline": "Cómo elegir una web para tu cafetería en Madrid", "url": "https://obradorweb.com/blog/como-elegir-web-cafeteria/", "datePublished": "2026-04-21" }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -75,7 +103,7 @@
   <nav class="navbar scrolled" id="navbar">
     <div class="nav-inner">
       <a href="../" class="nav-logo">
-        <img src="../img/logo.png" alt="Obrador" class="nav-logo-img">
+        <img src="../img/logo.png" alt="Obrador" class="nav-logo-img" width="40" height="40">
         <span class="nav-logo-text">obrador<span class="accent">.web</span></span>
       </a>
       <div class="nav-links" id="navLinks">
@@ -87,6 +115,11 @@
         <a href="./" class="nav-active">Blog</a>
         <a href="../#contacto" class="nav-cta">Hablemos</a>
       </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
@@ -137,7 +170,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <p>© 2026 Obrador Web</p>
+        <p>© 2026 Obrador Web · obradorweb.com · Madrid</p>
         <div class="footer-links">
           <a href="../">Inicio</a>
           <a href="../proyectos/">Proyectos</a>
@@ -147,5 +180,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="../js/main.js"></script>
 </body>
 </html>
