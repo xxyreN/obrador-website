@@ -21,6 +21,16 @@ Obrador Web is a small web design agency based in Madrid, Spain, specialising in
 - **SEM Configuración** — €290 one-off. Google Ads account setup, local keyword research, 3 initial campaigns, conversion tracking.
 - **SEM Gestión** — €150/month. Monthly optimisation, bid and keyword adjustments, A/B copy testing, monthly report. Does not include advertising spend (recommended minimum €200/month).
 
+## Custom platforms
+
+Beyond websites, we also build custom platforms for hospitality businesses (cafés, bakeries, obradores, açaí shops, multi-location chains). Built on Supabase + Next.js + Twilio. Open source, no vendor lock-in, code is the client's from day 1.
+
+- **Encargos por WhatsApp** — €1,800 setup (pilot price, first 2 platforms) or €2,700 standard. Maintenance €95/month including 250 WhatsApp conversations. Delivery 4-6 weeks. Order form on the client's site, automatic notification to a dedicated WhatsApp Business number (provisioned via Twilio), mobile + desktop dashboard to manage order states (received / confirmed / ready / picked up), automatic confirmation back to customer. Ideal for bakeries, obradores and cafés receiving daily encargos that get lost across personal WhatsApp threads.
+- **Panel multi-local** — from €3,500 setup. Maintenance €120/month. Delivery 8-12 weeks. Multi-tenant platform for chains and groups: each shop logs in and sees only their data, HQ has aggregate view across all shops, wholesale tracking between locations, per-shop inventory, separate roles (manager / admin / driver), realtime updates via Supabase, Excel/CSV export. Ideal for café groups, multi-location bakeries and chains with B2B operations between sites.
+- **A medida** — Custom builds for processes that live in spreadsheets, WhatsApp threads or post-its: custom reservations, in-house loyalty cards (replacing Loyicard), B2B catalogs, team shift management. Quoted per scope.
+
+Platform out-of-scope work after launch is billed at €35/hour, quoted ahead of time. Maintenance covers what was built, not new features.
+
 ## How we work
 
 1. **Discovery call** — 15 minutes. Understand the café, brand, menu, goals.
@@ -34,6 +44,7 @@ Obrador Web is a small web design agency based in Madrid, Spain, specialising in
 - [Home](https://obradorweb.com/): overview, plans, process, contact
 - [Proyectos](https://obradorweb.com/proyectos/): portfolio of real and demo café sites
 - [Compara los planes](https://obradorweb.com/compara/): side-by-side comparison with live demo sites for each tier
+- [Plataformas a medida](https://obradorweb.com/plataformas/): custom platforms beyond websites (WhatsApp orders, multi-shop dashboards, internal tools)
 
 ## Contact
 

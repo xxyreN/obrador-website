@@ -67,8 +67,8 @@
       { "@type": "City", "name": "Madrid" },
       { "@type": "Country", "name": "España" }
     ],
-    "serviceType": ["Diseño web", "Desarrollo web", "Carta digital", "QR carta", "SEO", "SEM", "Google Ads", "Tienda online"],
-    "priceRange": "€490 - €2490",
+    "serviceType": ["Diseño web", "Desarrollo web", "Carta digital", "QR carta", "SEO", "SEM", "Google Ads", "Tienda online", "Plataformas a medida", "Encargos por WhatsApp", "Panel multi-local"],
+    "priceRange": "€490 - €3500",
     "sameAs": [
       "https://instagram.com/obrador.web"
     ],
@@ -131,6 +131,29 @@
           "name": "SEM · Google Ads · Gestión mensual",
           "description": "Optimización, ajuste de pujas, A/B copy, reporte. Excluye inversión publicitaria.",
           "price": "150",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Plataforma · Encargos por WhatsApp",
+          "description": "Plataforma a medida para gestionar encargos. Formulario en web, notificación a WhatsApp Business vía Twilio, panel para gestionar pedidos. Precio piloto €1.800 (primeras 2), después €2.700. Mantenimiento €95/mes con 250 conversaciones.",
+          "price": "2700",
+          "priceCurrency": "EUR",
+          "url": "https://obradorweb.com/plataformas/"
+        },
+        {
+          "@type": "Offer",
+          "name": "Plataforma · Panel multi-local",
+          "description": "Plataforma multi-tenant para cadenas y grupos. Login por local, vista central agregada, mayoreo entre sedes, inventario, roles separados. Setup desde €3.500. Mantenimiento €120/mes.",
+          "price": "3500",
+          "priceCurrency": "EUR",
+          "url": "https://obradorweb.com/plataformas/"
+        },
+        {
+          "@type": "Offer",
+          "name": "Mantenimiento Plataforma WhatsApp",
+          "description": "Hosting, Supabase Pro, Twilio (250 conversaciones/mes), parches y bug fixes para plataforma de encargos.",
+          "price": "95",
           "priceCurrency": "EUR"
         }
       ]
@@ -203,8 +226,8 @@
         <a href="/" class="nav-active" data-en="Home">Inicio</a>
         <a href="proyectos/" data-en="Projects">Proyectos</a>
         <a href="compara/" data-en="Compare">Compara</a>
+        <a href="plataformas/" data-en="Platforms">Plataformas</a>
         <a href="#planes" data-en="Plans">Planes</a>
-        <a href="#faq" data-en="FAQ">Preguntas</a>
         <a href="blog/" data-en="Blog">Blog</a>
         <a href="#contacto" class="nav-cta" data-en="Let's talk">Hablemos</a>
       </div>
@@ -676,6 +699,92 @@
       </div>
 
       <p class="ecommerce-note anim-fade-up" data-en="Not sure which plan fits? <a href='compara/'>Compare the plans side-by-side</a> with real demo sites.">¿No sabes qué plan encaja? <a href="compara/">Compara los planes</a> con sitios de demo reales.</p>
+    </div>
+  </section>
+
+  <!-- Plataformas teaser -->
+  <style>
+    .plataformas-teaser { background: var(--cream, #F5EDE4); padding: 100px 0; position: relative; }
+    .plataformas-teaser .section-header { margin-bottom: 56px; }
+    .plataformas-teaser-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1080px; margin: 0 auto 40px; padding: 0 28px; }
+    .pt-card { background: var(--white, #fff); border: 1px solid rgba(26, 23, 21, 0.08); border-radius: 20px; padding: 36px 32px; transition: transform 0.4s var(--ease-out-expo, cubic-bezier(0.19,1,0.22,1)), box-shadow 0.4s var(--ease-out-expo, cubic-bezier(0.19,1,0.22,1)); position: relative; }
+    .pt-card:hover { transform: translateY(-4px); box-shadow: 0 24px 56px rgba(26, 23, 21, 0.1); }
+    .pt-card.featured { background: var(--dark, #1A1715); color: var(--cream, #F5EDE4); }
+    .pt-eyebrow { font-family: var(--font-sans, 'Outfit', sans-serif); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--copper-dark, #A87856); font-weight: 600; margin-bottom: 12px; }
+    .pt-card.featured .pt-eyebrow { color: var(--copper-light, #D4A57A); }
+    .pt-name { font-family: var(--font-serif, 'Libre Caslon Display', serif); font-size: clamp(28px, 3vw, 38px); line-height: 1; letter-spacing: -0.02em; margin-bottom: 12px; color: inherit; }
+    .pt-name em { font-style: italic; color: var(--copper-dark, #A87856); }
+    .pt-card.featured .pt-name em { color: var(--copper-light, #D4A57A); }
+    .pt-tagline { font-family: var(--font-sans, 'Outfit', sans-serif); font-size: 15px; line-height: 1.5; color: var(--dark-soft, #4A453F); margin-bottom: 24px; }
+    .pt-card.featured .pt-tagline { color: rgba(245, 237, 228, 0.8); }
+    .pt-price-line { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+    .pt-price { font-family: var(--font-serif, 'Libre Caslon Display', serif); font-size: 38px; letter-spacing: -0.03em; line-height: 1; color: var(--dark, #1A1715); }
+    .pt-card.featured .pt-price { color: var(--copper, #C4956A); }
+    .pt-price-meta { font-family: var(--font-sans, 'Outfit', sans-serif); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark-muted, #8A8278); font-weight: 500; }
+    .pt-card.featured .pt-price-meta { color: rgba(245, 237, 228, 0.6); }
+    .pt-features { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 8px; }
+    .pt-features li { font-family: var(--font-sans, 'Outfit', sans-serif); font-size: 14px; line-height: 1.5; color: var(--dark, #1A1715); padding-left: 18px; position: relative; }
+    .pt-card.featured .pt-features li { color: rgba(245, 237, 228, 0.9); }
+    .pt-features li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: var(--copper-dark, #A87856); border-radius: 50%; }
+    .pt-card.featured .pt-features li::before { background: var(--copper-light, #D4A57A); }
+    .pt-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-sans, 'Outfit', sans-serif); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--dark, #1A1715); text-decoration: none; padding: 12px 0; border-bottom: 1px solid var(--dark, #1A1715); transition: color 0.2s, border-color 0.2s; }
+    .pt-card.featured .pt-link { color: var(--cream, #F5EDE4); border-bottom-color: var(--cream, #F5EDE4); }
+    .pt-link:hover { color: var(--copper-dark, #A87856); border-color: var(--copper-dark, #A87856); }
+    .pt-card.featured .pt-link:hover { color: var(--copper-light, #D4A57A); border-color: var(--copper-light, #D4A57A); }
+    .pt-cta { text-align: center; }
+    @media (max-width: 768px) {
+      .plataformas-teaser { padding: 70px 0; }
+      .plataformas-teaser-grid { grid-template-columns: 1fr; gap: 18px; }
+      .pt-card { padding: 28px 24px; }
+    }
+  </style>
+  <section class="section plataformas-teaser" id="plataformas">
+    <div class="container">
+      <div class="section-header anim-fade-up">
+        <span class="section-label" data-en="Beyond the website">Más allá de la web</span>
+        <h2 class="section-title" data-en="Custom platforms">Plataformas a medida</h2>
+        <p class="section-subtitle" data-en="When a website isn't enough. Orders, multi-shop dashboards, custom internal tools.">Cuando una web no basta. Encargos, paneles multi-local, herramientas internas a medida.</p>
+      </div>
+    </div>
+
+    <div class="plataformas-teaser-grid">
+      <div class="pt-card featured anim-fade-up">
+        <div class="pt-eyebrow" data-en="01 · WhatsApp · Pilot price">01 · WhatsApp · Precio piloto</div>
+        <h3 class="pt-name" data-en="Orders via &lt;em&gt;WhatsApp&lt;/em&gt;">Encargos por <em>WhatsApp</em></h3>
+        <p class="pt-tagline" data-en="The customer orders. You receive it on WhatsApp. No more lost orders in chat threads.">El cliente pide. Tú lo recibes en WhatsApp. Sin perder pedidos en chats.</p>
+        <div class="pt-price-line">
+          <span class="pt-price">€1.800</span>
+          <span class="pt-price-meta" data-en="setup · then €2,700 · +€95/mo">setup · después €2.700 · +€95/mes</span>
+        </div>
+        <ul class="pt-features">
+          <li data-en="Order form on your site">Formulario de encargo en tu web</li>
+          <li data-en="Auto-WhatsApp to your business number">WhatsApp automático a tu número de empresa</li>
+          <li data-en="Mobile + desktop dashboard">Panel móvil + desktop</li>
+          <li data-en="Twilio + WhatsApp Business API">Twilio + WhatsApp Business API</li>
+        </ul>
+        <a href="plataformas/#whatsapp" class="pt-link" data-en="See details →">Ver detalles →</a>
+      </div>
+
+      <div class="pt-card anim-fade-up">
+        <div class="pt-eyebrow" data-en="02 · Multi-shop">02 · Multi-local</div>
+        <h3 class="pt-name" data-en="&lt;em&gt;Multi-shop&lt;/em&gt; dashboard">Panel <em>multi-local</em></h3>
+        <p class="pt-tagline" data-en="Each shop logs in. HQ sees everything in real time.">Cada local registra. La central ve todo en tiempo real.</p>
+        <div class="pt-price-line">
+          <span class="pt-price" data-en="from €3,500">desde €3.500</span>
+          <span class="pt-price-meta" data-en="setup · +€120/mo">setup · +€120/mes</span>
+        </div>
+        <ul class="pt-features">
+          <li data-en="Login per shop with separate roles">Login por local con roles separados</li>
+          <li data-en="HQ aggregate view, realtime">Vista central agregada, tiempo real</li>
+          <li data-en="Wholesale tracking + per-shop inventory">Mayoreo + inventario por sede</li>
+          <li data-en="Excel / CSV export">Exportación a Excel / CSV</li>
+        </ul>
+        <a href="plataformas/#multilocal" class="pt-link" data-en="See details →">Ver detalles →</a>
+      </div>
+    </div>
+
+    <div class="pt-cta anim-fade-up">
+      <a href="plataformas/" class="btn btn-primary magnetic" data-en="See all platforms">Ver todas las plataformas</a>
     </div>
   </section>
 

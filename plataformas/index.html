@@ -1,0 +1,1164 @@
+<!doctype html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plataformas a medida · Obrador Web</title>
+<meta name="description" content="Construimos plataformas a medida para hostelería en Madrid. Encargos por WhatsApp, paneles multi-local y herramientas internas. Supabase + Twilio. Desde €1.800.">
+<link rel="canonical" href="https://obradorweb.com/plataformas/">
+
+<meta property="og:title" content="Plataformas a medida · Obrador Web">
+<meta property="og:description" content="Cuando una web no basta. Construimos herramientas a medida para que la operación de tu cafetería, obrador o cadena viva en una sola pantalla.">
+<meta property="og:url" content="https://obradorweb.com/plataformas/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="Obrador Web">
+<meta property="og:image" content="https://obradorweb.com/img/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Plataformas a medida · Obrador Web">
+<meta name="twitter:description" content="Encargos por WhatsApp, paneles multi-local y herramientas internas para hostelería. Desde €1.800.">
+<meta name="twitter:image" content="https://obradorweb.com/img/og-default.jpg">
+
+<link rel="icon" type="image/png" href="../img/logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Obrador", "item": "https://obradorweb.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Plataformas a medida" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Plataformas a medida obrador.web",
+  "description": "Plataformas a medida para hostelería en Madrid: encargos por WhatsApp, paneles multi-local y herramientas internas a medida.",
+  "numberOfItems": 2,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "name": "Encargos por WhatsApp",
+        "description": "Plataforma a medida para gestionar encargos. El cliente envía el pedido por formulario, el obrador recibe la notificación en WhatsApp y gestiona estados desde un panel propio. Integrado con Twilio + WhatsApp Business API. Incluye 250 conversaciones/mes.",
+        "provider": { "@type": "Organization", "name": "Obrador Web", "url": "https://obradorweb.com" },
+        "areaServed": { "@type": "Country", "name": "España" },
+        "offers": {
+          "@type": "Offer",
+          "price": "2700",
+          "priceCurrency": "EUR",
+          "description": "Setup desde €1.800 (precio piloto, primeras 2 plataformas) o €2.700 estándar. Mantenimiento €95/mes."
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Service",
+        "name": "Panel multi-local",
+        "description": "Plataforma multi-tenant para cadenas y grupos. Cada local registra sus operaciones (pedidos, mayoreo, inventario) y la central ve agregado en tiempo real. Roles separados (manager, admin, repartidor). Construido con Supabase + Next.js.",
+        "provider": { "@type": "Organization", "name": "Obrador Web", "url": "https://obradorweb.com" },
+        "areaServed": { "@type": "Country", "name": "España" },
+        "offers": {
+          "@type": "Offer",
+          "price": "3500",
+          "priceCurrency": "EUR",
+          "description": "Setup desde €3.500 según alcance. Mantenimiento €120/mes."
+        }
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿La plataforma de encargos funciona con mi WhatsApp actual?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No directamente. WhatsApp no permite que apps externas envíen mensajes desde tu número personal sin violar sus términos. Lo que hacemos es darte un número de WhatsApp Business profesional vía Twilio (incluido en el setup), por el que entran los pedidos automáticos. Tu WhatsApp personal sigue intacto. El cliente final ve un número de empresa, no el tuyo personal." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay límite de pedidos al mes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El plan de mantenimiento de €95/mes incluye 250 conversaciones de WhatsApp al mes (más que suficiente para una panadería u obrador medio). Si tu volumen sube por encima, las conversaciones extra se pasan a coste (~€0,05 cada una) o subimos al siguiente tier de mantenimiento. Sin sorpresas en factura: te avisamos antes." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si dejo de pagar el mantenimiento?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El código es tuyo desde el día 1. Si quieres llevarlo por tu cuenta, te entregamos el repositorio, los accesos a Supabase y Twilio, y documentación de despliegue. No hay proveedor cautivo. La razón más común para mantener el plan es que no quieres lidiar con renovaciones, fallos del API y bugs raros, no porque dependas de nosotros legalmente." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tarda el setup?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Encargos por WhatsApp: 4-6 semanas. La parte de desarrollo es 2-3 semanas, pero hay que sumar 1-2 semanas de verificación de Meta (proceso oficial para aprobar tu cuenta de WhatsApp Business) que es proceso burocrático y no depende de nosotros. Panel multi-local: 8-12 semanas según número de locales y operaciones a digitalizar." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo añadir features nuevas después del lanzamiento?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. El mantenimiento mensual cubre bugs, parches y mejoras menores. Features nuevas (un campo más, una pantalla nueva, una integración con otro servicio) van por horas a €35/h, presupuestadas antes de empezar. Esto evita scope creep silencioso, tú decides qué se construye y qué no." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué Supabase y no otra base de datos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Supabase es Postgres open-source con API moderna, autenticación incluida y realtime. Si mañana queréis migrar a otro proveedor (AWS, vuestro propio servidor, otro PaaS) Postgres es el estándar de la industria, exportable a cualquier sitio. No te encierra en una tecnología propietaria como Firebase. Para una herramienta interna de hostelería es overkill por arriba (escala a millones de usuarios) y bajo coste." }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Outfit:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Outfit:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Outfit:wght@400;500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+/* Plataformas page, matches compara visual language */
+.plat-hero {
+  padding: 140px 28px 56px;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+.plat-hero .eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--copper-dark);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.plat-hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(44px, 6.5vw, 92px);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--dark);
+  margin-bottom: 24px;
+  max-width: 18ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.plat-hero h1 em { font-style: italic; color: var(--copper-dark); }
+.plat-hero p {
+  font-family: var(--font-sans);
+  font-size: clamp(17px, 1.5vw, 20px);
+  color: var(--dark-soft);
+  max-width: 60ch;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.plat-meta {
+  max-width: 960px;
+  margin: 56px auto 0;
+  padding: 24px 32px;
+  border-top: 1px solid rgba(26, 23, 21, 0.1);
+  border-bottom: 1px solid rgba(26, 23, 21, 0.1);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  text-align: center;
+}
+.plat-meta > div .n {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 28px;
+  color: var(--dark);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.plat-meta > div .l {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--dark-muted);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* PRODUCT CARDS */
+.prods-grid {
+  max-width: 1280px;
+  margin: 80px auto 0;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+.prod-card {
+  background: var(--white);
+  border: 1px solid rgba(26, 23, 21, 0.1);
+  border-radius: 24px;
+  padding: 44px 36px 36px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo);
+  overflow: hidden;
+}
+.prod-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 64px rgba(26, 23, 21, 0.1);
+}
+.prod-card.featured {
+  background: var(--dark);
+  color: var(--cream);
+  border: none;
+  box-shadow: 0 24px 60px rgba(26, 23, 21, 0.2);
+}
+.prod-num {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--dark-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.prod-card.featured .prod-num { color: var(--copper-light); }
+
+.prod-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 6px 14px;
+  background: var(--copper-dark);
+  color: var(--cream);
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.prod-name {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 3.4vw, 48px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+  color: inherit;
+}
+.prod-name em { font-style: italic; color: var(--copper-dark); }
+.prod-card.featured .prod-name em { color: var(--copper-light); }
+
+.prod-tagline {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--dark-soft);
+  margin-bottom: 28px;
+  min-height: 48px;
+}
+.prod-card.featured .prod-tagline { color: rgba(245, 237, 228, 0.8); }
+
+.prod-price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+.prod-price {
+  font-family: var(--font-serif);
+  font-size: 56px;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--dark);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.prod-card.featured .prod-price { color: var(--copper); }
+.prod-price > span { font-family: inherit; font-size: inherit; color: inherit; line-height: inherit; }
+.prod-price-old {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  color: var(--dark-muted);
+  text-decoration: line-through;
+  letter-spacing: -0.02em;
+}
+.prod-card.featured .prod-price-old { color: rgba(245, 237, 228, 0.45); }
+
+.prod-price-sub {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--dark-muted);
+  font-weight: 500;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+.prod-card.featured .prod-price-sub { color: rgba(245, 237, 228, 0.6); }
+
+.prod-meta-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 14px 0;
+  margin-bottom: 24px;
+  border-top: 1px solid rgba(26, 23, 21, 0.08);
+  border-bottom: 1px solid rgba(26, 23, 21, 0.08);
+}
+.prod-card.featured .prod-meta-row {
+  border-top-color: rgba(245, 237, 228, 0.12);
+  border-bottom-color: rgba(245, 237, 228, 0.12);
+}
+.prod-meta-row > div {
+  flex: 1;
+  min-width: 100px;
+}
+.prod-meta-row .ml {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dark-muted);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.prod-card.featured .prod-meta-row .ml { color: rgba(245, 237, 228, 0.5); }
+.prod-meta-row .mv {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--dark);
+  line-height: 1.3;
+  font-weight: 500;
+}
+.prod-card.featured .prod-meta-row .mv { color: var(--cream); }
+
+.prod-for {
+  padding: 14px 18px;
+  background: rgba(196, 149, 106, 0.08);
+  border-left: 3px solid var(--copper-dark);
+  border-radius: 4px;
+  margin-bottom: 24px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--dark);
+}
+.prod-card.featured .prod-for {
+  background: rgba(196, 149, 106, 0.15);
+  color: var(--cream);
+  border-left-color: var(--copper-light);
+}
+.prod-for strong {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--copper-dark);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.prod-card.featured .prod-for strong { color: var(--copper-light); }
+
+.prod-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: grid;
+  gap: 11px;
+  flex: 1;
+}
+.prod-features li {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--dark);
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 8px;
+  align-items: start;
+}
+.prod-card.featured .prod-features li { color: rgba(245, 237, 228, 0.9); }
+.prod-features li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-top: 8px;
+  background: var(--copper-dark);
+  border-radius: 50%;
+}
+.prod-card.featured .prod-features li::before { background: var(--copper-light); }
+
+.prod-buttons { display: grid; gap: 10px; }
+.prod-btn-primary, .prod-btn-ghost {
+  display: block;
+  text-align: center;
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.prod-btn-primary {
+  background: var(--dark);
+  color: var(--cream);
+}
+.prod-btn-primary:hover { background: var(--copper-dark); }
+.prod-card.featured .prod-btn-primary {
+  background: var(--copper-dark);
+  color: var(--cream);
+}
+.prod-card.featured .prod-btn-primary:hover { background: var(--copper); }
+.prod-btn-ghost {
+  background: transparent;
+  color: var(--dark);
+  border: 1px solid rgba(26, 23, 21, 0.15);
+}
+.prod-btn-ghost:hover { background: var(--dark); color: var(--cream); border-color: var(--dark); }
+.prod-card.featured .prod-btn-ghost {
+  color: var(--cream);
+  border-color: rgba(245, 237, 228, 0.25);
+}
+.prod-card.featured .prod-btn-ghost:hover { background: var(--cream); color: var(--dark); }
+
+/* HOW IT WORKS DIAGRAM */
+.flow-section {
+  max-width: 1080px;
+  margin: 100px auto 0;
+  padding: 0 28px;
+}
+.flow-title {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.flow-title h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 52px);
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  line-height: 1;
+}
+.flow-title h2 em { font-style: italic; color: var(--copper-dark); }
+.flow-title p {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--dark-soft);
+  margin-top: 14px;
+  line-height: 1.55;
+}
+.flow-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  position: relative;
+}
+.flow-step {
+  background: var(--white);
+  border: 1px solid rgba(26, 23, 21, 0.08);
+  border-radius: 16px;
+  padding: 24px 20px;
+  position: relative;
+}
+.flow-step .step-num {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  color: var(--copper-dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+.flow-step h3 {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.flow-step p {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--dark-soft);
+}
+.flow-step::after {
+  content: '→';
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--copper-dark);
+  font-size: 22px;
+  font-weight: 600;
+  z-index: 2;
+}
+.flow-step:last-child::after { display: none; }
+
+/* A MEDIDA / CUSTOM SECTION */
+.custom-section {
+  max-width: 1080px;
+  margin: 100px auto 0;
+  padding: 64px 40px;
+  background: var(--cream);
+  border-radius: 24px;
+  text-align: center;
+}
+.custom-section .eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--copper-dark);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.custom-section h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(30px, 4vw, 46px);
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  margin: 0 auto 16px;
+  max-width: 22ch;
+  line-height: 1.05;
+}
+.custom-section h2 em { font-style: italic; color: var(--copper-dark); }
+.custom-section p {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--dark-soft);
+  max-width: 52ch;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+.custom-examples {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 920px;
+  margin: 0 auto 36px;
+}
+.custom-examples > div {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 18px 14px;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--dark);
+  border: 1px solid rgba(26, 23, 21, 0.06);
+}
+.custom-examples > div strong {
+  display: block;
+  font-size: 14px;
+  color: var(--copper-dark);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+/* STACK SECTION */
+.stack-section {
+  max-width: 1080px;
+  margin: 100px auto 0;
+  padding: 0 28px;
+  text-align: center;
+}
+.stack-section .eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--copper-dark);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.stack-section h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3.6vw, 44px);
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin: 0 auto 18px;
+  max-width: 22ch;
+}
+.stack-section h2 em { font-style: italic; color: var(--copper-dark); }
+.stack-section > p {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--dark-soft);
+  max-width: 56ch;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+}
+.stack-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.stack-pill {
+  padding: 12px 22px;
+  border: 1px solid rgba(26, 23, 21, 0.15);
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  color: var(--dark);
+  background: var(--white);
+}
+
+/* FAQ */
+.faq-section {
+  max-width: 800px;
+  margin: 100px auto 0;
+  padding: 0 28px;
+}
+.faq-section h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(30px, 4vw, 46px);
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.05;
+}
+.faq-section h2 em { font-style: italic; color: var(--copper-dark); }
+.faq-list { display: grid; gap: 14px; }
+.faq-item {
+  background: var(--white);
+  border: 1px solid rgba(26, 23, 21, 0.08);
+  border-radius: 14px;
+  padding: 20px 24px;
+  transition: border-color 0.2s;
+}
+.faq-item[open] { border-color: var(--copper-dark); }
+.faq-item summary {
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark);
+  list-style: none;
+  position: relative;
+  padding-right: 28px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--copper-dark);
+  font-size: 24px;
+  font-weight: 400;
+  transition: transform 0.2s;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-item .faq-body {
+  padding-top: 14px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--dark-soft);
+}
+
+/* CTA */
+.plat-cta {
+  max-width: 1000px;
+  margin: 100px auto 0;
+  padding: 72px 40px;
+  background: var(--dark);
+  color: var(--cream);
+  text-align: center;
+  border-radius: 24px;
+}
+.plat-cta .eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--copper-light);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.plat-cta h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 52px);
+  color: var(--cream);
+  letter-spacing: -0.02em;
+  margin: 0 auto 18px;
+  max-width: 22ch;
+  line-height: 1.05;
+}
+.plat-cta h2 em { font-style: italic; color: var(--copper-light); }
+.plat-cta p {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: rgba(245, 237, 228, 0.8);
+  max-width: 52ch;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+.plat-cta a {
+  display: inline-block;
+  padding: 18px 36px;
+  background: var(--copper-dark);
+  color: var(--cream);
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.plat-cta a:hover { background: var(--copper); }
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)),
+              transform 0.9s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
+  will-change: opacity, transform;
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-stagger > * { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)), transform 0.9s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)); }
+.reveal-stagger.in > * { opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger.in > *:nth-child(2) { transition-delay: 90ms; }
+.reveal-stagger.in > *:nth-child(3) { transition-delay: 180ms; }
+.reveal-stagger.in > *:nth-child(4) { transition-delay: 270ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-stagger > * { opacity: 1; transform: none; transition: none; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1080px) {
+  .prods-grid { grid-template-columns: 1fr; gap: 24px; }
+  .flow-steps { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .flow-step:nth-child(2)::after { display: none; }
+  .custom-examples { grid-template-columns: repeat(2, 1fr); }
+  .plat-meta { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+
+@media (max-width: 640px) {
+  .plat-hero { padding-top: 110px; }
+  .flow-steps { grid-template-columns: 1fr; }
+  .flow-step::after { content: '↓'; right: 50%; top: auto; bottom: -24px; transform: translateX(50%); }
+  .flow-step:last-child::after { display: none; }
+  .custom-examples { grid-template-columns: 1fr; }
+  .custom-section { padding: 44px 20px; }
+  .plat-cta { padding: 48px 24px; margin-top: 60px; }
+  .prod-card { padding: 36px 24px 28px; }
+  .prod-name { font-size: 32px; }
+  .prod-price { font-size: 44px; }
+  .prod-badge { top: 16px; right: 16px; padding: 5px 11px; font-size: 9px; }
+}
+</style>
+</head>
+<body>
+
+<div class="side-bar-left" aria-hidden="true"></div>
+<div class="side-bar-right" aria-hidden="true"></div>
+
+<!-- Navbar -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="nav-inner">
+    <a href="../" class="nav-logo">
+      <img src="../img/logo.png" alt="Obrador" class="nav-logo-img">
+      <span class="nav-logo-text">obrador<span class="accent">.web</span></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="../" data-en="Home">Inicio</a>
+      <a href="../proyectos/" data-en="Projects">Proyectos</a>
+      <a href="../compara/" data-en="Compare">Compara</a>
+      <a href="../plataformas/" class="nav-active" data-en="Platforms">Plataformas</a>
+      <a href="../#planes" data-en="Plans">Planes</a>
+      <a href="../blog/" data-en="Blog">Blog</a>
+      <a href="../#contacto" class="nav-cta" data-en="Let's talk">Hablemos</a>
+    </div>
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+      <span class="lang-option lang-active" data-lang="es">ES</span>
+      <span class="lang-divider">/</span>
+      <span class="lang-option" data-lang="en">EN</span>
+    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="plat-hero">
+  <span class="eyebrow"><span class="es-only">Plataformas a medida</span><span class="en-only">Custom platforms</span></span>
+  <h1>
+    <span class="es-only">Cuando una web <em>no basta</em>.</span>
+    <span class="en-only">When a website <em>isn't enough</em>.</span>
+  </h1>
+  <p>
+    <span class="es-only">Construimos herramientas a medida para que la operación de tu cafetería, obrador o cadena viva en una sola pantalla. No en 5 chats de WhatsApp.</span>
+    <span class="en-only">We build custom tools so the daily operations of your café, bakery or chain live in one place. Not across 5 WhatsApp threads.</span>
+  </p>
+
+  <div class="plat-meta reveal-stagger">
+    <div><span class="n" data-count="2">0</span><span class="l"><span class="es-only">Productos</span><span class="en-only">Products</span></span></div>
+    <div><span class="n">€<span data-count="1800" data-format="dot">0</span> → €<span data-count="3500" data-format="dot">0</span></span><span class="l"><span class="es-only">Rango setup</span><span class="en-only">Setup range</span></span></div>
+    <div><span class="n">4-12 <span class="l" style="display:inline">sem.</span></span><span class="l"><span class="es-only">Entrega</span><span class="en-only">Delivery</span></span></div>
+    <div><span class="n">Madrid</span><span class="l"><span class="es-only">Hecho en</span><span class="en-only">Made in</span></span></div>
+  </div>
+</section>
+
+<!-- PRODUCT CARDS -->
+<section class="prods-grid">
+
+  <!-- ENCARGOS POR WHATSAPP, FEATURED -->
+  <article class="prod-card featured reveal">
+    <div class="prod-badge"><span class="es-only">Precio piloto</span><span class="en-only">Pilot price</span></div>
+    <div class="prod-num">01 · WhatsApp</div>
+    <h2 class="prod-name"><span class="es-only">Encargos por <em>WhatsApp</em></span><span class="en-only">Orders via <em>WhatsApp</em></span></h2>
+    <p class="prod-tagline"><span class="es-only">El cliente pide. Tú lo recibes en WhatsApp. Sin perder pedidos en chats.</span><span class="en-only">The customer orders. You receive it on WhatsApp. No more lost orders in chat threads.</span></p>
+
+    <div class="prod-price-block">
+      <span class="prod-price">€<span data-count="1800" data-format="dot">0</span></span>
+      <span class="prod-price-old">€2.700</span>
+    </div>
+    <div class="prod-price-sub"><span class="es-only">setup · primeras 2 plataformas · después €2.700</span><span class="en-only">setup · first 2 platforms · then €2,700</span></div>
+
+    <div class="prod-meta-row">
+      <div>
+        <span class="ml"><span class="es-only">Mantenimiento</span><span class="en-only">Maintenance</span></span>
+        <span class="mv">€95<span class="es-only">/mes</span><span class="en-only">/mo</span></span>
+      </div>
+      <div>
+        <span class="ml"><span class="es-only">Entrega</span><span class="en-only">Delivery</span></span>
+        <span class="mv">4-6 <span class="es-only">semanas</span><span class="en-only">weeks</span></span>
+      </div>
+      <div>
+        <span class="ml"><span class="es-only">Conversaciones</span><span class="en-only">Conversations</span></span>
+        <span class="mv">250<span class="es-only">/mes</span><span class="en-only">/mo</span></span>
+      </div>
+    </div>
+
+    <div class="prod-for">
+      <strong><span class="es-only">Ideal para</span><span class="en-only">Ideal for</span></strong>
+      <span class="es-only">Panaderías, obradores y cafeterías que reciben encargos a diario y los pierden entre WhatsApps.</span>
+      <span class="en-only">Bakeries, obradores and cafés receiving daily orders that get lost in WhatsApp.</span>
+    </div>
+
+    <ul class="prod-features">
+      <li><span class="es-only">Formulario de encargo en tu web o subdominio</span><span class="en-only">Order form on your site or subdomain</span></li>
+      <li><span class="es-only">Notificación automática a tu WhatsApp Business</span><span class="en-only">Auto-notification to your WhatsApp Business</span></li>
+      <li><span class="es-only">Panel para gestionar pedidos (móvil + desktop)</span><span class="en-only">Mobile + desktop dashboard to manage orders</span></li>
+      <li><span class="es-only">Confirmación automática al cliente</span><span class="en-only">Auto-confirmation back to customer</span></li>
+      <li><span class="es-only">Estados (recibido / confirmado / listo / recogido)</span><span class="en-only">Statuses (received / confirmed / ready / picked up)</span></li>
+      <li><span class="es-only">Twilio + WhatsApp Business API oficial</span><span class="en-only">Official Twilio + WhatsApp Business API</span></li>
+      <li><span class="es-only">Onboarding + formación incluidos</span><span class="en-only">Onboarding + training included</span></li>
+    </ul>
+
+    <div class="prod-buttons">
+      <a href="../#contacto" class="prod-btn-primary"><span class="es-only">Hablar de mi caso →</span><span class="en-only">Talk about my case →</span></a>
+    </div>
+  </article>
+
+  <!-- PANEL MULTI-LOCAL -->
+  <article class="prod-card reveal">
+    <div class="prod-num">02 · Multi-local</div>
+    <h2 class="prod-name"><span class="es-only">Panel <em>multi-local</em></span><span class="en-only"><em>Multi-shop</em> dashboard</span></h2>
+    <p class="prod-tagline"><span class="es-only">Cada local registra. La central ve todo en tiempo real.</span><span class="en-only">Each shop logs in. HQ sees everything in real time.</span></p>
+
+    <div class="prod-price-block">
+      <span class="prod-price"><span class="es-only">desde </span><span class="en-only">from </span>€<span data-count="3500" data-format="dot">0</span></span>
+    </div>
+    <div class="prod-price-sub"><span class="es-only">setup · según alcance</span><span class="en-only">setup · depending on scope</span></div>
+
+    <div class="prod-meta-row">
+      <div>
+        <span class="ml"><span class="es-only">Mantenimiento</span><span class="en-only">Maintenance</span></span>
+        <span class="mv">€120<span class="es-only">/mes</span><span class="en-only">/mo</span></span>
+      </div>
+      <div>
+        <span class="ml"><span class="es-only">Entrega</span><span class="en-only">Delivery</span></span>
+        <span class="mv">8-12 <span class="es-only">semanas</span><span class="en-only">weeks</span></span>
+      </div>
+      <div>
+        <span class="ml"><span class="es-only">Locales</span><span class="en-only">Shops</span></span>
+        <span class="mv"><span class="es-only">Sin límite</span><span class="en-only">No limit</span></span>
+      </div>
+    </div>
+
+    <div class="prod-for">
+      <strong><span class="es-only">Ideal para</span><span class="en-only">Ideal for</span></strong>
+      <span class="es-only">Grupos de cafeterías, cadenas multi-local y obradores con mayoreo entre sedes.</span>
+      <span class="en-only">Café groups, multi-location chains and bakeries with wholesale between shops.</span>
+    </div>
+
+    <ul class="prod-features">
+      <li><span class="es-only">Login por local (cada uno ve solo lo suyo)</span><span class="en-only">Login per shop (each sees only their data)</span></li>
+      <li><span class="es-only">Vista central con agregado de todos los locales</span><span class="en-only">HQ view with aggregate across all shops</span></li>
+      <li><span class="es-only">Mayoreo / wholesale entre locales</span><span class="en-only">Wholesale tracking between shops</span></li>
+      <li><span class="es-only">Inventario por sede</span><span class="en-only">Per-shop inventory</span></li>
+      <li><span class="es-only">Roles separados (manager / admin / repartidor)</span><span class="en-only">Separate roles (manager / admin / driver)</span></li>
+      <li><span class="es-only">Updates en tiempo real (Supabase Realtime)</span><span class="en-only">Realtime updates (Supabase Realtime)</span></li>
+      <li><span class="es-only">Exportación a Excel / CSV</span><span class="en-only">Excel / CSV export</span></li>
+    </ul>
+
+    <div class="prod-buttons">
+      <a href="../#contacto" class="prod-btn-primary"><span class="es-only">Pedir presupuesto →</span><span class="en-only">Request quote →</span></a>
+    </div>
+  </article>
+
+</section>
+
+<!-- HOW IT WORKS / FLOW DIAGRAM -->
+<section class="flow-section reveal">
+  <div class="flow-title">
+    <h2><span class="es-only">Así funciona <em>encargos</em>.</span><span class="en-only">How <em>orders</em> work.</span></h2>
+    <p><span class="es-only">El cliente nunca instala nada. El obrador tampoco.</span><span class="en-only">The customer installs nothing. Neither does the baker.</span></p>
+  </div>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="step-num">01</div>
+      <h3><span class="es-only">El cliente pide</span><span class="en-only">Customer orders</span></h3>
+      <p><span class="es-only">Rellena el formulario en tu web. Sin descargar app, sin crear cuenta.</span><span class="en-only">Fills the form on your site. No app, no account.</span></p>
+    </div>
+    <div class="flow-step">
+      <div class="step-num">02</div>
+      <h3><span class="es-only">Tú lo recibes</span><span class="en-only">You receive it</span></h3>
+      <p><span class="es-only">Llega un WhatsApp a tu número de empresa con el pedido y un botón para confirmar.</span><span class="en-only">A WhatsApp arrives on your business number with the order and a confirm button.</span></p>
+    </div>
+    <div class="flow-step">
+      <div class="step-num">03</div>
+      <h3><span class="es-only">Confirmas en 1 toque</span><span class="en-only">Confirm in 1 tap</span></h3>
+      <p><span class="es-only">Abre el panel. Confirmar / modificar / rechazar. Tu WhatsApp personal sigue intacto.</span><span class="en-only">Open the panel. Confirm / edit / reject. Your personal WhatsApp untouched.</span></p>
+    </div>
+    <div class="flow-step">
+      <div class="step-num">04</div>
+      <h3><span class="es-only">Cliente avisado</span><span class="en-only">Customer notified</span></h3>
+      <p><span class="es-only">Recibe la confirmación automática y los updates de estado hasta recogerlo.</span><span class="en-only">Auto-confirmation arrives. Status updates flow until pickup.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- A MEDIDA / CUSTOM SECTION -->
+<section class="custom-section reveal">
+  <span class="eyebrow"><span class="es-only">A medida</span><span class="en-only">Custom builds</span></span>
+  <h2><span class="es-only">¿Tu negocio tiene un proceso que vive en hojas de cálculo o post-its <em>amarillos</em>?</span><span class="en-only">Got a process that lives in spreadsheets or <em>yellow</em> sticky notes?</span></h2>
+  <p><span class="es-only">Si lo haces a mano cada semana, se puede automatizar. Si vive en 4 sitios distintos, se puede unificar. Cuéntanos qué hace tu negocio cada día y te decimos qué tiene sentido digitalizar.</span><span class="en-only">If you do it by hand every week, it can be automated. If it lives in 4 different places, it can be unified. Tell us what your business does daily and we'll tell you what's worth digitising.</span></p>
+
+  <div class="custom-examples reveal-stagger">
+    <div>
+      <strong><span class="es-only">Reservas custom</span><span class="en-only">Custom reservations</span></strong>
+      <span class="es-only">Para mesas no estándar (eventos privados, catas, talleres).</span>
+      <span class="en-only">For non-standard tables (private events, tastings, workshops).</span>
+    </div>
+    <div>
+      <strong><span class="es-only">Fidelización</span><span class="en-only">Loyalty</span></strong>
+      <span class="es-only">Tarjeta de cliente propia, sin Loyicard ni apps de terceros.</span>
+      <span class="en-only">Your own customer card, no Loyicard or third-party apps.</span>
+    </div>
+    <div>
+      <strong><span class="es-only">Catálogo B2B</span><span class="en-only">B2B catalog</span></strong>
+      <span class="es-only">Para que tus clientes mayoristas pidan online sin llamar.</span>
+      <span class="en-only">For wholesale clients to order online without calling.</span>
+    </div>
+    <div>
+      <strong><span class="es-only">Turnos del equipo</span><span class="en-only">Team shifts</span></strong>
+      <span class="es-only">Calendario, peticiones de cambio, control de horas.</span>
+      <span class="en-only">Calendar, swap requests, hour tracking.</span>
+    </div>
+  </div>
+
+  <a href="../#contacto" class="prod-btn-primary" style="display:inline-block; padding: 16px 30px; background: var(--dark); color: var(--cream); border-radius: 999px;"><span class="es-only">Cuéntanos tu caso →</span><span class="en-only">Tell us your case →</span></a>
+</section>
+
+<!-- TECH STACK -->
+<section class="stack-section reveal">
+  <span class="eyebrow"><span class="es-only">Stack técnico</span><span class="en-only">Tech stack</span></span>
+  <h2><span class="es-only">Código abierto, <em>sin proveedor cautivo</em>.</span><span class="en-only">Open source, <em>no vendor lock-in</em>.</span></h2>
+  <p><span class="es-only">Construido con tecnología estándar de la industria. Si mañana queréis llevarlo por vuestra cuenta, os entregamos repo y accesos. El código es vuestro desde el día 1.</span><span class="en-only">Built on industry-standard tech. If you ever want to take it in-house, we hand over the repo and access. The code is yours from day 1.</span></p>
+  <div class="stack-pills">
+    <div class="stack-pill">Supabase (Postgres)</div>
+    <div class="stack-pill">Next.js</div>
+    <div class="stack-pill">Twilio · WhatsApp API</div>
+    <div class="stack-pill">Stripe</div>
+    <div class="stack-pill">Vercel</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section reveal">
+  <h2><span class="es-only">Preguntas <em>frecuentes</em></span><span class="en-only"><em>Frequent</em> questions</span></h2>
+  <div class="faq-list">
+
+    <details class="faq-item">
+      <summary><span class="es-only">¿Funciona con mi WhatsApp actual?</span><span class="en-only">Does it work with my current WhatsApp?</span></summary>
+      <div class="faq-body">
+        <span class="es-only">No directamente. WhatsApp no permite que apps externas envíen mensajes desde tu número personal sin violar sus términos. Lo que hacemos es darte un número de WhatsApp Business profesional vía Twilio (incluido en el setup), por el que entran los pedidos automáticos. Tu WhatsApp personal sigue intacto. El cliente final ve un número de empresa, no el tuyo personal.</span>
+        <span class="en-only">Not directly. WhatsApp doesn't allow external apps to send messages from your personal number without violating their terms. What we do is provide you with a professional WhatsApp Business number via Twilio (included in setup) that handles automated orders. Your personal WhatsApp stays untouched. Customers see a business number, not your personal one.</span>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary><span class="es-only">¿Hay límite de pedidos al mes?</span><span class="en-only">Is there a monthly order limit?</span></summary>
+      <div class="faq-body">
+        <span class="es-only">El plan de mantenimiento de €95/mes incluye 250 conversaciones de WhatsApp al mes (más que suficiente para una panadería u obrador medio). Si tu volumen sube, las conversaciones extra se pasan a coste (~€0,05 cada una) o subimos al siguiente tier de mantenimiento. Sin sorpresas en factura, te avisamos antes.</span>
+        <span class="en-only">The €95/mo maintenance plan includes 250 WhatsApp conversations/month (more than enough for an average bakery or obrador). If your volume goes up, extra conversations are passed at cost (~€0.05 each) or we bump to the next tier. No invoice surprises, we warn you ahead.</span>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary><span class="es-only">¿Qué pasa si dejo de pagar el mantenimiento?</span><span class="en-only">What if I stop paying maintenance?</span></summary>
+      <div class="faq-body">
+        <span class="es-only">El código es tuyo desde el día 1. Si quieres llevarlo por tu cuenta, te entregamos el repositorio, los accesos a Supabase y Twilio, y documentación de despliegue. No hay proveedor cautivo. La razón más común para mantener el plan es que no quieres lidiar con renovaciones, fallos del API y bugs raros, no porque dependas de nosotros legalmente.</span>
+        <span class="en-only">The code is yours from day 1. If you want to take it in-house, we hand over the repo, Supabase and Twilio access, and deployment docs. No vendor lock-in. The main reason to keep the plan is that you don't want to deal with renewals, API failures and weird bugs, not because you legally depend on us.</span>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary><span class="es-only">¿Cuánto tarda el setup?</span><span class="en-only">How long is setup?</span></summary>
+      <div class="faq-body">
+        <span class="es-only">Encargos por WhatsApp: 4-6 semanas. La parte de desarrollo es 2-3 semanas, pero hay que sumar 1-2 semanas de verificación de Meta (proceso oficial para aprobar tu cuenta de WhatsApp Business) que es burocrático y no depende de nosotros. Panel multi-local: 8-12 semanas según número de locales y operaciones a digitalizar.</span>
+        <span class="en-only">WhatsApp orders: 4-6 weeks. Dev is 2-3 weeks, plus 1-2 weeks of Meta verification (official WhatsApp Business approval, bureaucratic, not on us). Multi-shop panel: 8-12 weeks depending on shop count and operations to digitise.</span>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary><span class="es-only">¿Puedo añadir features nuevas después del lanzamiento?</span><span class="en-only">Can I add features after launch?</span></summary>
+      <div class="faq-body">
+        <span class="es-only">Sí. El mantenimiento mensual cubre bugs, parches y mejoras menores. Features nuevas (un campo más, una pantalla nueva, una integración con otro servicio) van por horas a €35/h, presupuestadas antes de empezar. Esto evita scope creep silencioso, tú decides qué se construye y qué no.</span>
+        <span class="en-only">Yes. Monthly maintenance covers bugs, patches and minor improvements. New features (extra field, new screen, third-party integration) go hourly at €35/h, quoted before starting. This avoids silent scope creep, you decide what's built and what's not.</span>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary><span class="es-only">¿Por qué Supabase y no otra base de datos?</span><span class="en-only">Why Supabase and not another database?</span></summary>
+      <div class="faq-body">
+        <span class="es-only">Supabase es Postgres open-source con API moderna, autenticación incluida y realtime. Si mañana queréis migrar a otro proveedor (AWS, vuestro propio servidor, otro PaaS) Postgres es el estándar de la industria, exportable a cualquier sitio. No te encierra en una tecnología propietaria como Firebase. Para una herramienta interna de hostelería es overkill por arriba (escala a millones de usuarios) y bajo coste.</span>
+        <span class="en-only">Supabase is open-source Postgres with a modern API, auth and realtime built in. If you want to migrate later (AWS, self-hosted, another PaaS) Postgres is industry standard, portable anywhere. No vendor lock-in like Firebase. For internal hospitality tools it's overkill on the high end (scales to millions of users) and cheap.</span>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="plat-cta reveal">
+  <span class="eyebrow"><span class="es-only">Sin compromiso</span><span class="en-only">No strings</span></span>
+  <h2><span class="es-only">Cuéntanos qué hace tu negocio <em>cada día</em>.</span><span class="en-only">Tell us what your business does <em>every day</em>.</span></h2>
+  <p><span class="es-only">Te decimos qué se puede automatizar, en cuánto tiempo y qué cuesta. 15 minutos de llamada, sin presión.</span><span class="en-only">We'll tell you what can be automated, how long it takes and what it costs. 15-minute call, no pressure.</span></p>
+  <a href="../#contacto"><span class="es-only">Hablemos →</span><span class="en-only">Let's talk →</span></a>
+</section>
+
+<div style="height: 40px;"></div>
+
+<script>
+  (function(){
+    const root = document.documentElement;
+    const saved = localStorage.getItem('obrador-lang');
+    if (saved === 'en') root.classList.add('lang-en');
+    function applyLang() {
+      const isEn = root.classList.contains('lang-en');
+      document.querySelectorAll('.es-only').forEach(el => el.style.display = isEn ? 'none' : '');
+      document.querySelectorAll('.en-only').forEach(el => el.style.display = isEn ? '' : 'none');
+    }
+    applyLang();
+    document.querySelectorAll('.lang-option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        if (lang === 'en') root.classList.add('lang-en');
+        else root.classList.remove('lang-en');
+        localStorage.setItem('obrador-lang', lang);
+        document.querySelectorAll('.lang-option').forEach(o => o.classList.toggle('lang-active', o.dataset.lang === lang));
+        applyLang();
+      });
+    });
+
+    // SCROLL REVEAL + COUNTERS
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function formatNum(n, format) {
+      if (format === 'dot') return n.toLocaleString('es-ES');
+      return String(n);
+    }
+
+    function animateCount(el) {
+      const target = parseInt(el.dataset.count, 10);
+      const format = el.dataset.format;
+      if (isNaN(target) || el.dataset.counted) return;
+      el.dataset.counted = '1';
+      if (reduce) { el.textContent = formatNum(target, format); return; }
+      const duration = 1400;
+      const start = performance.now();
+      function tick(now) {
+        const t = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        const value = Math.round(target * eased);
+        el.textContent = formatNum(value, format);
+        if (t < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    function startCountersInside(scope) {
+      scope.querySelectorAll('[data-count]').forEach(animateCount);
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => el.classList.add('in'));
+      document.querySelectorAll('[data-count]').forEach(animateCount);
+    } else {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            startCountersInside(entry.target);
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.18, rootMargin: '0px 0px -60px 0px' });
+      document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
+      const heroMeta = document.querySelector('.plat-hero .plat-meta');
+      if (heroMeta) {
+        setTimeout(() => {
+          heroMeta.classList.add('in');
+          startCountersInside(heroMeta);
+        }, 250);
+      }
+    }
+  })();
+</script>
+<script src="../js/main.js" defer></script>
+</body>
+</html>
