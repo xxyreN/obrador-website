@@ -187,8 +187,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.title = lang === 'en'
-      ? 'Obrador · Websites for cafés in Madrid'
-      : 'Obrador · Webs para cafeterías en Madrid';
+      ? 'Web studio for hospitality. Obrador Web Madrid.'
+      : 'Estudio web para hostelería. Obrador Web Madrid.';
 
     if (typeof updateValidationMessages === 'function') updateValidationMessages();
   }
