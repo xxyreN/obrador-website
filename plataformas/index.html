@@ -68,7 +68,7 @@
       "item": {
         "@type": "Service",
         "name": "Panel multi-local",
-        "description": "Plataforma multi-tenant para cadenas y grupos. Cada local registra sus operaciones (pedidos, mayoreo, inventario) y la central ve agregado en tiempo real. Roles separados (manager, admin, repartidor). Construido con Supabase + Next.js.",
+        "description": "Plataforma multi-tenant para cadenas y grupos. Incluye todo de Encargos por WhatsApp (formulario web, notificaciones WhatsApp Business, panel por local) más vista central con agregado en tiempo real, mayoreo entre locales, inventario por sede y roles separados (manager, admin, repartidor). Construido con Supabase + Twilio + Next.js.",
         "provider": { "@type": "Organization", "name": "Obrador Web", "url": "https://obradorweb.com" },
         "areaServed": { "@type": "Country", "name": "España" },
         "offers": {
@@ -895,7 +895,7 @@
   <article class="prod-card reveal">
     <div class="prod-num">02 · Multi-local</div>
     <h2 class="prod-name"><span class="es-only">Panel <em>multi-local</em></span><span class="en-only"><em>Multi-shop</em> dashboard</span></h2>
-    <p class="prod-tagline"><span class="es-only">Cada local registra. La central ve todo en tiempo real.</span><span class="en-only">Each shop logs in. HQ sees everything in real time.</span></p>
+    <p class="prod-tagline"><span class="es-only">Encargos por WhatsApp en cada local. Vista central en tiempo real.</span><span class="en-only">WhatsApp orders at each shop. HQ view in real time.</span></p>
 
     <div class="prod-price-block">
       <span class="prod-price"><span class="es-only">desde </span><span class="en-only">from </span>€<span data-count="3500" data-format="dot">0</span></span>
@@ -924,6 +924,7 @@
     </div>
 
     <ul class="prod-features">
+      <li><strong><span class="es-only">Incluye todo de Encargos por WhatsApp</span><span class="en-only">Includes everything from Orders via WhatsApp</span></strong><br><span class="es-only">Formulario web, notificaciones a WhatsApp Business, panel de pedidos por local.</span><span class="en-only">Web form, WhatsApp Business notifications, per-shop orders panel.</span></li>
       <li><span class="es-only">Login por local (cada uno ve solo lo suyo)</span><span class="en-only">Login per shop (each sees only their data)</span></li>
       <li><span class="es-only">Vista central con agregado de todos los locales</span><span class="en-only">HQ view with aggregate across all shops</span></li>
       <li><span class="es-only">Mayoreo / wholesale entre locales</span><span class="en-only">Wholesale tracking between shops</span></li>
