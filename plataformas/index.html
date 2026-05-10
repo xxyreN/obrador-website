@@ -68,7 +68,7 @@
       "item": {
         "@type": "Service",
         "name": "Panel multi-local",
-        "description": "Plataforma multi-tenant para cadenas y grupos. Incluye todo de Encargos por WhatsApp (formulario web, notificaciones WhatsApp Business, panel por local) más vista central con agregado en tiempo real, mayoreo entre locales, inventario por sede y roles separados (manager, admin, repartidor). Construido con Supabase + Twilio + Next.js.",
+        "description": "Plataforma multi-tenant para cadenas y grupos. Incluye todo de Encargos por WhatsApp (formulario web, notificaciones WhatsApp Business, panel por local) más vista central agregada de todos los locales, pedidos entre locales (un local pide al obrador central), inventario por local y roles separados (dueño / manager). Construido con Supabase + Twilio + Next.js.",
         "provider": { "@type": "Organization", "name": "Obrador Web", "url": "https://obradorweb.com" },
         "areaServed": { "@type": "Country", "name": "España" },
         "offers": {
@@ -880,8 +880,8 @@
       <li><span class="es-only">Formulario de encargo en tu web o subdominio</span><span class="en-only">Order form on your site or subdomain</span></li>
       <li><span class="es-only">Notificación automática a tu WhatsApp Business</span><span class="en-only">Auto-notification to your WhatsApp Business</span></li>
       <li><span class="es-only">Panel para gestionar pedidos (móvil + desktop)</span><span class="en-only">Mobile + desktop dashboard to manage orders</span></li>
-      <li><span class="es-only">Confirmación automática al cliente</span><span class="en-only">Auto-confirmation back to customer</span></li>
-      <li><span class="es-only">Estados (recibido / confirmado / listo / recogido)</span><span class="en-only">Statuses (received / confirmed / ready / picked up)</span></li>
+      <li><span class="es-only">Email automático al cliente con el resumen del pedido</span><span class="en-only">Auto email to the customer with the order summary</span></li>
+      <li><span class="es-only">Estado del pedido visible (recibido · listo · recogido)</span><span class="en-only">Order status visible (received · ready · picked up)</span></li>
       <li><span class="es-only">Twilio + WhatsApp Business API oficial</span><span class="en-only">Official Twilio + WhatsApp Business API</span></li>
       <li><span class="es-only">Onboarding + formación incluidos</span><span class="en-only">Onboarding + training included</span></li>
     </ul>
@@ -927,10 +927,10 @@
       <li><strong><span class="es-only">Incluye todo de Encargos por WhatsApp</span><span class="en-only">Includes everything from Orders via WhatsApp</span></strong><br><span class="es-only">Formulario web, notificaciones a WhatsApp Business, panel de pedidos por local.</span><span class="en-only">Web form, WhatsApp Business notifications, per-shop orders panel.</span></li>
       <li><span class="es-only">Login por local (cada uno ve solo lo suyo)</span><span class="en-only">Login per shop (each sees only their data)</span></li>
       <li><span class="es-only">Vista central con agregado de todos los locales</span><span class="en-only">HQ view with aggregate across all shops</span></li>
-      <li><span class="es-only">Mayoreo / wholesale entre locales</span><span class="en-only">Wholesale tracking between shops</span></li>
-      <li><span class="es-only">Inventario por sede</span><span class="en-only">Per-shop inventory</span></li>
-      <li><span class="es-only">Roles separados (manager / admin / repartidor)</span><span class="en-only">Separate roles (manager / admin / driver)</span></li>
-      <li><span class="es-only">Updates en tiempo real (Supabase Realtime)</span><span class="en-only">Realtime updates (Supabase Realtime)</span></li>
+      <li><span class="es-only">Pedidos entre locales (un local pide al obrador central)</span><span class="en-only">Inter-shop orders (one shop orders from the central bakery)</span></li>
+      <li><span class="es-only">Inventario por local</span><span class="en-only">Per-shop inventory</span></li>
+      <li><span class="es-only">Roles separados (dueño / manager de local)</span><span class="en-only">Separate roles (owner / shop manager)</span></li>
+      <li><span class="es-only">Pedidos y stock se actualizan al instante</span><span class="en-only">Orders and stock update instantly</span></li>
       <li><span class="es-only">Exportación a Excel / CSV</span><span class="en-only">Excel / CSV export</span></li>
     </ul>
 
