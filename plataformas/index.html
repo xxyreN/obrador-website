@@ -264,15 +264,15 @@
 .video-caption a { color: var(--dark); border-bottom: 1px solid rgba(26, 23, 21, 0.2); text-decoration: none; }
 .video-caption a:hover { color: var(--copper-dark); border-color: var(--copper-dark); }
 
-/* SHOTS SECTION · grouped feature blocks, stacked vertical, zoom on click */
+/* SHOTS SECTION · alternating 2-col bg blocks with cycling screenshots */
 .shots-section {
-  max-width: 1100px;
+  max-width: 1280px;
   margin: 96px auto 0;
   padding: 0 28px;
 }
 .shots-head {
   max-width: 720px;
-  margin: 0 auto 64px;
+  margin: 0 auto 56px;
   text-align: center;
 }
 .shots-head h2 {
@@ -290,95 +290,153 @@
   line-height: 1.55;
   margin: 0;
 }
-.feat-group { margin-bottom: 88px; }
-.feat-group:last-child { margin-bottom: 0; }
-.feat-head {
-  max-width: 760px;
-  margin: 0 auto 28px;
-  text-align: center;
+
+.feat-block {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr);
+  gap: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  align-items: stretch;
+  background: #EFE9DF;
+  position: relative;
 }
-.feat-head .eyebrow {
-  display: inline-block;
+.feat-block:last-child { margin-bottom: 0; }
+.feat-block.alt {
+  background: #1A1715;
+  color: var(--cream);
+}
+.feat-block.reverse .feat-content { order: 2; }
+.feat-block.reverse .feat-image { order: 1; }
+
+.feat-content {
+  padding: clamp(36px, 4.5vw, 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.feat-content .eyebrow {
   font-family: var(--font-sans);
   font-size: 12px;
   color: var(--copper-dark);
   font-weight: 600;
-  letter-spacing: 0.02em;
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 22px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
 }
-.feat-head .eyebrow::before {
+.feat-block.alt .feat-content .eyebrow { color: var(--copper); }
+.feat-content h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  color: var(--dark);
+  margin: 0 0 16px;
+}
+.feat-block.alt .feat-content h3 { color: var(--cream); }
+.feat-content p {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-soft);
+  margin: 0 0 18px;
+}
+.feat-block.alt .feat-content p { color: rgba(245, 237, 228, 0.8); }
+.feat-content p b { color: var(--dark); font-weight: 600; }
+.feat-block.alt .feat-content p b { color: var(--cream); }
+.feat-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+  display: grid;
+  gap: 9px;
+}
+.feat-bullets li {
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: var(--dark);
+  padding-left: 26px;
+  position: relative;
+}
+.feat-block.alt .feat-bullets li { color: rgba(245, 237, 228, 0.92); }
+.feat-bullets li::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 8px;
   width: 14px;
-  height: 1px;
-  background: var(--copper-dark);
-  transform: translateY(-50%);
-  animation: drawIn 1s 0.2s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)) backwards;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(45, 122, 79, 0.15);
 }
-@keyframes drawIn {
-  from { transform: translateY(-50%) scaleX(0); transform-origin: left; }
-  to { transform: translateY(-50%) scaleX(1); transform-origin: left; }
+.feat-bullets li::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 11px;
+  width: 6px;
+  height: 3px;
+  border-left: 2px solid #2D7A4F;
+  border-bottom: 2px solid #2D7A4F;
+  transform: rotate(-45deg);
 }
-.feat-head h3 {
-  font-family: var(--font-serif);
-  font-size: clamp(26px, 3vw, 38px);
-  letter-spacing: -0.02em;
-  color: var(--dark);
-  line-height: 1.1;
-  margin: 0 0 12px;
-}
-.feat-head p {
-  font-family: var(--font-sans);
-  font-size: 15.5px;
-  line-height: 1.6;
-  color: var(--dark-soft);
-  margin: 0;
-}
-.feat-head p b { color: var(--dark); font-weight: 600; }
-.feat-stack {
-  display: grid;
-  gap: 20px;
-  max-width: 1080px;
-  margin: 0 auto;
-}
-.shot-img {
+.feat-block.alt .feat-bullets li::before { background: rgba(196, 149, 106, 0.2); }
+.feat-block.alt .feat-bullets li::after { border-color: var(--copper); }
+
+.feat-image {
+  padding: clamp(32px, 4vw, 48px);
+  display: flex;
+  align-items: center;
   position: relative;
+}
+
+/* CYCLING SCREENSHOTS · CSS-only crossfade */
+.shot-stack {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1280 / 800;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 14px 40px rgba(26, 23, 21, 0.1), 0 2px 6px rgba(26, 23, 21, 0.04);
-  background: var(--white);
-  border: 1px solid rgba(26, 23, 21, 0.06);
+  background: #fff;
+  box-shadow: 0 26px 60px rgba(26, 23, 21, 0.18), 0 4px 14px rgba(26, 23, 21, 0.08);
+  cursor: zoom-in;
   transition: transform 0.45s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1)),
               box-shadow 0.45s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
 }
-.shot-img:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 22px 56px rgba(26, 23, 21, 0.16), 0 4px 10px rgba(26, 23, 21, 0.06);
+.shot-stack:hover {
+  transform: translateY(-4px) scale(1.008);
+  box-shadow: 0 36px 80px rgba(26, 23, 21, 0.24), 0 6px 18px rgba(26, 23, 21, 0.1);
 }
-.shot-img .shot-link {
-  display: block;
-  position: relative;
-  cursor: zoom-in;
-  overflow: hidden;
+.shot-frame {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: shotCycle 12s infinite;
 }
-.shot-img .shot-link img {
+.shot-frame img {
   display: block;
   width: 100%;
-  height: auto;
-  transition: transform 0.8s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
 }
-.shot-img:hover .shot-link img { transform: scale(1.015); }
-.shot-img .shot-link::after {
+.shot-frame:nth-child(1) { animation-delay: 0s; opacity: 1; }
+.shot-frame:nth-child(2) { animation-delay: -6s; }
+@keyframes shotCycle {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.shot-stack:hover .shot-frame { animation-play-state: paused; }
+.shot-stack::after {
   content: '⤢';
   position: absolute;
   top: 14px;
-  right: 16px;
-  width: 36px;
-  height: 36px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: rgba(26, 23, 21, 0.85);
   color: var(--cream);
@@ -387,31 +445,48 @@
   justify-content: center;
   font-size: 16px;
   opacity: 0;
-  transform: translateY(-6px) scale(0.92);
+  transform: translateY(-4px) scale(0.92);
   transition: opacity 0.3s ease, transform 0.35s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
   pointer-events: none;
-  backdrop-filter: blur(4px);
+  z-index: 2;
 }
-.shot-img:hover .shot-link::after {
+.shot-stack:hover::after {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
-.shot-img .shot-caption {
-  font-family: var(--font-sans);
-  font-size: 12.5px;
-  color: var(--dark-muted);
-  letter-spacing: 0.02em;
-  padding: 12px 16px;
-  border-top: 1px solid rgba(26, 23, 21, 0.06);
-  background: rgba(26, 23, 21, 0.015);
-}
-.shot-img .shot-caption b { color: var(--dark); font-weight: 600; }
 
-/* ZOOM LIGHTBOX · pure CSS via :target */
+.shot-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+  pointer-events: none;
+}
+.shot-dots span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  animation: dotCycle 12s infinite;
+}
+.shot-dots span:nth-child(1) { animation-delay: 0s; }
+.shot-dots span:nth-child(2) { animation-delay: -6s; }
+@keyframes dotCycle {
+  0%, 45% { background: rgba(255, 255, 255, 0.95); transform: scale(1.15); }
+  50%, 95% { background: rgba(255, 255, 255, 0.4); transform: scale(1); }
+  100% { background: rgba(255, 255, 255, 0.95); transform: scale(1.15); }
+}
+
+/* ZOOM OVERLAY · JS-driven, more reliable than :target */
 .zoom-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(10, 10, 10, 0.92);
+  background: rgba(10, 10, 10, 0.94);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -422,11 +497,10 @@
   transition: opacity 0.35s ease, visibility 0.35s ease;
   cursor: zoom-out;
   padding: 40px;
-  text-decoration: none;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
-.zoom-overlay:target {
+.zoom-overlay.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -437,12 +511,11 @@
   object-fit: contain;
   border-radius: 10px;
   box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
-  transform: scale(0.92);
+  transform: scale(0.94);
   transition: transform 0.5s var(--ease-out-expo, cubic-bezier(0.19, 1, 0.22, 1));
 }
-.zoom-overlay:target img { transform: scale(1); }
-.zoom-overlay::before {
-  content: '';
+.zoom-overlay.is-open img { transform: scale(1); }
+.zoom-overlay .zoom-close {
   position: absolute;
   top: 24px;
   right: 28px;
@@ -450,24 +523,20 @@
   height: 44px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-.zoom-overlay::after {
-  content: '×';
-  position: absolute;
-  top: 24px;
-  right: 28px;
-  width: 44px;
-  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--cream);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-sans);
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 300;
-  color: var(--cream);
-  pointer-events: none;
-  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.zoom-overlay .zoom-close:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.05);
 }
 
 /* STACK REPLACEMENT TABLE · "hoy esto vive en 5 sitios" */
@@ -1009,7 +1078,11 @@ html { scroll-behavior: smooth; }
 
 /* RESPONSIVE */
 @media (max-width: 980px) {
-  .feat-group { margin-bottom: 64px; }
+  .feat-block { grid-template-columns: 1fr; margin-bottom: 18px; }
+  .feat-block.reverse .feat-content { order: 1; }
+  .feat-block.reverse .feat-image { order: 2; }
+  .feat-image { padding: 0 24px 32px; }
+  .feat-content { padding: 36px 24px 20px; }
   .stack-row { grid-template-columns: 1fr; gap: 6px; padding: 18px 20px; }
   .stack-row.header { display: none; }
   .stack-row .stack-now::before { content: 'Hoy · '; color: var(--dark-muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-right: 4px; }
@@ -1107,114 +1180,165 @@ html { scroll-behavior: smooth; }
   </div>
 </section>
 
-<!-- SHOTS · 5 feature groups, stacked vertical, click to zoom -->
+<!-- SHOTS · 5 feature blocks, 2-col alternating with cycling screenshots -->
 <section class="shots-section">
   <div class="shots-head reveal">
     <h2><span class="es-only">Todo el negocio en una pantalla</span><span class="en-only">Your whole business on one screen</span></h2>
-    <p><span class="es-only">Cinco bloques principales del producto. Mismo color, mismo idioma, mismas teclas para todo el equipo. <b>Pulsa cualquier imagen para verla en grande.</b></span><span class="en-only">Five main blocks of the product. Same colour, same language, same shortcuts for the whole team. <b>Tap any image to zoom in.</b></span></p>
+    <p><span class="es-only">Cinco bloques del producto. Cada uno con dos vistas que se alternan solas. <b>Pulsa cualquier imagen para verla en grande.</b></span><span class="en-only">Five product blocks. Each cycles through two views automatically. <b>Tap any image to zoom in.</b></span></p>
   </div>
 
-  <div class="feat-group reveal">
-    <div class="feat-head">
+  <!-- 1. Cara cliente -->
+  <div class="feat-block reveal">
+    <div class="feat-content">
       <span class="eyebrow"><span class="es-only">Cara cliente</span><span class="en-only">Customer side</span></span>
-      <h3><span class="es-only">El cliente pide en 30 segundos, sin app ni cuenta</span><span class="en-only">The customer orders in 30 seconds, no app or account</span></h3>
-      <p><span class="es-only">Elige producto, deja teléfono y email, pulsa <b>Hacer pedido</b>. Le llega un recibo branded al instante. Lo agotado desaparece del menú solo.</span><span class="en-only">Picks a product, leaves phone and email, hits <b>Place order</b>. A branded receipt lands instantly. Sold-out items drop from the menu on their own.</span></p>
+      <h3><span class="es-only">Pide en 30 segundos, sin app ni cuenta</span><span class="en-only">Orders in 30 seconds, no app or account</span></h3>
+      <p><span class="es-only">Cara cliente con tu marca, tu paleta y tu menú. El cliente elige, deja teléfono y email opcional. Recibe el resumen al instante.</span><span class="en-only">Customer-facing with your brand, your palette, your menu. They pick, leave phone and optional email. Receipt lands instantly.</span></p>
+      <ul class="feat-bullets">
+        <li><span class="es-only">Carrito con email opcional para el recibo</span><span class="en-only">Cart with optional email for the receipt</span></li>
+        <li><span class="es-only">Lo agotado desaparece del menú solo</span><span class="en-only">Sold-out items drop from the menu on their own</span></li>
+        <li><span class="es-only">Funciona en móvil sin descargar nada</span><span class="en-only">Works on mobile without downloading anything</span></li>
+      </ul>
     </div>
-    <div class="feat-stack">
-      <figure class="shot-img reveal">
-        <a class="shot-link" href="#z-cliente-pide" aria-label="Ampliar imagen">
+    <div class="feat-image">
+      <div class="shot-stack" data-zoom="cliente">
+        <div class="shot-frame">
+          <picture>
+            <source srcset="../img/platform-frames/shot-cliente-menu.webp" type="image/webp">
+            <img src="../img/platform-frames/shot-cliente-menu.jpg" alt="Menú público del local con productos, categorías y precios" loading="lazy" width="2880" height="1800">
+          </picture>
+        </div>
+        <div class="shot-frame">
           <picture>
             <source srcset="../img/platform-frames/shot-cliente-pide.webp" type="image/webp">
-            <img src="../img/platform-frames/shot-cliente-pide.jpg" alt="Pantalla de pedido del cliente con carrito y formulario de contacto" loading="lazy" width="2880" height="1800">
+            <img src="../img/platform-frames/shot-cliente-pide.jpg" alt="Cart modal abierto con productos, total y formulario de pedido" loading="lazy" width="2880" height="1800">
           </picture>
-        </a>
-        <figcaption class="shot-caption"><span class="es-only"><b>Web pública del local</b> · carrito con email opcional para recibir el recibo</span><span class="en-only"><b>Public shop page</b> · cart with optional email for the receipt</span></figcaption>
-      </figure>
+        </div>
+        <div class="shot-dots"><span></span><span></span></div>
+      </div>
     </div>
   </div>
 
-  <div class="feat-group reveal">
-    <div class="feat-head">
+  <!-- 2. Pedidos del local -->
+  <div class="feat-block alt reverse reveal">
+    <div class="feat-content">
       <span class="eyebrow"><span class="es-only">Pedidos del local</span><span class="en-only">Shop orders</span></span>
-      <h3><span class="es-only">Web, Uber, Glovo y caja física en el mismo tablero</span><span class="en-only">Web, Uber, Glovo and till on the same board</span></h3>
-      <p><span class="es-only"><b>Arrastras de Recibidos a Aceptados</b>, se actualiza para todos al instante. Mientras estás en el obrador sigues el ritmo sin abrir 4 apps.</span><span class="en-only"><b>Drag from Received to Accepted</b>, everyone sees it at once. While you're in the kitchen you keep the rhythm without opening 4 apps.</span></p>
+      <h3><span class="es-only">Web, Uber, Glovo y caja en un tablero</span><span class="en-only">Web, Uber, Glovo and till on one board</span></h3>
+      <p><span class="es-only">Cambias entre lista y kanban. Arrastras de Recibidos a Aceptados, se actualiza para todos. Sigues el ritmo sin abrir 4 apps.</span><span class="en-only">Switch between list and kanban. Drag from Received to Accepted, everyone sees it. Keep the rhythm without juggling 4 apps.</span></p>
+      <ul class="feat-bullets">
+        <li><span class="es-only">Vista lista o kanban, tu eliges</span><span class="en-only">List or kanban view, you choose</span></li>
+        <li><span class="es-only">Pedidos externos de Uber y Glovo apuntados manual en un toque</span><span class="en-only">External Uber and Glovo orders logged in one tap</span></li>
+        <li><span class="es-only">Reembolsos con razón guardada por canal</span><span class="en-only">Refunds with reason saved per channel</span></li>
+      </ul>
     </div>
-    <div class="feat-stack">
-      <figure class="shot-img reveal">
-        <a class="shot-link" href="#z-kanban" aria-label="Ampliar imagen">
+    <div class="feat-image">
+      <div class="shot-stack" data-zoom="pedidos">
+        <div class="shot-frame">
           <picture>
             <source srcset="../img/platform-frames/shot-kanban.webp" type="image/webp">
-            <img src="../img/platform-frames/shot-kanban.jpg" alt="Panel kanban con pedidos en columnas Recibidos, Aceptados, Listos, Recogidos" loading="lazy" width="2880" height="1800">
+            <img src="../img/platform-frames/shot-kanban.jpg" alt="Vista kanban con columnas Recibidos, Aceptados, Listos, Recogidos" loading="lazy" width="2880" height="1800">
           </picture>
-        </a>
-        <figcaption class="shot-caption"><span class="es-only"><b>Vista kanban</b> · 4 columnas con drag-and-drop, contador por columna, cards con cliente y total</span><span class="en-only"><b>Kanban view</b> · 4 columns with drag-and-drop, per-column counter, cards with customer and total</span></figcaption>
-      </figure>
+        </div>
+        <div class="shot-frame">
+          <picture>
+            <source srcset="../img/platform-frames/shot-orders-list.webp" type="image/webp">
+            <img src="../img/platform-frames/shot-orders-list.jpg" alt="Vista lista con cards de pedidos aceptados" loading="lazy" width="2880" height="1800">
+          </picture>
+        </div>
+        <div class="shot-dots"><span></span><span></span></div>
+      </div>
     </div>
   </div>
 
-  <div class="feat-group reveal">
-    <div class="feat-head">
+  <!-- 3. Encargos especiales -->
+  <div class="feat-block reveal">
+    <div class="feat-content">
       <span class="eyebrow"><span class="es-only">Encargos especiales</span><span class="en-only">Special orders</span></span>
-      <h3><span class="es-only">Tartas, eventos, catering. Sin perderse en chats.</span><span class="en-only">Cakes, events, catering. Without losing track in chats.</span></h3>
-      <p><span class="es-only">El cliente rellena un formulario propio (fecha, personas, descripción). Te llega como tarjeta en su columna. Respondes con <b>presupuesto, WhatsApp o email directo</b> desde la tarjeta.</span><span class="en-only">The customer fills a dedicated form (date, guests, description). It lands as a card. You reply with <b>quote, WhatsApp or direct email</b> from the card.</span></p>
+      <h3><span class="es-only">Tartas, eventos, catering. Sin perderse en chats.</span><span class="en-only">Cakes, events, catering. No more lost chats.</span></h3>
+      <p><span class="es-only">Formulario propio que el cliente rellena (fecha, personas, descripción). Te llega como tarjeta. Respondes con presupuesto, WhatsApp o email directo.</span><span class="en-only">Dedicated form the customer fills (date, guests, description). Lands as a card. Reply with quote, WhatsApp or direct email.</span></p>
+      <ul class="feat-bullets">
+        <li><span class="es-only">5 estados de avance del encargo</span><span class="en-only">5 stages from received to delivered</span></li>
+        <li><span class="es-only">WhatsApp y llamada al cliente con un clic</span><span class="en-only">WhatsApp and call the customer in one click</span></li>
+        <li><span class="es-only">Presupuesto cotizado guardado en la tarjeta</span><span class="en-only">Quoted budget saved on the card</span></li>
+      </ul>
     </div>
-    <div class="feat-stack">
-      <figure class="shot-img reveal">
-        <a class="shot-link" href="#z-encargos-board" aria-label="Ampliar imagen">
+    <div class="feat-image">
+      <div class="shot-stack" data-zoom="encargos">
+        <div class="shot-frame">
           <picture>
             <source srcset="../img/platform-frames/shot-encargos-board.webp" type="image/webp">
-            <img src="../img/platform-frames/shot-encargos-board.jpg" alt="Kanban de encargos especiales con columnas Recibidos, Confirmados, En producción, Listos y Entregados" loading="lazy" width="2880" height="1800">
+            <img src="../img/platform-frames/shot-encargos-board.jpg" alt="Kanban de encargos con 5 columnas y cards reales" loading="lazy" width="2880" height="1800">
           </picture>
-        </a>
-        <figcaption class="shot-caption"><span class="es-only"><b>Kanban de encargos</b> · 5 estados, link al formulario público compartible</span><span class="en-only"><b>Encargos kanban</b> · 5 stages, link to a shareable public form</span></figcaption>
-      </figure>
-      <figure class="shot-img reveal">
-        <a class="shot-link" href="#z-encargos" aria-label="Ampliar imagen">
+        </div>
+        <div class="shot-frame">
           <picture>
             <source srcset="../img/platform-frames/shot-encargos.webp" type="image/webp">
-            <img src="../img/platform-frames/shot-encargos.jpg" alt="Modal de encargo con datos de cliente, presupuesto y botones de WhatsApp, Llamar y Enviar email" loading="lazy" width="2880" height="1800">
+            <img src="../img/platform-frames/shot-encargos.jpg" alt="Modal de edición de encargo con WhatsApp y llamada al cliente" loading="lazy" width="2880" height="1800">
           </picture>
-        </a>
-        <figcaption class="shot-caption"><span class="es-only"><b>Detalle de un encargo</b> · WhatsApp, llamada y email del cliente a un clic</span><span class="en-only"><b>Encargo detail</b> · WhatsApp, call and email the customer in one click</span></figcaption>
-      </figure>
+        </div>
+        <div class="shot-dots"><span></span><span></span></div>
+      </div>
     </div>
   </div>
 
-  <div class="feat-group reveal">
-    <div class="feat-head">
+  <!-- 4. Finanzas -->
+  <div class="feat-block alt reverse reveal">
+    <div class="feat-content">
       <span class="eyebrow"><span class="es-only">Finanzas</span><span class="en-only">Finances</span></span>
-      <h3><span class="es-only">Facturación, crecimiento y canal calculados solos</span><span class="en-only">Revenue, growth and channels, calculated on their own</span></h3>
-      <p><span class="es-only">Mes y año, distribución entre <b>web, Uber, Glovo y caja física</b>, ticket medio, mejor día. Con reembolsos restados proporcionalmente.</span><span class="en-only">Month and year, split across <b>web, Uber, Glovo and till</b>, average ticket, best day. Refunds netted out proportionally.</span></p>
+      <h3><span class="es-only">Facturación, crecimiento y canal, calculados solos</span><span class="en-only">Revenue, growth and channels, calculated on their own</span></h3>
+      <p><span class="es-only">Toggle mes / año. Distribución entre web, Uber, Glovo y caja física. Crecimiento proyectado, ticket medio, mejor día. Con reembolsos netos.</span><span class="en-only">Month / year toggle. Split between web, Uber, Glovo and till. Projected growth, average ticket, best day. With refunds netted out.</span></p>
+      <ul class="feat-bullets">
+        <li><span class="es-only">11 tiles clicables con drill-down</span><span class="en-only">11 clickable tiles with drill-down</span></li>
+        <li><span class="es-only">Donut por canal y barras por día</span><span class="en-only">Donut per channel, bars per day</span></li>
+        <li><span class="es-only">Vista año con 12 meses comparables</span><span class="en-only">Year view with 12 comparable months</span></li>
+      </ul>
     </div>
-    <div class="feat-stack">
-      <figure class="shot-img reveal">
-        <a class="shot-link" href="#z-analytics" aria-label="Ampliar imagen">
+    <div class="feat-image">
+      <div class="shot-stack" data-zoom="finanzas">
+        <div class="shot-frame">
           <picture>
             <source srcset="../img/platform-frames/shot-analytics.webp" type="image/webp">
-            <img src="../img/platform-frames/shot-analytics.jpg" alt="Panel de análisis con facturación, crecimiento, ticket medio, distribución por canal y donut chart" loading="lazy" width="2880" height="1800">
+            <img src="../img/platform-frames/shot-analytics.jpg" alt="Vista mes con 11 KPIs y donut chart por canal" loading="lazy" width="2880" height="1800">
           </picture>
-        </a>
-        <figcaption class="shot-caption"><span class="es-only"><b>Panel de análisis</b> · 11 tiles clicables que abren drill-down con histórico</span><span class="en-only"><b>Analytics panel</b> · 11 clickable tiles with drill-down history</span></figcaption>
-      </figure>
+        </div>
+        <div class="shot-frame">
+          <picture>
+            <source srcset="../img/platform-frames/shot-analytics-year.webp" type="image/webp">
+            <img src="../img/platform-frames/shot-analytics-year.jpg" alt="Vista año con facturación, mejor mes y día más flojo" loading="lazy" width="2880" height="1800">
+          </picture>
+        </div>
+        <div class="shot-dots"><span></span><span></span></div>
+      </div>
     </div>
   </div>
 
-  <div class="feat-group reveal">
-    <div class="feat-head">
+  <!-- 5. Inventario -->
+  <div class="feat-block reveal">
+    <div class="feat-content">
       <span class="eyebrow"><span class="es-only">Inventario</span><span class="en-only">Inventory</span></span>
       <h3><span class="es-only">Stock por local, sync al menú online</span><span class="en-only">Per-shop stock, synced to the online menu</span></h3>
-      <p><span class="es-only">Cada local apunta cuánto le queda. <b>Lo agotado desaparece del menú online</b> sin tocar nada. La central ve qué locales necesitan reposición.</span><span class="en-only">Each shop logs what's left. <b>Out-of-stock items vanish from the online menu</b> automatically. HQ sees which shops need restock.</span></p>
+      <p><span class="es-only">Vista global de toda la cadena. Drill a un local: cada producto con su stock, alertas de agotado y fecha de reposición. Sync al menú público.</span><span class="en-only">Chain-wide view. Drill into a shop: each product with its stock, sold-out alerts and restock date. Synced to the public menu.</span></p>
+      <ul class="feat-bullets">
+        <li><span class="es-only">Valor del inventario por local y total</span><span class="en-only">Inventory value per shop and total</span></li>
+        <li><span class="es-only">Lo agotado se cae del menú online solo</span><span class="en-only">Sold-out items drop from the online menu automatically</span></li>
+        <li><span class="es-only">Materias primas separadas de productos de venta</span><span class="en-only">Raw materials separated from sale products</span></li>
+      </ul>
     </div>
-    <div class="feat-stack">
-      <figure class="shot-img reveal">
-        <a class="shot-link" href="#z-inventario" aria-label="Ampliar imagen">
+    <div class="feat-image">
+      <div class="shot-stack" data-zoom="inventario">
+        <div class="shot-frame">
           <picture>
             <source srcset="../img/platform-frames/shot-inventario.webp" type="image/webp">
-            <img src="../img/platform-frames/shot-inventario.jpg" alt="Inventario por local con Barcelona, Madrid Centro, Madrid Norte y Sevilla, mostrando productos agotados, queda poco y stock OK" loading="lazy" width="2880" height="1800">
+            <img src="../img/platform-frames/shot-inventario.jpg" alt="Vista global de inventario con todos los locales" loading="lazy" width="2880" height="1800">
           </picture>
-        </a>
-        <figcaption class="shot-caption"><span class="es-only"><b>Vista global de la cadena</b> · valor inventario, agotados ahora, queda poco</span><span class="en-only"><b>Chain-wide view</b> · inventory value, out-of-stock now, low stock</span></figcaption>
-      </figure>
+        </div>
+        <div class="shot-frame">
+          <picture>
+            <source srcset="../img/platform-frames/shot-inventario-detail.webp" type="image/webp">
+            <img src="../img/platform-frames/shot-inventario-detail.jpg" alt="Detalle de un local con productos individuales y stock" loading="lazy" width="2880" height="1800">
+          </picture>
+        </div>
+        <div class="shot-dots"><span></span><span></span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1468,43 +1592,11 @@ html { scroll-behavior: smooth; }
   </div>
 </section>
 
-<!-- ZOOM OVERLAYS · pure CSS lightbox via :target -->
-<a href="#close" id="z-cliente-pide" class="zoom-overlay">
-  <picture>
-    <source srcset="../img/platform-frames/shot-cliente-pide.webp" type="image/webp">
-    <img src="../img/platform-frames/shot-cliente-pide.jpg" alt="">
-  </picture>
-</a>
-<a href="#close" id="z-kanban" class="zoom-overlay">
-  <picture>
-    <source srcset="../img/platform-frames/shot-kanban.webp" type="image/webp">
-    <img src="../img/platform-frames/shot-kanban.jpg" alt="">
-  </picture>
-</a>
-<a href="#close" id="z-encargos-board" class="zoom-overlay">
-  <picture>
-    <source srcset="../img/platform-frames/shot-encargos-board.webp" type="image/webp">
-    <img src="../img/platform-frames/shot-encargos-board.jpg" alt="">
-  </picture>
-</a>
-<a href="#close" id="z-encargos" class="zoom-overlay">
-  <picture>
-    <source srcset="../img/platform-frames/shot-encargos.webp" type="image/webp">
-    <img src="../img/platform-frames/shot-encargos.jpg" alt="">
-  </picture>
-</a>
-<a href="#close" id="z-analytics" class="zoom-overlay">
-  <picture>
-    <source srcset="../img/platform-frames/shot-analytics.webp" type="image/webp">
-    <img src="../img/platform-frames/shot-analytics.jpg" alt="">
-  </picture>
-</a>
-<a href="#close" id="z-inventario" class="zoom-overlay">
-  <picture>
-    <source srcset="../img/platform-frames/shot-inventario.webp" type="image/webp">
-    <img src="../img/platform-frames/shot-inventario.jpg" alt="">
-  </picture>
-</a>
+<!-- ZOOM OVERLAY · single dynamic, populated by JS on click -->
+<div class="zoom-overlay" id="zoomOverlay" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+  <button class="zoom-close" aria-label="Cerrar">×</button>
+  <img id="zoomImg" src="" alt="">
+</div>
 
 <!-- FINAL CTA -->
 <section class="plat-cta reveal">
@@ -1549,10 +1641,53 @@ html { scroll-behavior: smooth; }
       document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
     }
 
-    // Esc key closes the zoom lightbox
+    // ZOOM lightbox: detect which frame is visible at click time
+    const overlay = document.getElementById('zoomOverlay');
+    const zoomImg = document.getElementById('zoomImg');
+    const closeBtn = overlay.querySelector('.zoom-close');
+
+    function getVisibleFrameSrc(stack) {
+      const frames = stack.querySelectorAll('.shot-frame');
+      let bestSrc = null;
+      let bestOpacity = -1;
+      frames.forEach(frame => {
+        const op = parseFloat(window.getComputedStyle(frame).opacity);
+        if (op > bestOpacity) {
+          bestOpacity = op;
+          const img = frame.querySelector('img');
+          if (img) bestSrc = img.currentSrc || img.src;
+        }
+      });
+      return bestSrc;
+    }
+
+    function openZoom(src) {
+      if (!src) return;
+      zoomImg.src = src;
+      overlay.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeZoom() {
+      overlay.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.shot-stack').forEach(stack => {
+      stack.addEventListener('click', (e) => {
+        e.preventDefault();
+        openZoom(getVisibleFrameSrc(stack));
+      });
+    });
+
+    overlay.addEventListener('click', (e) => {
+      // close on click anywhere except on the image itself
+      if (e.target === overlay || e.target === closeBtn) closeZoom();
+    });
+    closeBtn.addEventListener('click', closeZoom);
+
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && window.location.hash.startsWith('#z-')) {
-        history.replaceState(null, '', window.location.pathname + window.location.search);
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+        closeZoom();
       }
     });
   })();
