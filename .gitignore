@@ -1,3 +1,5 @@
 node_modules/
 screenshot-befores.js
 package-lock.json
+img/platform-frames/sample/
+img/platform-frames/demo-source.*
