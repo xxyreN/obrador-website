@@ -264,15 +264,15 @@
 .video-caption a { color: var(--dark); border-bottom: 1px solid rgba(26, 23, 21, 0.2); text-decoration: none; }
 .video-caption a:hover { color: var(--copper-dark); border-color: var(--copper-dark); }
 
-/* SHOTS SECTION · 5 screenshots with captions */
+/* SHOTS SECTION · grouped feature blocks, Belaire-style */
 .shots-section {
   max-width: 1280px;
-  margin: 88px auto 0;
+  margin: 96px auto 0;
   padding: 0 28px;
 }
 .shots-head {
   max-width: 720px;
-  margin: 0 auto 48px;
+  margin: 0 auto 56px;
   text-align: center;
 }
 .shots-head h2 {
@@ -290,21 +290,51 @@
   line-height: 1.55;
   margin: 0;
 }
-.shot-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
-  align-items: center;
-  margin-bottom: 84px;
+.feat-group {
+  margin-bottom: 80px;
 }
-.shot-row.reverse { direction: rtl; }
-.shot-row.reverse > * { direction: ltr; }
-.shot-row:last-child { margin-bottom: 0; }
+.feat-group:last-child { margin-bottom: 0; }
+.feat-head {
+  max-width: 760px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+.feat-head .eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--copper-dark);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+.feat-head h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 3vw, 38px);
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+.feat-head p {
+  font-family: var(--font-sans);
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--dark-soft);
+  margin: 0;
+}
+.feat-head p b { color: var(--dark); font-weight: 600; }
+.feat-grid {
+  display: grid;
+  gap: 22px;
+}
+.feat-grid.cols-1 { grid-template-columns: 1fr; max-width: 760px; margin: 0 auto; }
+.feat-grid.cols-2 { grid-template-columns: 1fr 1fr; }
 .shot-img {
   position: relative;
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 22px 50px rgba(26, 23, 21, 0.1), 0 2px 6px rgba(26, 23, 21, 0.04);
+  box-shadow: 0 14px 40px rgba(26, 23, 21, 0.1), 0 2px 6px rgba(26, 23, 21, 0.04);
   background: var(--white);
   border: 1px solid rgba(26, 23, 21, 0.06);
 }
@@ -313,136 +343,104 @@
   width: 100%;
   height: auto;
 }
-.shot-body {
-  padding: 6px 4px;
-}
-.shot-body h3 {
-  font-family: var(--font-serif);
-  font-size: clamp(26px, 2.8vw, 36px);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  color: var(--dark);
-  margin: 0 0 14px;
-}
-.shot-body p {
+.shot-img .shot-caption {
   font-family: var(--font-sans);
-  font-size: 15.5px;
-  line-height: 1.6;
-  color: var(--dark-soft);
-  margin: 0 0 14px;
-}
-.shot-body p:last-child { margin-bottom: 0; }
-.shot-body p b { color: var(--dark); font-weight: 600; }
-.shot-tag {
-  display: inline-block;
-  font-family: var(--font-sans);
-  font-size: 12px;
+  font-size: 12.5px;
   color: var(--dark-muted);
-  background: rgba(26, 23, 21, 0.04);
-  padding: 4px 12px;
-  border-radius: 999px;
-  margin-top: 4px;
   letter-spacing: 0.02em;
+  padding: 12px 16px;
+  border-top: 1px solid rgba(26, 23, 21, 0.06);
+  background: rgba(26, 23, 21, 0.015);
 }
+.shot-img .shot-caption b { color: var(--dark); font-weight: 600; }
 
-/* BEFORE / AFTER · honest comparison */
-.compare-section {
-  max-width: 1280px;
-  margin: 110px auto 0;
+/* STACK REPLACEMENT TABLE · "hoy esto vive en 5 sitios" */
+.stack-section {
+  max-width: 1080px;
+  margin: 96px auto 0;
   padding: 0 28px;
 }
-.compare-head {
-  max-width: 680px;
-  margin: 0 auto 44px;
+.stack-head {
+  max-width: 700px;
+  margin: 0 auto 40px;
   text-align: center;
 }
-.compare-head h2 {
+.stack-head h2 {
   font-family: var(--font-serif);
-  font-size: clamp(30px, 4vw, 48px);
+  font-size: clamp(28px, 3.6vw, 44px);
   letter-spacing: -0.02em;
   color: var(--dark);
-  line-height: 1.05;
+  line-height: 1.08;
   margin: 0 0 12px;
 }
-.compare-head p {
+.stack-head p {
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 15.5px;
   color: var(--dark-soft);
   line-height: 1.55;
   margin: 0;
 }
-.compare-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-.compare-card {
-  border-radius: 18px;
-  padding: 36px 32px 32px;
-  position: relative;
-}
-.compare-card.before {
-  background: #F3EFEA;
+.stack-table {
+  background: var(--white);
   border: 1px solid rgba(26, 23, 21, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
 }
-.compare-card.after {
+.stack-row {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr;
+  align-items: center;
+  padding: 18px 28px;
+  font-family: var(--font-sans);
+  border-bottom: 1px solid rgba(26, 23, 21, 0.06);
+}
+.stack-row:last-child { border-bottom: 0; }
+.stack-row.header {
+  background: #F7F3EE;
+  padding: 14px 28px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--dark-muted);
+  font-weight: 600;
+}
+.stack-row.total {
   background: var(--dark);
   color: var(--cream);
+  font-size: 16px;
+  padding: 20px 28px;
 }
-.compare-card .label {
+.stack-row.total .stack-now { color: rgba(245, 237, 228, 0.6); text-decoration: line-through; }
+.stack-row.total .stack-obrador { color: var(--copper); font-weight: 700; }
+.stack-row .stack-thing {
+  font-size: 15px;
+  color: var(--dark);
+}
+.stack-row.total .stack-thing { color: var(--cream); font-weight: 600; }
+.stack-row .stack-now {
+  font-size: 14px;
+  color: var(--dark-soft);
+  font-variant-numeric: tabular-nums;
+}
+.stack-row .stack-obrador {
+  font-size: 14px;
+  color: var(--dark);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+.stack-row .stack-obrador.included {
+  color: #2D7A4F;
+}
+.stack-note {
   font-family: var(--font-sans);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 12.5px;
   color: var(--dark-muted);
-  margin-bottom: 8px;
-}
-.compare-card.after .label { color: rgba(245, 237, 228, 0.55); }
-.compare-card h3 {
-  font-family: var(--font-serif);
-  font-size: clamp(24px, 2.6vw, 30px);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin: 0 0 22px;
-  color: inherit;
-}
-.compare-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 12px;
-}
-.compare-list li {
-  font-family: var(--font-sans);
-  font-size: 14.5px;
+  text-align: center;
+  margin-top: 18px;
   line-height: 1.55;
-  padding-left: 22px;
-  position: relative;
 }
-.compare-card.before .compare-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 12px;
-  height: 1px;
-  background: var(--dark-muted);
-}
-.compare-card.after .compare-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 7px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--copper);
-}
-.compare-card.after .compare-list li { color: rgba(245, 237, 228, 0.92); }
 
-/* PRICING SECTION · 2 product cards (preserved structure, calmed) */
+/* PRICING SECTION · 2 product cards */
 .pricing-section {
   max-width: 1280px;
   margin: 110px auto 0;
@@ -813,9 +811,14 @@
 
 /* RESPONSIVE */
 @media (max-width: 980px) {
-  .shot-row { grid-template-columns: 1fr; gap: 24px; margin-bottom: 64px; }
-  .shot-row.reverse { direction: ltr; }
-  .compare-grid { grid-template-columns: 1fr; gap: 18px; }
+  .feat-grid.cols-2 { grid-template-columns: 1fr; gap: 18px; }
+  .feat-group { margin-bottom: 64px; }
+  .stack-row { grid-template-columns: 1fr; gap: 6px; padding: 18px 20px; }
+  .stack-row.header { display: none; }
+  .stack-row .stack-now::before { content: 'Hoy · '; color: var(--dark-muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-right: 4px; }
+  .stack-row .stack-obrador::before { content: 'obrador · '; color: var(--copper-dark); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-right: 4px; }
+  .stack-row.total .stack-now::before { color: rgba(245, 237, 228, 0.5); }
+  .stack-row.total .stack-obrador::before { color: var(--copper); }
   .prods-grid { grid-template-columns: 1fr; gap: 22px; }
   .plat-hero-v2 .hero-meta-row { grid-template-columns: repeat(3, 1fr); }
 }
@@ -823,10 +826,11 @@
 @media (max-width: 640px) {
   .plat-hero-v2 { padding-top: 100px; }
   .plat-hero-v2 .hero-meta-row { grid-template-columns: 1fr 1fr; }
-  .shots-section, .compare-section, .pricing-section { margin-top: 72px; }
+  .shots-section, .stack-section, .pricing-section { margin-top: 72px; }
+  .feat-head h3 { font-size: 22px; }
   .custom-strip { padding: 26px 22px; }
   .prod-card { padding: 32px 24px 26px; }
-  .compare-card { padding: 26px 22px 22px; }
+  .stack-row { padding: 16px 18px; }
   .plat-cta { padding: 44px 26px; margin-top: 72px; }
 }
 </style>
@@ -906,118 +910,130 @@
   </div>
 </section>
 
-<!-- SHOTS · lo que ves en el video -->
+<!-- SHOTS · feature groups -->
 <section class="shots-section">
   <div class="shots-head">
-    <h2><span class="es-only">Lo que ves en el video</span><span class="en-only">What you see in the video</span></h2>
-    <p><span class="es-only">Screenshots directos del producto que va a tener tu negocio. Cada bloque tarda 2-3 minutos del demo.</span><span class="en-only">Real screenshots of the product your business will get. Each block runs 2-3 minutes of the demo.</span></p>
+    <h2><span class="es-only">Todo el negocio en una pantalla</span><span class="en-only">Your whole business on one screen</span></h2>
+    <p><span class="es-only">Tres bloques principales del producto. Mismo color, mismo idioma, mismas teclas para todo el equipo.</span><span class="en-only">Three main blocks of the product. Same colour, same language, same shortcuts for the whole team.</span></p>
   </div>
 
-  <div class="shot-row reveal">
-    <div class="shot-img">
-      <picture>
-        <source srcset="../img/platform-frames/shot-cliente-pide.webp" type="image/webp">
-        <img src="../img/platform-frames/shot-cliente-pide.jpg" alt="Pantalla de pedido del cliente con carrito y formulario de contacto" loading="lazy" width="1280" height="626">
-      </picture>
+  <div class="feat-group reveal">
+    <div class="feat-head">
+      <span class="eyebrow"><span class="es-only">Cara cliente</span><span class="en-only">Customer side</span></span>
+      <h3><span class="es-only">El cliente pide en 30 segundos, sin app ni cuenta</span><span class="en-only">The customer orders in 30 seconds, no app or account</span></h3>
+      <p><span class="es-only">Elige producto, deja teléfono y email, pulsa <b>Hacer pedido</b>. Le llega un recibo branded al instante. Lo agotado desaparece del menú solo.</span><span class="en-only">Picks a product, leaves phone and email, hits <b>Place order</b>. A branded receipt lands instantly. Sold-out items drop from the menu on their own.</span></p>
     </div>
-    <div class="shot-body">
-      <h3><span class="es-only">El cliente pide en 30 segundos</span><span class="en-only">The customer orders in 30 seconds</span></h3>
-      <p><span class="es-only">No descarga app ni crea cuenta. Elige producto, deja teléfono y email, pulsa <b>Hacer pedido</b>. Le llega un recibo automático al instante.</span><span class="en-only">No app to download, no account to create. Picks the product, leaves phone and email, hits <b>Place order</b>. An instant receipt lands by email.</span></p>
-      <p><span class="es-only">Los productos agotados desaparecen del menú al momento.</span><span class="en-only">Sold-out items drop from the menu instantly.</span></p>
-      <span class="shot-tag"><span class="es-only">Web pública del local</span><span class="en-only">Public shop page</span></span>
-    </div>
-  </div>
-
-  <div class="shot-row reverse reveal">
-    <div class="shot-img">
-      <picture>
-        <source srcset="../img/platform-frames/shot-kanban.webp" type="image/webp">
-        <img src="../img/platform-frames/shot-kanban.jpg" alt="Panel kanban con pedidos en columnas Recibidos, Aceptados, Listos, Recogidos" loading="lazy" width="1280" height="626">
-      </picture>
-    </div>
-    <div class="shot-body">
-      <h3><span class="es-only">Todos los pedidos en columnas</span><span class="en-only">All orders on a board</span></h3>
-      <p><span class="es-only">Web, Uber Eats, Glovo y la caja física, en el mismo tablero. <b>Arrastras de Recibidos a Aceptados</b>, se actualiza para todos al instante.</span><span class="en-only">Web, Uber Eats, Glovo and the till, all on the same board. <b>Drag from Received to Accepted</b>, everyone sees it at once.</span></p>
-      <p><span class="es-only">Mientras estás en el obrador, sigue el ritmo sin abrir 4 apps.</span><span class="en-only">While you're in the kitchen, you keep the rhythm without opening 4 apps.</span></p>
-      <span class="shot-tag"><span class="es-only">Vista por local</span><span class="en-only">Per-shop view</span></span>
+    <div class="feat-grid cols-1">
+      <div class="shot-img">
+        <picture>
+          <source srcset="../img/platform-frames/shot-cliente-pide.webp" type="image/webp">
+          <img src="../img/platform-frames/shot-cliente-pide.jpg" alt="Pantalla de pedido del cliente con carrito y formulario de contacto" loading="lazy" width="1280" height="626">
+        </picture>
+        <div class="shot-caption"><span class="es-only"><b>Web pública del local</b> · carrito con email opcional para recibir el recibo</span><span class="en-only"><b>Public shop page</b> · cart with optional email for the receipt</span></div>
+      </div>
     </div>
   </div>
 
-  <div class="shot-row reveal">
-    <div class="shot-img">
-      <picture>
-        <source srcset="../img/platform-frames/shot-encargos.webp" type="image/webp">
-        <img src="../img/platform-frames/shot-encargos.jpg" alt="Modal de encargo especial con datos de cliente, presupuesto y botones de WhatsApp, Llamar y Enviar email" loading="lazy" width="1280" height="626">
-      </picture>
+  <div class="feat-group reveal">
+    <div class="feat-head">
+      <span class="eyebrow"><span class="es-only">Operación día a día</span><span class="en-only">Day-to-day operations</span></span>
+      <h3><span class="es-only">Pedidos y encargos en columnas. Sin perderse en chats.</span><span class="en-only">Orders and special orders on a board. No more lost chats.</span></h3>
+      <p><span class="es-only">Web, Uber, Glovo y caja física en el mismo tablero. Encargos especiales en su propio kanban con <b>WhatsApp y email directo</b> al cliente desde la tarjeta.</span><span class="en-only">Web, Uber, Glovo and till on the same board. Special orders on their own kanban with <b>WhatsApp and email directly</b> to the customer from the card.</span></p>
     </div>
-    <div class="shot-body">
-      <h3><span class="es-only">Tartas, eventos, catering. Sin perderse en chats.</span><span class="en-only">Cakes, events, catering. Without losing track in chats.</span></h3>
-      <p><span class="es-only">El cliente rellena un formulario propio (fecha, personas, descripción). Te llega como tarjeta en su columna. Le respondes con <b>presupuesto, WhatsApp o email directo</b> desde el panel.</span><span class="en-only">The customer fills a dedicated form (date, guests, description). It lands as a card in its own lane. You reply with a <b>quote, WhatsApp or direct email</b> from the panel.</span></p>
-      <span class="shot-tag"><span class="es-only">Kanban encargos · 5 estados</span><span class="en-only">Special orders board · 5 stages</span></span>
-    </div>
-  </div>
-
-  <div class="shot-row reverse reveal">
-    <div class="shot-img">
-      <picture>
-        <source srcset="../img/platform-frames/shot-analytics.webp" type="image/webp">
-        <img src="../img/platform-frames/shot-analytics.jpg" alt="Panel de análisis con facturación, crecimiento, ticket medio, distribución por canal y donut chart" loading="lazy" width="1280" height="626">
-      </picture>
-    </div>
-    <div class="shot-body">
-      <h3><span class="es-only">Cuánto facturas, por qué canal y cuál local manda</span><span class="en-only">Revenue, channels, top shops</span></h3>
-      <p><span class="es-only">Facturación del mes y del año, crecimiento proyectado, ticket medio, mejor día. Reparto entre <b>web, Uber, Glovo y caja física</b>. Con reembolsos restados proporcionalmente.</span><span class="en-only">Monthly and yearly revenue, projected growth, average ticket, best day. Split across <b>web, Uber, Glovo and till</b>. With refunds netted out proportionally.</span></p>
-      <p><span class="es-only">Sin exportar a Excel ni calcular nada a mano.</span><span class="en-only">No Excel exports, no manual math.</span></p>
-      <span class="shot-tag"><span class="es-only">Vista mes y año</span><span class="en-only">Month and year view</span></span>
+    <div class="feat-grid cols-2">
+      <div class="shot-img">
+        <picture>
+          <source srcset="../img/platform-frames/shot-kanban.webp" type="image/webp">
+          <img src="../img/platform-frames/shot-kanban.jpg" alt="Panel kanban con pedidos en columnas Recibidos, Aceptados, Listos, Recogidos" loading="lazy" width="1280" height="626">
+        </picture>
+        <div class="shot-caption"><span class="es-only"><b>Pedidos del local</b> · arrastras de columna, se actualiza para todos</span><span class="en-only"><b>Shop orders</b> · drag between columns, everyone sees it</span></div>
+      </div>
+      <div class="shot-img">
+        <picture>
+          <source srcset="../img/platform-frames/shot-encargos.webp" type="image/webp">
+          <img src="../img/platform-frames/shot-encargos.jpg" alt="Modal de encargo especial con datos de cliente, presupuesto y botones de WhatsApp, Llamar y Enviar email" loading="lazy" width="1280" height="626">
+        </picture>
+        <div class="shot-caption"><span class="es-only"><b>Encargos especiales</b> · presupuesto, WhatsApp y email en la misma tarjeta</span><span class="en-only"><b>Special orders</b> · quote, WhatsApp and email on the same card</span></div>
+      </div>
     </div>
   </div>
 
-  <div class="shot-row reveal">
-    <div class="shot-img">
-      <picture>
-        <source srcset="../img/platform-frames/shot-inventario.webp" type="image/webp">
-        <img src="../img/platform-frames/shot-inventario.jpg" alt="Inventario por local mostrando Barcelona, Madrid Centro, Madrid Norte y Sevilla con productos agotados, queda poco y stock OK" loading="lazy" width="1280" height="626">
-      </picture>
+  <div class="feat-group reveal">
+    <div class="feat-head">
+      <span class="eyebrow"><span class="es-only">Centro de control</span><span class="en-only">Control centre</span></span>
+      <h3><span class="es-only">Finanzas e inventario calculados solos</span><span class="en-only">Finances and inventory, calculated on their own</span></h3>
+      <p><span class="es-only">Facturación del mes y del año, crecimiento proyectado, distribución por canal. Stock por local que <b>se cae del menú</b> cuando se agota.</span><span class="en-only">Monthly and yearly revenue, projected growth, channel split. Per-shop stock that <b>drops from the menu</b> when it runs out.</span></p>
     </div>
-    <div class="shot-body">
-      <h3><span class="es-only">Stock por local, en tiempo real</span><span class="en-only">Per-shop stock, in real time</span></h3>
-      <p><span class="es-only">Cada local apunta cuánto le queda. <b>Lo agotado desaparece del menú online</b> sin tocar nada. La central ve qué locales necesitan reposición.</span><span class="en-only">Each shop logs what's left. <b>Out-of-stock items vanish from the online menu</b> automatically. HQ sees which shops need restock.</span></p>
-      <span class="shot-tag"><span class="es-only">Vista global de la cadena</span><span class="en-only">Chain-wide view</span></span>
+    <div class="feat-grid cols-2">
+      <div class="shot-img">
+        <picture>
+          <source srcset="../img/platform-frames/shot-analytics.webp" type="image/webp">
+          <img src="../img/platform-frames/shot-analytics.jpg" alt="Panel de análisis con facturación, crecimiento, ticket medio, distribución por canal y donut chart" loading="lazy" width="1280" height="626">
+        </picture>
+        <div class="shot-caption"><span class="es-only"><b>Finanzas</b> · facturación, crecimiento, canal, mejor día. Mes y año.</span><span class="en-only"><b>Finances</b> · revenue, growth, channel, best day. Month and year.</span></div>
+      </div>
+      <div class="shot-img">
+        <picture>
+          <source srcset="../img/platform-frames/shot-inventario.webp" type="image/webp">
+          <img src="../img/platform-frames/shot-inventario.jpg" alt="Inventario por local mostrando Barcelona, Madrid Centro, Madrid Norte y Sevilla con productos agotados, queda poco y stock OK" loading="lazy" width="1280" height="626">
+        </picture>
+        <div class="shot-caption"><span class="es-only"><b>Inventario</b> · todos los locales en una pantalla, alertas por agotado</span><span class="en-only"><b>Inventory</b> · all shops on one screen, sold-out alerts</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- BEFORE / AFTER -->
-<section class="compare-section reveal">
-  <div class="compare-head">
-    <h2><span class="es-only">Hoy frente a después</span><span class="en-only">Today vs after</span></h2>
-    <p><span class="es-only">Misma operación. Distinto sitio donde vive la información.</span><span class="en-only">Same operations. Different home for the information.</span></p>
+<!-- STACK REPLACEMENT TABLE -->
+<section class="stack-section reveal">
+  <div class="stack-head">
+    <h2><span class="es-only">Lo que vive en 5 sitios distintos pasa a vivir en uno</span><span class="en-only">What lives in 5 places moves to one</span></h2>
+    <p><span class="es-only">No reemplaza Glovo ni Uber Eats: ellos siguen entregando. Reemplaza el caos del día a día.</span><span class="en-only">It doesn't replace Glovo or Uber Eats: they keep delivering. It replaces the day-to-day chaos.</span></p>
   </div>
-  <div class="compare-grid">
-    <div class="compare-card before">
-      <div class="label"><span class="es-only">Hoy</span><span class="en-only">Today</span></div>
-      <h3><span class="es-only">WhatsApp, post-its, Excel y Glovo Partner abierto</span><span class="en-only">WhatsApp, post-its, Excel and Glovo Partner tab open</span></h3>
-      <ul class="compare-list">
-        <li><span class="es-only">Encargos por WhatsApp que se cuelan entre chats personales</span><span class="en-only">Orders via WhatsApp drowning between personal chats</span></li>
-        <li><span class="es-only">Pedidos de Uber y Glovo en 2 apps distintas, sin total agregado</span><span class="en-only">Uber and Glovo orders in 2 separate apps, no aggregated total</span></li>
-        <li><span class="es-only">Caja del día en una libreta o foto al móvil</span><span class="en-only">Daily till in a notebook or phone photo</span></li>
-        <li><span class="es-only">Stock en la cabeza del encargado, hasta que se acaba en mitad de la tarde</span><span class="en-only">Stock in the manager's head, until it runs out mid-afternoon</span></li>
-        <li><span class="es-only">Cierre del mes con Excel y memoria</span><span class="en-only">Month close with Excel and memory</span></li>
-      </ul>
+  <div class="stack-table">
+    <div class="stack-row header">
+      <span><span class="es-only">Esto</span><span class="en-only">This</span></span>
+      <span><span class="es-only">Hoy vive en</span><span class="en-only">Today it lives in</span></span>
+      <span><span class="es-only">Con obrador.web</span><span class="en-only">With obrador.web</span></span>
     </div>
-    <div class="compare-card after">
-      <div class="label"><span class="es-only">Con obrador.web</span><span class="en-only">With obrador.web</span></div>
-      <h3><span class="es-only">Una pantalla por local, una vista central</span><span class="en-only">One screen per shop, one HQ view</span></h3>
-      <ul class="compare-list">
-        <li><span class="es-only">Encargos llegan como tarjeta, separados del WhatsApp personal</span><span class="en-only">Special orders arrive as cards, separated from personal WhatsApp</span></li>
-        <li><span class="es-only">Web, Uber, Glovo y caja en el mismo tablero kanban</span><span class="en-only">Web, Uber, Glovo and till on the same kanban board</span></li>
-        <li><span class="es-only">Caja del día apuntada en 10 segundos, con o sin desglose</span><span class="en-only">Daily till logged in 10 seconds, with or without breakdown</span></li>
-        <li><span class="es-only">Stock por local: lo agotado se cae del menú al instante</span><span class="en-only">Per-shop stock: sold-out items drop from the menu instantly</span></li>
-        <li><span class="es-only">Facturación, crecimiento y canales calculados solos</span><span class="en-only">Revenue, growth and channels calculated on their own</span></li>
-      </ul>
+    <div class="stack-row">
+      <span class="stack-thing"><span class="es-only">Encargos especiales</span><span class="en-only">Special orders</span></span>
+      <span class="stack-now"><span class="es-only">WhatsApp + notas sueltas</span><span class="en-only">WhatsApp + loose notes</span></span>
+      <span class="stack-obrador included"><span class="es-only">Kanban propio · incluido</span><span class="en-only">Own kanban · included</span></span>
+    </div>
+    <div class="stack-row">
+      <span class="stack-thing"><span class="es-only">Pedidos online del día</span><span class="en-only">Daily online orders</span></span>
+      <span class="stack-now"><span class="es-only">Glovo + Uber + caja, apps por separado</span><span class="en-only">Glovo + Uber + till, separate apps</span></span>
+      <span class="stack-obrador included"><span class="es-only">Un solo tablero · incluido</span><span class="en-only">One single board · included</span></span>
+    </div>
+    <div class="stack-row">
+      <span class="stack-thing"><span class="es-only">Cierre de caja</span><span class="en-only">Daily till close</span></span>
+      <span class="stack-now"><span class="es-only">Libreta o foto al móvil</span><span class="en-only">Notebook or phone photo</span></span>
+      <span class="stack-obrador included"><span class="es-only">10 segundos en el panel · incluido</span><span class="en-only">10 seconds in the panel · included</span></span>
+    </div>
+    <div class="stack-row">
+      <span class="stack-thing"><span class="es-only">Inventario por local</span><span class="en-only">Per-shop inventory</span></span>
+      <span class="stack-now"><span class="es-only">En la cabeza del encargado</span><span class="en-only">In the manager's head</span></span>
+      <span class="stack-obrador included"><span class="es-only">Sync al menú online · incluido</span><span class="en-only">Synced to online menu · included</span></span>
+    </div>
+    <div class="stack-row">
+      <span class="stack-thing"><span class="es-only">Facturación del mes</span><span class="en-only">Monthly revenue</span></span>
+      <span class="stack-now"><span class="es-only">Excel + memoria</span><span class="en-only">Excel + memory</span></span>
+      <span class="stack-obrador included"><span class="es-only">Cálculo automático · incluido</span><span class="en-only">Auto-calculated · included</span></span>
+    </div>
+    <div class="stack-row">
+      <span class="stack-thing"><span class="es-only">Recibo al cliente</span><span class="en-only">Customer receipt</span></span>
+      <span class="stack-now"><span class="es-only">No se envía</span><span class="en-only">Not sent</span></span>
+      <span class="stack-obrador included"><span class="es-only">Email branded automático · incluido</span><span class="en-only">Branded auto-email · included</span></span>
+    </div>
+    <div class="stack-row total">
+      <span class="stack-thing"><span class="es-only">Total</span><span class="en-only">Total</span></span>
+      <span class="stack-now"><span class="es-only">5 apps + libretas</span><span class="en-only">5 apps + notebooks</span></span>
+      <span class="stack-obrador"><span class="es-only">1 pantalla</span><span class="en-only">1 screen</span></span>
     </div>
   </div>
+  <p class="stack-note"><span class="es-only">Glovo y Uber Eats siguen entregando como hasta ahora. Su comisión y su app las gestionas como siempre.</span><span class="en-only">Glovo and Uber Eats keep delivering as usual. Their commission and app are managed as always.</span></p>
 </section>
+
 
 <!-- PRICING -->
 <section class="pricing-section reveal" id="precios">
