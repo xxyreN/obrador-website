@@ -65,7 +65,7 @@ tag = "Webs para cafeterías en Madrid"
 w2, h2 = text_size(tag, sans_font)
 draw.text(((og_w-w2)//2, logo_y+logo_size+40+h+18), tag, fill=muted, font=sans_font)
 
-bottom = "obradorweb.com  ·  desde €490"
+bottom = "obradorweb.com  ·  desde €395"
 w3, h3 = text_size(bottom, small_font)
 draw.text(((og_w-w3)//2, og_h-60), bottom, fill=copper, font=small_font)
 

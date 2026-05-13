@@ -1,12 +1,12 @@
 # Obrador Web
 
-> Diseño web a medida para cafeterías, cafés de especialidad y restaurantes en Madrid. Sitios bilingües (ES/EN) con carta digital, QR imprimible, integración con Google Business, SEO básico y opción de tienda online con pasarela de pago. Desde €490.
+> Diseño web a medida para cafeterías, cafés de especialidad y restaurantes en Madrid. Sitios bilingües (ES/EN) con carta digital, QR imprimible, integración con Google Business, SEO básico y opción de tienda online con pasarela de pago. Desde €395.
 
 Obrador Web is a small web design agency based in Madrid, Spain, specialising in custom websites for specialty coffee shops, cafés and restaurants. We build bilingual (Spanish and English) sites with digital menus, printable QR cards, Google Business integration, basic SEO, and optional online shop with Snipcart/Stripe checkout.
 
 ## Services and pricing
 
-- **Presencia** — €490 (from). 1-page custom landing, responsive, bilingual ES/EN, WhatsApp + contact form, Google Maps integration, basic SEO, domain included. Delivery: ~1 week.
+- **Presencia** — €395 (from). 1-page custom landing, responsive, bilingual ES/EN, WhatsApp + contact form, Google Maps integration, basic SEO, domain included. Delivery: ~1 week.
 - **Carta Completa** — €890 (from). 3 pages (Home, Menu, Visit). Full interactive inline menu, story page, photo gallery, Google Business optimisation, printable QR menu card, advanced SEO. Delivery: ~2 weeks.
 - **Marca Completa** — €1,290 (from). 4-5 pages including Culture/Story, multi-location support, scroll animations + custom UI, premium SEO + Search Console, unlimited menu updates, priority support. Delivery: ~3 weeks.
 - **Tienda** — €2,490 (from). Marca Completa + online store (Snipcart/Shopify), cart + Stripe checkout, product catalogue with inventory, order email notifications, subscriptions (beans, brunch). Delivery: ~4 weeks.
