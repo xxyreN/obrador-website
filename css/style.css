@@ -446,6 +446,74 @@ body::before {
   color: var(--copper);
   font-weight: 400;
 }
+
+/* === Gold shimmer keywords (hero verticals) === */
+.hero-title .gold-shimmer {
+  font-style: normal;
+  font-weight: 400;
+  background-image: linear-gradient(
+    100deg,
+    var(--copper-dark) 0%,
+    var(--copper) 22%,
+    #F2D49A 48%,
+    #FFE9BD 52%,
+    var(--copper-light) 70%,
+    var(--copper) 88%,
+    var(--copper-dark) 100%
+  );
+  background-size: 240% 100%;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter:
+    drop-shadow(0 0 14px rgba(212, 170, 130, 0.32))
+    drop-shadow(0 0 4px rgba(242, 212, 154, 0.25));
+  animation: gold-shimmer-sweep 7s ease-in-out infinite;
+  position: relative;
+  display: inline-block;
+}
+.hero-title .gold-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: -6px -2px;
+  background: radial-gradient(ellipse at 50% 50%, rgba(242, 212, 154, 0.18) 0%, transparent 65%);
+  filter: blur(8px);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.9s ease 1.2s;
+}
+.hero-title.visible .gold-shimmer::after {
+  opacity: 1;
+  animation: gold-glow-pulse 5.5s ease-in-out infinite;
+}
+.hero-title .gold-shimmer:nth-of-type(2) { animation-delay: -2.3s; }
+.hero-title .gold-shimmer:nth-of-type(3) { animation-delay: -4.6s; }
+.hero-title.visible .gold-shimmer:nth-of-type(2)::after { animation-delay: -1.8s; }
+.hero-title.visible .gold-shimmer:nth-of-type(3)::after { animation-delay: -3.6s; }
+
+@keyframes gold-shimmer-sweep {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes gold-glow-pulse {
+  0%, 100% { opacity: 0.55; transform: scale(0.97); }
+  50%      { opacity: 1;    transform: scale(1.04); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-title .gold-shimmer {
+    animation: none;
+    background-position: 50% 50%;
+  }
+  .hero-title.visible .gold-shimmer::after {
+    animation: none;
+    opacity: 0.7;
+  }
+}
 .hero-title .accent-underline {
   color: var(--copper);
   position: relative;
