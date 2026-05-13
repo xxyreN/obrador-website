@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <title>Estudio web para hostelería · Obrador Web · Madrid</title>
-  <meta name="description" content="Estudio web para cafeterías, obradores y heladerías en Madrid. Webs propias, dominio incluido, SEO local. Desde 395€.">
+  <title>Estudio web para hostelería. Obrador Web Madrid.</title>
+  <meta name="description" content="Diseñamos webs que llenan mesas. Sitios web a medida para cafeterías y restaurantes en Madrid. Carta digital, bilingüe, QR, SEO. Desde €395.">
   <meta name="author" content="Obrador Web">
   <link rel="canonical" href="https://obradorweb.com/">
 
-  <meta property="og:title" content="Estudio web para hostelería · Obrador Web · Madrid">
-  <meta property="og:description" content="Webs propias para cafeterías, obradores y heladerías en Madrid. Desde 395€.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Estudio web para hostelería. Obrador Web Madrid.">
+  <meta property="og:description" content="Hacemos webs para cafeterías, obradores y heladerías en Madrid. Carta inline, dominio propio, SEO local. Sin Linktree, sin plantilla.">
   <meta property="og:url" content="https://obradorweb.com/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
@@ -21,16 +19,19 @@
   <meta property="og:image" content="https://obradorweb.com/img/og-default.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Obrador Web · Webs para cafeterías en Madrid · desde €395">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Estudio web para hostelería · Obrador Web · Madrid">
-  <meta name="twitter:description" content="Webs propias para cafeterías en Madrid. Desde 395€.">
+  <meta name="twitter:title" content="Estudio web para hostelería. Obrador Web Madrid.">
+  <meta name="twitter:description" content="Diseñamos webs que llenan mesas. Carta digital, bilingüe, QR, SEO. Desde €395.">
   <meta name="twitter:image" content="https://obradorweb.com/img/og-default.jpg">
 
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="icon" type="image/png" href="img/logo.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
 
+  <!-- Structured Data: WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,458 +46,880 @@
   }
   </script>
 
+  <!-- Structured Data: ProfessionalService -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": "https://obradorweb.com/#organization",
     "name": "Obrador Web",
-    "description": "Estudio web a medida para cafeterías, cafés de especialidad y restaurantes en Madrid. Desde 395€.",
+    "description": "Diseño web a medida para cafeterías, cafés de especialidad y restaurantes en Madrid. Sitios web bilingües con carta digital, QR imprimible y SEO. Desde €395.",
     "url": "https://obradorweb.com",
     "logo": "https://obradorweb.com/img/logo.png",
     "image": "https://obradorweb.com/img/logo.png",
     "email": "hola@obradorweb.com",
-    "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES" },
-    "areaServed": [{ "@type": "City", "name": "Madrid" }, { "@type": "Country", "name": "España" }],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Madrid",
+      "addressCountry": "ES"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Madrid" },
+      { "@type": "Country", "name": "España" }
+    ],
+    "serviceType": ["Diseño web", "Desarrollo web", "Carta digital", "QR carta", "SEO", "SEM", "Google Ads", "Tienda online", "Plataformas a medida", "Encargos por WhatsApp", "Panel multi-local"],
     "priceRange": "€395 - €3500",
-    "sameAs": ["https://instagram.com/obrador.web"]
+    "sameAs": [
+      "https://instagram.com/obrador.web"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Planes y servicios",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Presencia",
+          "description": "Landing page a medida (1 página), bilingüe ES/EN, WhatsApp, Google Maps, SEO básico, dominio incluido. Entrega ~1 semana.",
+          "price": "395",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Carta Completa",
+          "description": "3 páginas (Inicio, Carta, Visítanos), carta interactiva inline, galería, QR imprimible, SEO avanzado. Entrega ~2 semanas.",
+          "price": "890",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Marca Completa",
+          "description": "4-5 páginas, Cultura/Historia, multi-local, animaciones y UI custom, SEO premium, Search Console, actualizaciones ilimitadas de carta. Entrega ~3 semanas.",
+          "price": "1290",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Tienda",
+          "description": "Marca Completa más tienda online (Snipcart/Shopify), checkout Stripe, catálogo con inventario, notificaciones de pedido, suscripciones. Entrega ~4 semanas.",
+          "price": "2490",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Mantenimiento Básico",
+          "description": "Dominio, SSL, hosting, copias, formulario, hasta 2 actualizaciones/mes, soporte.",
+          "price": "50",
+          "priceCurrency": "EUR",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" } }
+        },
+        {
+          "@type": "Offer",
+          "name": "Mantenimiento Tienda",
+          "description": "Básico más monitorización de pedidos, Snipcart/pasarela, hasta 5 actualizaciones/mes, prioridad.",
+          "price": "90",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "SEM · Google Ads · Configuración",
+          "description": "Cuenta Google Ads, keywords, 3 campañas iniciales, tracking.",
+          "price": "290",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "SEM · Google Ads · Gestión mensual",
+          "description": "Optimización, ajuste de pujas, A/B copy, reporte. Excluye inversión publicitaria.",
+          "price": "150",
+          "priceCurrency": "EUR"
+        },
+        {
+          "@type": "Offer",
+          "name": "Plataforma · Encargos por WhatsApp",
+          "description": "Plataforma a medida para gestionar encargos. Formulario en web, notificación a WhatsApp Business vía Twilio, panel para gestionar pedidos. Precio piloto €1.800 (primeras 2), después €2.700. Mantenimiento €95/mes con 250 conversaciones.",
+          "price": "2700",
+          "priceCurrency": "EUR",
+          "url": "https://obradorweb.com/plataformas/"
+        },
+        {
+          "@type": "Offer",
+          "name": "Plataforma · Panel multi-local",
+          "description": "Plataforma multi-tenant para cadenas y grupos. Login por local, vista central agregada, mayoreo entre sedes, inventario, roles separados. Setup desde €3.500. Mantenimiento €120/mes.",
+          "price": "3500",
+          "priceCurrency": "EUR",
+          "url": "https://obradorweb.com/plataformas/"
+        },
+        {
+          "@type": "Offer",
+          "name": "Mantenimiento Plataforma WhatsApp",
+          "description": "Hosting, Supabase Pro, Twilio (250 conversaciones/mes), parches y bug fixes para plataforma de encargos.",
+          "price": "95",
+          "priceCurrency": "EUR"
+        }
+      ]
+    }
   }
   </script>
 
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta una web para una cafetería?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nuestros planes parten de €395 (Presencia, 1 página), €890 (Carta Completa, 3 páginas con carta inline), €1.290 (Marca Completa, multi-local y cultura) y €2.490 (Tienda, con e-commerce). Todos incluyen diseño responsive, bilingüe ES/EN, dominio y SEO básico." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tarda en estar lista?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Presencia ~1 semana, Carta Completa ~2 semanas, Marca Completa ~3 semanas, Tienda ~4 semanas. Los plazos dependen del volumen de contenido que tengáis listo (fotos, carta, copy)." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué incluye el mantenimiento de €50 al mes?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Dominio y SSL, hosting y copias de seguridad, formulario de contacto operativo (hasta 50 envíos/mes), hasta 2 actualizaciones de contenido al mes (horarios, precios, carta, eventos) y soporte técnico ante incidencias." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Hacéis SEO y SEM?",
+        "acceptedAnswer": { "@type": "Answer", "text": "SEO básico viene incluido en todos los planes (meta, schema, sitemap, performance). SEM (Google Ads) es un servicio aparte: €290 de configuración + €150/mes de gestión. La inversión publicitaria la paga el cliente directamente a Google (recomendamos mínimo €200/mes)." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Podéis editar la carta vosotros después del lanzamiento?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. En Carta Completa y Marca Completa las actualizaciones de carta están incluidas en el mantenimiento. Nos enviáis los cambios por WhatsApp o email y los publicamos en 24-48h." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La web es bilingüe?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Todos los planes son bilingües español e inglés por defecto. Incluye selector de idioma en el menú y traducciones gestionadas por nosotros." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Dónde trabajáis?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Somos de Madrid y trabajamos con cafés de especialidad y restaurantes en Madrid y remoto para el resto de España." }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="css/style.css?v=20260514-soft-gold">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Outfit:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Outfit:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Outfit:wght@400;500;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="side-bar-right" aria-hidden="true"></div>
 
-  <!-- SCROLL PROGRESS -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-
-  <!-- GRAIN OVERLAY -->
-  <div class="grain" aria-hidden="true"></div>
-
-  <!-- NAVBAR -->
+  <!-- Navbar -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="/" class="nav-logo">
         <img src="img/logo.png" alt="Obrador" class="nav-logo-img" width="40" height="40">
-        <span class="nav-logo-text">obrador<span class="nav-logo-accent">.web</span></span>
+        <span class="nav-logo-text">obrador<span class="accent">.web</span></span>
       </a>
-
       <div class="nav-links" id="navLinks">
-        <a href="proyectos/" data-en="Projects"><span>Proyectos</span></a>
-        <a href="compara/" data-en="Plans"><span>Planes</span></a>
-        <a href="plataformas/" data-en="Platforms"><span>Plataformas</span></a>
-        <a href="blog/" data-en="Blog"><span>Blog</span></a>
-        <a href="#contacto" class="nav-cta magnetic">
-          <span class="nav-cta-bg"></span>
-          <span class="nav-cta-text" data-en="Let's talk">Hablemos</span>
-        </a>
+        <a href="/" class="nav-active" data-en="Home">Inicio</a>
+        <a href="proyectos/" data-en="Projects">Proyectos</a>
+        <a href="compara/" data-en="Comparison">Comparativa</a>
+        <a href="plataformas/" data-en="Platforms">Plataformas</a>
+        <a href="#planes" data-en="Web">Web</a>
+        <a href="blog/" data-en="Blog">Blog</a>
+        <a href="#contacto" class="nav-cta" data-en="Let's talk">Hablemos</a>
       </div>
-
       <button class="lang-toggle" id="langToggle" aria-label="Switch language">
-        <span class="lang-current">ES</span><span class="lang-sep">/</span><span class="lang-other">EN</span>
+        <span class="lang-option lang-active" data-lang="es">ES</span>
+        <span class="lang-divider">/</span>
+        <span class="lang-option" data-lang="en">EN</span>
       </button>
-
-      <button class="nav-burger" id="navBurger" aria-label="Menu">
-        <span></span><span></span><span></span>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </nav>
 
-  <!-- HERO (full viewport) -->
+  <!-- Hero -->
   <section class="hero" id="hero">
-    <div class="hero-bg-layer hero-bg-1" data-parallax="0.2"></div>
-    <div class="hero-bg-layer hero-bg-2" data-parallax="0.4"></div>
-    <div class="hero-vignette"></div>
-
-    <div class="aroma" aria-hidden="true">
-      <span class="aroma-p large" style="left:6%; animation-delay:0s; animation-duration:10s"></span>
-      <span class="aroma-p" style="left:14%; animation-delay:3.2s; animation-duration:9s"></span>
-      <span class="aroma-p small" style="left:20%; animation-delay:1.8s; animation-duration:11s"></span>
-      <span class="aroma-p" style="left:28%; animation-delay:4.4s; animation-duration:8.5s"></span>
-      <span class="aroma-p large" style="left:34%; animation-delay:2.1s; animation-duration:12s"></span>
-      <span class="aroma-p" style="left:42%; animation-delay:5.5s; animation-duration:9.2s"></span>
-      <span class="aroma-p small" style="left:48%; animation-delay:0.6s; animation-duration:10.8s"></span>
-      <span class="aroma-p" style="left:55%; animation-delay:3.8s; animation-duration:8.8s"></span>
-      <span class="aroma-p large" style="left:62%; animation-delay:1.2s; animation-duration:11.5s"></span>
-      <span class="aroma-p" style="left:70%; animation-delay:4.7s; animation-duration:9.6s"></span>
-      <span class="aroma-p small" style="left:76%; animation-delay:2.4s; animation-duration:10.2s"></span>
-      <span class="aroma-p" style="left:82%; animation-delay:0.3s; animation-duration:11.8s"></span>
-      <span class="aroma-p large" style="left:90%; animation-delay:3.5s; animation-duration:9.4s"></span>
-      <span class="aroma-p" style="left:96%; animation-delay:5.1s; animation-duration:8.7s"></span>
+    <div class="hero-bg"></div>
+    <div class="steam-container">
+      <div class="steam steam-1"></div>
+      <div class="steam steam-2"></div>
+      <div class="steam steam-3"></div>
     </div>
-
-    <div class="steam" aria-hidden="true">
-      <span class="steam-s steam-1"></span>
-      <span class="steam-s steam-2"></span>
-      <span class="steam-s steam-3"></span>
-    </div>
-
-    <div class="hero-ring hero-ring-1" aria-hidden="true"></div>
-    <div class="hero-ring hero-ring-2" aria-hidden="true"></div>
-    <div class="hero-ring hero-ring-3" aria-hidden="true"></div>
-
+    <div class="coffee-ring coffee-ring-hero"></div>
     <div class="hero-content">
-      <a href="plataformas/" class="hero-pill anim-up" data-delay="100">
-        <span class="hero-pill-dot"></span>
-        <span class="hero-pill-text" data-en="NEW · Platform for cafés and bakeries">NUEVO · Plataforma para cafés y obradores</span>
-        <span class="hero-pill-arrow">→</span>
-      </a>
-
-      <div class="hero-eyebrow anim-up" data-delay="200">
-        <span class="hero-eyebrow-mark"></span>
-        <span data-en="Web studio for hospitality · Madrid">Estudio web para hostelería · Madrid</span>
-        <span class="hero-eyebrow-mark"></span>
-      </div>
-
-      <h1 class="hero-title anim-up" data-delay="300" data-en="Web studio for &lt;em class='shimmer'&gt;cafés · bakeries · ice cream shops&lt;/em&gt; in Madrid.">
-        Webs para <em class="shimmer">cafeterías · obradores · heladerías</em> en Madrid.
+      <a href="/plataformas/" class="hero-new-pill anim-fade-up" data-en="NEW · Platform for cafés and bakeries →"><span class="pulse-dot"></span>NUEVO · Plataforma para cafés y obradores →</a>
+      <div class="hero-badge anim-fade-up" data-en="Web for hospitality in Madrid">Webs para hostelería en Madrid</div>
+      <h1 class="hero-title anim-fade-up delay-1" data-en="We build websites for &lt;em class='gold-shimmer'&gt;cafés&lt;/em&gt;, &lt;em class='gold-shimmer'&gt;bakeries&lt;/em&gt; and &lt;em class='gold-shimmer'&gt;ice cream shops&lt;/em&gt; in Madrid.">
+        Hacemos webs para <em class="gold-shimmer">cafeterías</em>, <em class="gold-shimmer">obradores</em> y <em class="gold-shimmer">heladerías</em> en Madrid.
       </h1>
-
-      <p class="hero-sub anim-up" data-delay="500" data-en="Inline menu, own domain, local SEO. No Linktree, no template.">
+      <p class="hero-subtitle anim-fade-up delay-2" data-en="Inline menu, own domain, local SEO. No Linktree, no template.">
         Carta inline, dominio propio, SEO local. Sin Linktree, sin plantilla.
       </p>
-
-      <div class="hero-cta anim-up" data-delay="700">
-        <a href="proyectos/" class="btn btn-primary magnetic">
-          <span class="btn-bg"></span>
-          <span class="btn-text" data-en="See projects">Ver proyectos</span>
-          <span class="btn-arrow">→</span>
-        </a>
-        <a href="#contacto" class="btn btn-outline magnetic">
-          <span class="btn-text" data-en="Get in touch">Contactar</span>
-        </a>
-      </div>
-
-      <div class="hero-meta anim-up" data-delay="900">
-        <div class="hero-meta-item">
-          <span class="hero-meta-num">8</span>
-          <span class="hero-meta-label" data-en="Live projects">Proyectos en vivo</span>
-        </div>
-        <span class="hero-meta-sep"></span>
-        <div class="hero-meta-item">
-          <span class="hero-meta-num">395€</span>
-          <span class="hero-meta-label" data-en="Plans from">Planes desde</span>
-        </div>
-        <span class="hero-meta-sep"></span>
-        <div class="hero-meta-item">
-          <span class="hero-meta-num">~1</span>
-          <span class="hero-meta-label" data-en="Week to launch">Semana al lanzamiento</span>
-        </div>
+      <div class="hero-actions anim-fade-up delay-3">
+        <a href="proyectos/" class="btn btn-primary magnetic" data-en="See projects">Ver proyectos</a>
+        <a href="#contacto" class="btn btn-outline magnetic" data-en="Contact">Contactar</a>
       </div>
     </div>
-
-    <a href="#contacto" class="hero-scroll" aria-label="Scroll to contact">
-      <span class="hero-scroll-text" data-en="Scroll">Desliza</span>
-      <span class="hero-scroll-line"></span>
-    </a>
+    <div class="hero-scroll-indicator anim-fade-up delay-4">
+      <div class="scroll-line"></div>
+    </div>
   </section>
 
-  <!-- MARQUEE -->
-  <div class="marquee marquee-light">
+  <!-- Marquee divider -->
+  <div class="marquee-strip">
     <div class="marquee-track">
-      <span class="marquee-set">
-        <span class="marquee-word">Diseño web</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Carta digital</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Bilingüe</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Responsive</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">SEO local</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Madrid</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Specialty coffee</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Brunch</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Obradores</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Heladerías</span><span class="marquee-orn">✦</span>
-      </span>
-      <span class="marquee-set" aria-hidden="true">
-        <span class="marquee-word">Diseño web</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Carta digital</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Bilingüe</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Responsive</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">SEO local</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Madrid</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Specialty coffee</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Brunch</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Obradores</span><span class="marquee-orn">✦</span>
-        <span class="marquee-word">Heladerías</span><span class="marquee-orn">✦</span>
-      </span>
+      <span>DISEÑO WEB &middot; CARTA DIGITAL &middot; BILINGÜE &middot; RESPONSIVE &middot; SEO &middot; MADRID &middot; CAFETERÍAS &middot; BRUNCH &middot; SPECIALTY COFFEE &middot; DISEÑO WEB &middot; CARTA DIGITAL &middot; BILINGÜE &middot; RESPONSIVE &middot; SEO &middot; MADRID &middot; CAFETERÍAS &middot; BRUNCH &middot; SPECIALTY COFFEE &middot; DISEÑO WEB &middot; CARTA DIGITAL &middot; BILINGÜE &middot; RESPONSIVE &middot; SEO &middot; MADRID &middot; CAFETERÍAS &middot; BRUNCH &middot; SPECIALTY COFFEE &middot;&nbsp;</span>
+      <span>DISEÑO WEB &middot; CARTA DIGITAL &middot; BILINGÜE &middot; RESPONSIVE &middot; SEO &middot; MADRID &middot; CAFETERÍAS &middot; BRUNCH &middot; SPECIALTY COFFEE &middot; DISEÑO WEB &middot; CARTA DIGITAL &middot; BILINGÜE &middot; RESPONSIVE &middot; SEO &middot; MADRID &middot; CAFETERÍAS &middot; BRUNCH &middot; SPECIALTY COFFEE &middot; DISEÑO WEB &middot; CARTA DIGITAL &middot; BILINGÜE &middot; RESPONSIVE &middot; SEO &middot; MADRID &middot; CAFETERÍAS &middot; BRUNCH &middot; SPECIALTY COFFEE &middot;&nbsp;</span>
     </div>
   </div>
 
-  <!-- PORTFOLIO · WEBS QUE LLENAN MESAS -->
-  <section class="portfolio" id="proyectos">
-    <div class="hero-bg-layer portfolio-bg-1" data-parallax="0.15"></div>
-    <div class="hero-bg-layer portfolio-bg-2" data-parallax="0.3"></div>
-    <div class="hero-vignette"></div>
-
-    <div class="aroma" aria-hidden="true">
-      <span class="aroma-p large" style="left:6%; animation-delay:0s; animation-duration:11s"></span>
-      <span class="aroma-p" style="left:16%; animation-delay:3.2s; animation-duration:9.5s"></span>
-      <span class="aroma-p small" style="left:24%; animation-delay:1.7s; animation-duration:10.5s"></span>
-      <span class="aroma-p" style="left:34%; animation-delay:4.4s; animation-duration:8.7s"></span>
-      <span class="aroma-p large" style="left:46%; animation-delay:0.9s; animation-duration:12s"></span>
-      <span class="aroma-p" style="left:56%; animation-delay:2.8s; animation-duration:9s"></span>
-      <span class="aroma-p small" style="left:66%; animation-delay:5.1s; animation-duration:10.8s"></span>
-      <span class="aroma-p" style="left:76%; animation-delay:1.4s; animation-duration:11.5s"></span>
-      <span class="aroma-p large" style="left:86%; animation-delay:3.6s; animation-duration:9.8s"></span>
-      <span class="aroma-p" style="left:94%; animation-delay:4.9s; animation-duration:10.2s"></span>
+  <!-- Portfolio -->
+  <section class="section portfolio" id="portfolio">
+    <div class="coffee-ring coffee-ring-portfolio"></div>
+    <div class="coffee-dots">
+      <span class="dot dot-1"></span>
+      <span class="dot dot-2"></span>
+      <span class="dot dot-3"></span>
+      <span class="dot dot-4"></span>
+      <span class="dot dot-5"></span>
     </div>
-
-    <div class="hero-ring portfolio-ring-1" aria-hidden="true"></div>
-    <div class="hero-ring portfolio-ring-2" aria-hidden="true"></div>
-    <div class="hero-ring portfolio-ring-3" aria-hidden="true"></div>
-
     <div class="container">
-      <div class="section-head reveal">
-        <span class="section-eyebrow">
-          <span class="eyebrow-line"></span>
-          <span data-en="Our work">Nuestros diseños</span>
-        </span>
-        <h2 class="section-title">Webs que <em class="shimmer">llenan mesas</em></h2>
-        <p class="section-sub" data-en="Slide to compare the before and after of each project.">Desliza para comparar el antes y el después de cada proyecto.</p>
+      <div class="section-header anim-fade-up">
+        <span class="section-label" data-en="Our designs">Nuestros diseños</span>
+        <h2 class="section-title" data-en="Websites that fill tables">Webs que llenan mesas</h2>
+        <p class="section-subtitle" data-en="Slide to compare the before and after of each project.">Desliza para comparar el antes y después de cada proyecto.</p>
       </div>
 
       <div class="portfolio-grid">
 
-        <article class="project reveal" data-project="01">
+        <!-- Project 1: Fanático -->
+        <div class="project-card anim-fade-up">
           <div class="project-info">
-            <span class="project-num">N° 01</span>
             <h3 class="project-name">Fanático Café</h3>
-            <span class="project-tag" data-en="Design concept">Concepto de diseño</span>
-            <p class="project-desc" data-en="Specialty café in Chamberí. Rebuilt around brewing ritual with cinematic hero, clean menu and origin storytelling.">Café de especialidad en Chamberí. Reconstruido alrededor del ritual del brewing con hero cinematográfico, carta limpia e historia de origen.</p>
+            <span class="project-disclaimer" data-en="Design concept, not official work">Concepto de diseño, no es trabajo oficial</span>
+            <p class="project-desc" data-en="Specialty café in Chamberí. Rebuilt the site around brewing ritual with a cinematic hero, clean menu and origin storytelling.">Café de especialidad en Chamberí. Reconstruimos la web alrededor del ritual del brewing, con hero cinematográfico, carta limpia e historia de origen.</p>
             <div class="project-tags">
-              <span class="chip">Hero cinemático</span>
-              <span class="chip">Carta</span>
-              <span class="chip">Origen</span>
+              <span data-en="Cinematic hero">Hero cinemático</span>
+              <span data-en="Menu">Carta</span>
+              <span data-en="Origin story">Origen</span>
             </div>
           </div>
-          <div class="ba" data-ba>
-            <div class="ba-frame">
-              <div class="ba-after"><picture><source srcset="img/fanatico-after.webp" type="image/webp"><img src="img/fanatico-after.png" alt="Fanático después" loading="lazy"></picture></div>
-              <div class="ba-before"><picture><source srcset="img/fanatico-before.webp" type="image/webp"><img src="img/fanatico-before.png" alt="Fanático antes" loading="lazy"></picture></div>
-              <div class="ba-handle" data-ba-handle>
-                <span class="ba-handle-line"></span>
-                <span class="ba-handle-grip"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M8 5L4 11L8 17M14 5L18 11L14 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                <span class="ba-handle-line"></span>
+          <div class="ba-slider" data-before="img/fanatico-before.png" data-after="img/fanatico-after.png">
+            <div class="ba-wrapper">
+              <div class="ba-after">
+                <picture>
+                  <source srcset="img/fanatico-after.webp" type="image/webp">
+                  <img src="img/fanatico-after.png" alt="Fanático, Después" width="1440" height="900" loading="lazy" decoding="async">
+                </picture>
               </div>
-              <span class="ba-label ba-label-before" data-en="BEFORE">ANTES</span>
-              <span class="ba-label ba-label-after" data-en="AFTER">DESPUÉS</span>
+              <div class="ba-before">
+                <picture>
+                  <source srcset="img/fanatico-before.webp" type="image/webp">
+                  <img src="img/fanatico-before.png" alt="Fanático, Antes" width="1440" height="900" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <div class="ba-handle">
+                <div class="ba-handle-line"></div>
+                <div class="ba-handle-circle">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4L3 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13 4L17 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="ba-handle-line"></div>
+              </div>
+              <div class="ba-label ba-label-before" data-en="BEFORE">ANTES</div>
+              <div class="ba-label ba-label-after" data-en="AFTER">DESPUÉS</div>
             </div>
           </div>
-        </article>
+        </div>
 
-        <article class="project reveal project-reverse" data-project="02">
+        <!-- Project 2: Beik Beik -->
+        <div class="project-card anim-fade-up">
           <div class="project-info">
-            <span class="project-num">N° 02</span>
             <h3 class="project-name">Beik Beik</h3>
-            <span class="project-tag" data-en="Design concept">Concepto de diseño</span>
-            <p class="project-desc" data-en="Artisan bakery in Chamberí. Warm site with visual menu, founders' story and bakery gallery.">Obrador artesanal en Chamberí. Web cálida con carta visual, historia de los fundadores y galería del obrador.</p>
+            <span class="project-disclaimer" data-en="Design concept, not official work">Concepto de diseño, no es trabajo oficial</span>
+            <p class="project-desc" data-en="Artisan bakery in Chamberí. Warm website with visual menu, founders' story and bakery gallery.">Obrador artesanal en Chamberí. Web cálida con carta visual, historia de los fundadores y galería del obrador.</p>
             <div class="project-tags">
-              <span class="chip">Carta visual</span>
-              <span class="chip">Galería</span>
-              <span class="chip">Historia</span>
+              <span data-en="Visual menu">Carta visual</span>
+              <span data-en="Gallery">Galería</span>
+              <span data-en="Story">Historia</span>
             </div>
           </div>
-          <div class="ba" data-ba>
-            <div class="ba-frame">
-              <div class="ba-after"><picture><source srcset="img/beikbeik-after.webp" type="image/webp"><img src="img/beikbeik-after.png" alt="Beik Beik después" loading="lazy"></picture></div>
-              <div class="ba-before"><picture><source srcset="img/beikbeik-before.webp" type="image/webp"><img src="img/beikbeik-before.png" alt="Beik Beik antes" loading="lazy"></picture></div>
-              <div class="ba-handle" data-ba-handle>
-                <span class="ba-handle-line"></span>
-                <span class="ba-handle-grip"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M8 5L4 11L8 17M14 5L18 11L14 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                <span class="ba-handle-line"></span>
+          <div class="ba-slider" data-before="img/beikbeik-before.png" data-after="img/beikbeik-after.png">
+            <div class="ba-wrapper">
+              <div class="ba-after">
+                <picture>
+                  <source srcset="img/beikbeik-after.webp" type="image/webp">
+                  <img src="img/beikbeik-after.png" alt="Beik Beik, Después" width="1440" height="900" loading="lazy" decoding="async">
+                </picture>
               </div>
-              <span class="ba-label ba-label-before" data-en="BEFORE">ANTES</span>
-              <span class="ba-label ba-label-after" data-en="AFTER">DESPUÉS</span>
+              <div class="ba-before">
+                <picture>
+                  <source srcset="img/beikbeik-before.webp" type="image/webp">
+                  <img src="img/beikbeik-before.png" alt="Beik Beik, Antes" width="1222" height="1112" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <div class="ba-handle">
+                <div class="ba-handle-line"></div>
+                <div class="ba-handle-circle">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4L3 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13 4L17 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="ba-handle-line"></div>
+              </div>
+              <div class="ba-label ba-label-before" data-en="BEFORE">ANTES</div>
+              <div class="ba-label ba-label-after" data-en="AFTER">DESPUÉS</div>
             </div>
           </div>
-        </article>
+        </div>
 
-        <article class="project reveal" data-project="03">
+        <!-- Project 3: Pum Pum -->
+        <div class="project-card anim-fade-up">
           <div class="project-info">
-            <span class="project-num">N° 03</span>
             <h3 class="project-name">Pum Pum Café</h3>
-            <span class="project-tag" data-en="Design concept">Concepto de diseño</span>
+            <span class="project-disclaimer" data-en="Design concept, not official work">Concepto de diseño, no es trabajo oficial</span>
             <p class="project-desc" data-en="6-brand restaurant group in Lavapiés. Hub site connecting all venues with group portal.">Grupo de 6 marcas en Lavapiés. Web flagship con portal de grupo conectando todos los locales.</p>
             <div class="project-tags">
-              <span class="chip">Grupo</span>
-              <span class="chip">Carta digital</span>
-              <span class="chip">Historia</span>
+              <span data-en="Restaurant group">Grupo</span>
+              <span data-en="Digital menu">Carta digital</span>
+              <span data-en="Story">Historia</span>
             </div>
           </div>
-          <div class="ba" data-ba>
-            <div class="ba-frame">
-              <div class="ba-after"><picture><source srcset="img/pumpum-after.webp" type="image/webp"><img src="img/pumpum-after.png" alt="Pum Pum después" loading="lazy"></picture></div>
-              <div class="ba-before"><picture><source srcset="img/pumpum-before.webp" type="image/webp"><img src="img/pumpum-before.png" alt="Pum Pum antes" loading="lazy"></picture></div>
-              <div class="ba-handle" data-ba-handle>
-                <span class="ba-handle-line"></span>
-                <span class="ba-handle-grip"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M8 5L4 11L8 17M14 5L18 11L14 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                <span class="ba-handle-line"></span>
+          <div class="ba-slider" data-before="img/pumpum-before.png" data-after="img/pumpum-after.png">
+            <div class="ba-wrapper">
+              <div class="ba-after">
+                <picture>
+                  <source srcset="img/pumpum-after.webp" type="image/webp">
+                  <img src="img/pumpum-after.png" alt="Pum Pum, Después" width="1440" height="900" loading="lazy" decoding="async">
+                </picture>
               </div>
-              <span class="ba-label ba-label-before" data-en="BEFORE">ANTES</span>
-              <span class="ba-label ba-label-after" data-en="AFTER">DESPUÉS</span>
+              <div class="ba-before">
+                <picture>
+                  <source srcset="img/pumpum-before.webp" type="image/webp">
+                  <img src="img/pumpum-before.png" alt="Pum Pum, Antes" width="1440" height="900" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <div class="ba-handle">
+                <div class="ba-handle-line"></div>
+                <div class="ba-handle-circle">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4L3 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13 4L17 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="ba-handle-line"></div>
+              </div>
+              <div class="ba-label ba-label-before" data-en="BEFORE">ANTES</div>
+              <div class="ba-label ba-label-after" data-en="AFTER">DESPUÉS</div>
             </div>
           </div>
-        </article>
+        </div>
 
-        <article class="project reveal project-reverse" data-project="04">
+        <!-- Project 4: Naji -->
+        <div class="project-card anim-fade-up">
           <div class="project-info">
-            <span class="project-num">N° 04</span>
             <h3 class="project-name">Naji</h3>
-            <span class="project-tag" data-en="Design concept">Concepto de diseño</span>
-            <p class="project-desc" data-en="Best café in Spain 2025 & 2026. Dark site with bilingual menu and Iraqi heritage story.">Mejor café de España 2025 y 2026. Web oscura con carta bilingüe e historia de herencia iraquí.</p>
+            <span class="project-disclaimer" data-en="Design concept, not official work">Concepto de diseño, no es trabajo oficial</span>
+            <p class="project-desc" data-en="Best café in Spain 2025 & 2026. Dark website with bilingual menu and Iraqi heritage story.">Mejor café de España 2025 y 2026. Web oscura con carta bilingüe y historia de herencia iraquí.</p>
             <div class="project-tags">
-              <span class="chip">Carta digital</span>
-              <span class="chip">Bilingüe</span>
-              <span class="chip">Premios</span>
+              <span data-en="Digital menu">Carta digital</span>
+              <span data-en="Bilingual">Bilingüe</span>
+              <span data-en="Awards">Premios</span>
             </div>
           </div>
-          <div class="ba" data-ba>
-            <div class="ba-frame">
-              <div class="ba-after"><picture><source srcset="img/naji-after.webp" type="image/webp"><img src="img/naji-after.png" alt="Naji después" loading="lazy"></picture></div>
-              <div class="ba-before"><picture><source srcset="img/naji-before.webp" type="image/webp"><img src="img/naji-before.png" alt="Naji antes" loading="lazy"></picture></div>
-              <div class="ba-handle" data-ba-handle>
-                <span class="ba-handle-line"></span>
-                <span class="ba-handle-grip"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M8 5L4 11L8 17M14 5L18 11L14 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                <span class="ba-handle-line"></span>
+          <div class="ba-slider" data-before="img/naji-before.png" data-after="img/naji-after.png">
+            <div class="ba-wrapper">
+              <div class="ba-after">
+                <picture>
+                  <source srcset="img/naji-after.webp" type="image/webp">
+                  <img src="img/naji-after.png" alt="Naji, Después" width="1440" height="900" loading="lazy" decoding="async">
+                </picture>
               </div>
-              <span class="ba-label ba-label-before" data-en="BEFORE">ANTES</span>
-              <span class="ba-label ba-label-after" data-en="AFTER">DESPUÉS</span>
+              <div class="ba-before">
+                <picture>
+                  <source srcset="img/naji-before.webp" type="image/webp">
+                  <img src="img/naji-before.png" alt="Naji, Antes" width="1246" height="1103" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <div class="ba-handle">
+                <div class="ba-handle-line"></div>
+                <div class="ba-handle-circle">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4L3 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13 4L17 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="ba-handle-line"></div>
+              </div>
+              <div class="ba-label ba-label-before" data-en="BEFORE">ANTES</div>
+              <div class="ba-label ba-label-after" data-en="AFTER">DESPUÉS</div>
             </div>
           </div>
-        </article>
+        </div>
 
       </div>
 
-      <div class="portfolio-cta reveal">
-        <a href="proyectos/" class="btn btn-primary magnetic">
-          <span class="btn-bg"></span>
-          <span class="btn-text" data-en="See all 8 projects">Ver los 8 proyectos</span>
-          <span class="btn-arrow">→</span>
-        </a>
+      <div class="portfolio-cta anim-fade-up">
+        <a href="proyectos/" class="btn btn-primary btn-ver-todos magnetic" data-en="See all projects">Ver todos los proyectos</a>
+        <p class="portfolio-cta-sub" data-en="8 concept designs, explore each one live">8 conceptos de diseño, explora cada uno en vivo</p>
       </div>
     </div>
   </section>
 
-  <!-- MARQUEE DARK divider -->
-  <div class="marquee marquee-dark">
+  <!-- Marquee divider reverse -->
+  <div class="marquee-strip marquee-dark">
     <div class="marquee-track marquee-reverse">
-      <span class="marquee-set">
-        <span class="marquee-word">Obrador.web</span><span class="marquee-orn">●</span>
-        <span class="marquee-word" data-en="Websites that fill tables">Webs que llenan mesas</span><span class="marquee-orn">●</span>
-        <span class="marquee-word" data-en="Made in Madrid">Hecho en Madrid</span><span class="marquee-orn">●</span>
-        <span class="marquee-word">Obrador.web</span><span class="marquee-orn">●</span>
-        <span class="marquee-word" data-en="Websites that fill tables">Webs que llenan mesas</span><span class="marquee-orn">●</span>
-        <span class="marquee-word" data-en="Made in Madrid">Hecho en Madrid</span><span class="marquee-orn">●</span>
-      </span>
-      <span class="marquee-set" aria-hidden="true">
-        <span class="marquee-word">Obrador.web</span><span class="marquee-orn">●</span>
-        <span class="marquee-word" data-en="Websites that fill tables">Webs que llenan mesas</span><span class="marquee-orn">●</span>
-        <span class="marquee-word" data-en="Made in Madrid">Hecho en Madrid</span><span class="marquee-orn">●</span>
-        <span class="marquee-word">Obrador.web</span><span class="marquee-orn">●</span>
-        <span class="marquee-word" data-en="Websites that fill tables">Webs que llenan mesas</span><span class="marquee-orn">●</span>
-        <span class="marquee-word" data-en="Made in Madrid">Hecho en Madrid</span><span class="marquee-orn">●</span>
-      </span>
+      <span>OBRADOR.WEB &middot; WEBS QUE LLENAN MESAS &middot; HECHO EN MADRID &middot; OBRADOR.WEB &middot; WEBS QUE LLENAN MESAS &middot; HECHO EN MADRID &middot; OBRADOR.WEB &middot; WEBS QUE LLENAN MESAS &middot; HECHO EN MADRID &middot; OBRADOR.WEB &middot; WEBS QUE LLENAN MESAS &middot; HECHO EN MADRID &middot; OBRADOR.WEB &middot; WEBS QUE LLENAN MESAS &middot; HECHO EN MADRID &middot; OBRADOR.WEB &middot; WEBS QUE LLENAN MESAS &middot; HECHO EN MADRID &middot;&nbsp;</span>
+      <span>OBRADOR.WEB &middot; WEBS QUE LLENAN MESAS &middot; HECHO EN MADRID &middot; OBRADOR.WEB &middot; WEBS QUE LLENAN MESAS &middot; HECHO EN MADRID &middot; OBRADOR.WEB &middot; WEBS QUE LLENAN MESAS &middot; HECHO EN MADRID &middot; OBRADOR.WEB &middot; WEBS QUE LLENAN MESAS &middot; HECHO EN MADRID &middot; OBRADOR.WEB &middot; WEBS QUE LLENAN MESAS &middot; HECHO EN MADRID &middot; OBRADOR.WEB &middot; WEBS QUE LLENAN MESAS &middot; HECHO EN MADRID &middot;&nbsp;</span>
     </div>
   </div>
 
-  <!-- CONTACTO STRIP -->
-  <section class="contacto-strip" id="contacto">
-    <div class="hero-bg-layer hero-bg-1 contacto-bg-1" data-parallax="0.15"></div>
-    <div class="hero-bg-layer hero-bg-2 contacto-bg-2" data-parallax="0.3"></div>
-    <div class="hero-vignette"></div>
-
-    <div class="aroma" aria-hidden="true">
-      <span class="aroma-p large" style="left:8%; animation-delay:0s; animation-duration:11s"></span>
-      <span class="aroma-p" style="left:18%; animation-delay:2.6s; animation-duration:9s"></span>
-      <span class="aroma-p small" style="left:28%; animation-delay:1.3s; animation-duration:10s"></span>
-      <span class="aroma-p" style="left:40%; animation-delay:4.2s; animation-duration:8.5s"></span>
-      <span class="aroma-p large" style="left:52%; animation-delay:0.8s; animation-duration:11.5s"></span>
-      <span class="aroma-p" style="left:62%; animation-delay:3.4s; animation-duration:9.8s"></span>
-      <span class="aroma-p small" style="left:74%; animation-delay:1.9s; animation-duration:10.2s"></span>
-      <span class="aroma-p large" style="left:86%; animation-delay:4.6s; animation-duration:9.5s"></span>
-      <span class="aroma-p" style="left:94%; animation-delay:2.2s; animation-duration:11s"></span>
-    </div>
-
-    <div class="hero-ring contacto-ring-1" aria-hidden="true"></div>
-    <div class="hero-ring contacto-ring-2" aria-hidden="true"></div>
-    <div class="hero-ring contacto-ring-3" aria-hidden="true"></div>
-
+  <!-- Proceso -->
+  <section class="section proceso" id="proceso">
     <div class="container">
-      <div class="contacto-banner reveal">
-        <span class="section-eyebrow">
-          <span class="eyebrow-line"></span>
-          <span data-en="Let's talk">Contacto</span>
-        </span>
-        <h2 class="contacto-headline">Hablemos de <em class="shimmer">tu web</em></h2>
-        <p class="contacto-lede" data-en="Write to us and we'll send back a custom design concept for your café. No strings attached.">Escríbenos y te enviamos un concepto de diseño personalizado para tu cafetería. Sin compromiso.</p>
+      <div class="section-header anim-fade-up">
+        <span class="section-label" data-en="How we work">Cómo trabajamos</span>
+        <h2 class="section-title" data-en="From idea to website in 3 steps">De idea a web en 3 pasos</h2>
+      </div>
 
-        <div class="channels-row">
-          <a href="https://instagram.com/obrador.web" target="_blank" rel="noopener" class="channel-card">
-            <span class="channel-card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
-            </span>
-            <span class="channel-card-label" data-en="Instagram">INSTAGRAM</span>
-            <span class="channel-card-value">@obrador.web</span>
-            <span class="channel-card-arrow">→</span>
-          </a>
-          <a href="mailto:hola@obradorweb.com" class="channel-card">
-            <span class="channel-card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13L2 4"/></svg>
-            </span>
-            <span class="channel-card-label">EMAIL</span>
-            <span class="channel-card-value">hola@obradorweb.com</span>
-            <span class="channel-card-arrow">→</span>
-          </a>
-          <a href="https://wa.me/34621016344" target="_blank" rel="noopener" class="channel-card">
-            <span class="channel-card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
-            </span>
-            <span class="channel-card-label">WHATSAPP</span>
-            <span class="channel-card-value">+34 621 016 344</span>
-            <span class="channel-card-arrow">→</span>
-          </a>
+      <div class="proceso-steps">
+        <div class="paso anim-slide-left">
+          <div class="paso-number">01</div>
+          <div class="paso-content">
+            <h3 data-en="You write to us">Nos escribes</h3>
+            <p data-en="Tell us about your café. We analyse your current online presence and send you a custom design concept, free, no strings attached.">Cuéntanos sobre tu cafetería. Analizamos tu presencia online actual y te enviamos un concepto de diseño personalizado, gratis, sin compromiso.</p>
+          </div>
         </div>
-
-        <a href="mailto:hola@obradorweb.com" class="btn btn-primary btn-large magnetic">
-          <span class="btn-bg"></span>
-          <span class="btn-text" data-en="Write us an email">Escríbenos un email</span>
-          <span class="btn-arrow">→</span>
-        </a>
+        <div class="paso anim-slide-left" style="transition-delay: 0.15s">
+          <div class="paso-number">02</div>
+          <div class="paso-content">
+            <h3 data-en="We design your site">Diseñamos tu web</h3>
+            <p data-en="We build a custom website with your menu, your story and your aesthetic. Responsive, fast, bilingual and optimised for Google.">Creamos un sitio web a medida con tu carta, tu historia y tu estética. Responsive, rápido, bilingüe y optimizado para Google.</p>
+          </div>
+        </div>
+        <div class="paso anim-slide-left" style="transition-delay: 0.3s">
+          <div class="paso-number">03</div>
+          <div class="paso-content">
+            <h3 data-en="We launch">Lanzamos</h3>
+            <p data-en="Your website ready to welcome customers. Custom domain, SSL, Google Business and everything you need to be found.">Tu web lista para recibir clientes. Dominio propio, SSL, Google Business y todo lo que necesitas para que te encuentren.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Planes -->
+  <section class="section planes" id="planes">
+    <div class="container">
+      <div class="section-header anim-fade-up">
+        <span class="section-label" data-en="Plans">Planes</span>
+        <h2 class="section-title" data-en="Choose your plan">Elige tu plan</h2>
+        <p class="section-subtitle" data-en="All plans include responsive design, basic SEO and support. Compare the plans with real demos →"><a href="compara/" style="color:inherit;text-decoration:underline;">Todos los planes incluyen diseño responsive, SEO básico y soporte. Compara los planes con demos reales →</a></p>
+      </div>
+
+      <p class="planes-swipe-hint" data-en="← Swipe to see all plans →">← Desliza para ver todos los planes →</p>
+      <div class="planes-grid">
+
+        <div class="plan-card anim-fade-up tilt-card">
+          <div class="plan-header">
+            <h3 class="plan-name" data-en="Presence">Presencia</h3>
+            <p class="plan-desc" data-en="For cafés that need to be online with the essentials.">Para cafeterías que necesitan estar online con lo esencial.</p>
+          </div>
+          <div class="plan-price">
+            <span class="plan-desde" data-en="from">desde</span>
+            <span class="plan-amount"><span class="currency">&euro;</span>395</span>
+          </div>
+          <ul class="plan-features">
+            <li data-en="1-page custom site">Landing page a medida (1 página)</li>
+            <li data-en="Responsive (mobile + desktop)">Responsive (móvil + desktop)</li>
+            <li data-en="Bilingual (ES/EN)">Bilingüe (ES/EN)</li>
+            <li data-en="WhatsApp + contact form">WhatsApp + formulario</li>
+            <li data-en="Google Maps integrated">Google Maps integrado</li>
+            <li data-en="Basic SEO">SEO básico</li>
+            <li data-en="Domain included">Dominio incluido</li>
+          </ul>
+          <div class="plan-time" data-en="~ 1 week">~ 1 semana</div>
+          <a href="#contacto" class="btn btn-outline btn-block" data-en="Get started">Empezar</a>
+        </div>
+
+        <div class="plan-card anim-fade-up tilt-card">
+          <div class="plan-header">
+            <h3 class="plan-name" data-en="Full Menu">Carta Completa</h3>
+            <p class="plan-desc" data-en="Complete website with interactive menu and your story.">Web completa con carta interactiva y tu historia.</p>
+          </div>
+          <div class="plan-price">
+            <span class="plan-desde" data-en="from">desde</span>
+            <span class="plan-amount"><span class="currency">&euro;</span>890</span>
+          </div>
+          <ul class="plan-features">
+            <li data-en="Everything in Presence +">Todo en Presencia +</li>
+            <li data-en="3 pages (Home, Menu, Visit)">3 páginas (Inicio, Carta, Visítanos)</li>
+            <li data-en="Full interactive inline menu">Carta completa interactiva</li>
+            <li data-en="Story page">Página de historia</li>
+            <li data-en="Photo gallery">Galería de fotos</li>
+            <li data-en="Google Business optimised">Google Business optimizado</li>
+            <li data-en="Printable QR menu card">Tarjeta QR carta imprimible</li>
+            <li data-en="Advanced SEO">SEO avanzado</li>
+          </ul>
+          <div class="plan-time" data-en="~ 2 weeks">~ 2 semanas</div>
+          <a href="#contacto" class="btn btn-outline btn-block" data-en="Get started">Empezar</a>
+        </div>
+
+        <div class="plan-card plan-featured anim-fade-up tilt-card">
+          <div class="plan-badge" data-en="Recommended">Recomendado</div>
+          <div class="plan-header">
+            <h3 class="plan-name" data-en="Full Brand">Marca Completa</h3>
+            <p class="plan-desc" data-en="The complete solution for ambitious cafés.">La solución completa para cafeterías ambiciosas.</p>
+          </div>
+          <div class="plan-price">
+            <span class="plan-desde" data-en="from">desde</span>
+            <span class="plan-amount"><span class="currency">&euro;</span>1.290</span>
+          </div>
+          <ul class="plan-features">
+            <li data-en="Everything in Full Menu +">Todo en Carta Completa +</li>
+            <li data-en="4-5 pages + Culture/Story">4-5 páginas + Cultura/Historia</li>
+            <li data-en="Multi-location">Multi-local</li>
+            <li data-en="Scroll animations + custom UI">Animaciones + UI custom</li>
+            <li data-en="Premium SEO + Search Console">SEO premium + Search Console</li>
+            <li data-en="Unlimited menu updates">Actualizaciones de carta ilimitadas</li>
+            <li data-en="Printable QR menu card">Tarjeta QR carta imprimible</li>
+            <li data-en="Priority support">Soporte prioritario</li>
+          </ul>
+          <div class="plan-time" data-en="~ 3 weeks">~ 3 semanas</div>
+          <a href="#contacto" class="btn btn-primary btn-block" data-en="Get started">Empezar</a>
+        </div>
+
+        <div class="plan-card anim-fade-up tilt-card">
+          <div class="plan-header">
+            <h3 class="plan-name" data-en="Shop">Tienda</h3>
+            <p class="plan-desc" data-en="Marca Completa + online ordering, beans, subscriptions.">Marca Completa + pedidos online, granos, suscripciones.</p>
+          </div>
+          <div class="plan-price">
+            <span class="plan-desde" data-en="from">desde</span>
+            <span class="plan-amount"><span class="currency">&euro;</span>2.490</span>
+          </div>
+          <ul class="plan-features">
+            <li data-en="Everything in Full Brand +">Todo en Marca Completa +</li>
+            <li data-en="Online store (Snipcart/Shopify)">Tienda online (Snipcart/Shopify)</li>
+            <li data-en="Cart + Stripe checkout">Carrito + checkout Stripe</li>
+            <li data-en="Product catalog with inventory">Catálogo con inventario</li>
+            <li data-en="Order email notifications">Notificaciones de pedido</li>
+            <li data-en="Subscriptions (beans, brunch)">Suscripciones (granos, brunch)</li>
+            <li data-en="Printable QR menu card">Tarjeta QR carta imprimible</li>
+            <li data-en="Priority support">Soporte prioritario</li>
+          </ul>
+          <div class="plan-time" data-en="~ 4 weeks">~ 4 semanas</div>
+          <a href="#contacto" class="btn btn-outline btn-block" data-en="Get started">Empezar</a>
+        </div>
+
+      </div>
+
+      <!-- Services: Mantenimiento + SEM -->
+      <div class="services-row anim-fade-up">
+
+        <div class="service-card">
+          <div class="service-head">
+            <h3 data-en="Maintenance">Mantenimiento</h3>
+            <p data-en="Keep your site alive, updated and safe.">Para que tu web siga viva, actualizada y al día.</p>
+          </div>
+          <div class="service-tiers">
+            <div class="service-tier">
+              <div class="service-tier-head">
+                <span class="tier-name" data-en="Basic">Básico</span>
+                <span class="tier-price">&euro;50<span data-en="/month">/mes</span></span>
+              </div>
+              <ul>
+                <li data-en="Domain and SSL">Dominio y SSL</li>
+                <li data-en="Hosting and backups">Hosting y copias de seguridad</li>
+                <li data-en="Contact form active (up to 50 entries/mo)">Formulario de contacto (hasta 50 envíos/mes)</li>
+                <li data-en="Up to 2 content updates/month">Hasta 2 actualizaciones/mes (horarios, precios, carta, eventos)</li>
+                <li data-en="Technical support">Soporte técnico ante incidencias</li>
+              </ul>
+            </div>
+            <div class="service-tier">
+              <div class="service-tier-head">
+                <span class="tier-name" data-en="Shop">Tienda</span>
+                <span class="tier-price">&euro;90<span data-en="/month">/mes</span></span>
+              </div>
+              <ul>
+                <li data-en="Everything in Basic +">Todo lo de Básico, más:</li>
+                <li data-en="Orders &amp; stock monitoring">Monitorización de pedidos y stock</li>
+                <li data-en="Snipcart &amp; payment gateway">Integración Snipcart y pasarela de pago</li>
+                <li data-en="Up to 5 updates/month">Hasta 5 actualizaciones/mes</li>
+                <li data-en="Priority support">Prioridad en soporte</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-head">
+            <h3 data-en="SEM · Google Ads">SEM · Google Ads</h3>
+            <p data-en="Paid ads to show up at the top from day one.">Anuncios pagados para aparecer arriba desde el primer día.</p>
+          </div>
+          <div class="service-tiers">
+            <div class="service-tier">
+              <div class="service-tier-head">
+                <span class="tier-name" data-en="Setup">Configuración</span>
+                <span class="tier-price">&euro;290<span data-en="one-off">único</span></span>
+              </div>
+              <ul>
+                <li data-en="Google Ads account setup">Cuenta Google Ads configurada</li>
+                <li data-en="Keyword research">Research de keywords locales</li>
+                <li data-en="3 initial campaigns">3 campañas base</li>
+                <li data-en="Conversion tracking">Tracking de conversiones</li>
+              </ul>
+            </div>
+            <div class="service-tier">
+              <div class="service-tier-head">
+                <span class="tier-name" data-en="Management">Gestión</span>
+                <span class="tier-price">&euro;150<span data-en="/month">/mes</span></span>
+              </div>
+              <ul>
+                <li data-en="Monthly optimisation">Optimización mensual</li>
+                <li data-en="Bid and keyword adjustments">Ajuste de pujas y keywords</li>
+                <li data-en="A/B copy testing">A/B testing de copy</li>
+                <li data-en="Monthly report">Reporte mensual detallado</li>
+                <li class="tier-note" data-en="* Ad spend not included (min. recommended €200/mo)">* No incluye inversión publicitaria (mín. recomendada €200/mes)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="ecommerce-note anim-fade-up" data-en="Not sure which plan fits? <a href='compara/'>Compare the plans side-by-side</a> with real demo sites.">¿No sabes qué plan encaja? <a href="compara/">Compara los planes</a> con sitios de demo reales.</p>
+    </div>
+  </section>
+
+  <!-- Plataformas teaser -->
+  <style>
+    .plataformas-teaser { background: var(--cream, #F5EDE4); padding: 100px 0; position: relative; }
+    .plataformas-teaser .section-header { margin-bottom: 56px; }
+    .plataformas-teaser-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1080px; margin: 0 auto 40px; padding: 0 28px; }
+    .pt-card { background: var(--white, #fff); border: 1px solid rgba(26, 23, 21, 0.08); border-radius: 20px; padding: 36px 32px; transition: transform 0.4s var(--ease-out-expo, cubic-bezier(0.19,1,0.22,1)), box-shadow 0.4s var(--ease-out-expo, cubic-bezier(0.19,1,0.22,1)); position: relative; }
+    .pt-card:hover { transform: translateY(-4px); box-shadow: 0 24px 56px rgba(26, 23, 21, 0.1); }
+    .pt-card.featured { background: var(--dark, #1A1715); color: var(--cream, #F5EDE4); }
+    .pt-eyebrow { font-family: var(--font-sans, 'Outfit', sans-serif); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--copper-dark, #A87856); font-weight: 600; margin-bottom: 12px; }
+    .pt-card.featured .pt-eyebrow { color: var(--copper-light, #D4A57A); }
+    .pt-name { font-family: var(--font-serif, 'Libre Caslon Display', serif); font-size: clamp(28px, 3vw, 38px); line-height: 1; letter-spacing: -0.02em; margin-bottom: 12px; color: inherit; }
+    .pt-name em { font-style: italic; color: var(--copper-dark, #A87856); }
+    .pt-card.featured .pt-name em { color: var(--copper-light, #D4A57A); }
+    .pt-tagline { font-family: var(--font-sans, 'Outfit', sans-serif); font-size: 15px; line-height: 1.5; color: var(--dark-soft, #4A453F); margin-bottom: 24px; }
+    .pt-card.featured .pt-tagline { color: rgba(245, 237, 228, 0.8); }
+    .pt-price-line { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+    .pt-price { font-family: var(--font-serif, 'Libre Caslon Display', serif); font-size: 38px; letter-spacing: -0.03em; line-height: 1; color: var(--dark, #1A1715); }
+    .pt-card.featured .pt-price { color: var(--copper, #C4956A); }
+    .pt-price-meta { font-family: var(--font-sans, 'Outfit', sans-serif); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark-muted, #8A8278); font-weight: 500; }
+    .pt-card.featured .pt-price-meta { color: rgba(245, 237, 228, 0.6); }
+    .pt-features { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 8px; }
+    .pt-features li { font-family: var(--font-sans, 'Outfit', sans-serif); font-size: 14px; line-height: 1.5; color: var(--dark, #1A1715); padding-left: 18px; position: relative; }
+    .pt-card.featured .pt-features li { color: rgba(245, 237, 228, 0.9); }
+    .pt-features li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: var(--copper-dark, #A87856); border-radius: 50%; }
+    .pt-card.featured .pt-features li::before { background: var(--copper-light, #D4A57A); }
+    .pt-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-sans, 'Outfit', sans-serif); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--dark, #1A1715); text-decoration: none; padding: 12px 0; border-bottom: 1px solid var(--dark, #1A1715); transition: color 0.2s, border-color 0.2s; }
+    .pt-card.featured .pt-link { color: var(--cream, #F5EDE4); border-bottom-color: var(--cream, #F5EDE4); }
+    .pt-link:hover { color: var(--copper-dark, #A87856); border-color: var(--copper-dark, #A87856); }
+    .pt-card.featured .pt-link:hover { color: var(--copper-light, #D4A57A); border-color: var(--copper-light, #D4A57A); }
+    .pt-cta { text-align: center; }
+    @media (max-width: 768px) {
+      .plataformas-teaser { padding: 70px 0; }
+      .plataformas-teaser-grid { grid-template-columns: 1fr; gap: 18px; }
+      .pt-card { padding: 28px 24px; }
+    }
+  </style>
+  <section class="section plataformas-teaser" id="plataformas">
+    <div class="container">
+      <div class="section-header anim-fade-up">
+        <span class="section-label" data-en="Beyond the website">Más allá de la web</span>
+        <h2 class="section-title" data-en="Custom platforms">Plataformas a medida</h2>
+        <p class="section-subtitle" data-en="When a website isn't enough. Orders, multi-shop dashboards, custom internal tools.">Cuando una web no basta. Encargos, paneles multi-local, herramientas internas a medida.</p>
+      </div>
+    </div>
+
+    <div class="plataformas-teaser-grid">
+      <div class="pt-card featured anim-fade-up">
+        <div class="pt-eyebrow" data-en="01 · WhatsApp · Pilot price">01 · WhatsApp · Precio piloto</div>
+        <h3 class="pt-name" data-en="Orders via &lt;em&gt;WhatsApp&lt;/em&gt;">Encargos por <em>WhatsApp</em></h3>
+        <p class="pt-tagline" data-en="The customer orders. You receive it on WhatsApp. No more lost orders in chat threads.">El cliente pide. Tú lo recibes en WhatsApp. Sin perder pedidos en chats.</p>
+        <div class="pt-price-line">
+          <span class="pt-price">€1.800</span>
+          <span class="pt-price-meta" data-en="setup · then €2,700 · +€95/mo">setup · después €2.700 · +€95/mes</span>
+        </div>
+        <ul class="pt-features">
+          <li data-en="Order form on your site">Formulario de encargo en tu web</li>
+          <li data-en="Auto-WhatsApp to your business number">WhatsApp automático a tu número de empresa</li>
+          <li data-en="Mobile + desktop dashboard">Panel móvil + desktop</li>
+          <li data-en="Twilio + WhatsApp Business API">Twilio + WhatsApp Business API</li>
+        </ul>
+        <a href="plataformas/#whatsapp" class="pt-link" data-en="See details →">Ver detalles →</a>
+      </div>
+
+      <div class="pt-card anim-fade-up">
+        <div class="pt-eyebrow" data-en="02 · Multi-shop">02 · Multi-local</div>
+        <h3 class="pt-name" data-en="&lt;em&gt;Multi-shop&lt;/em&gt; dashboard">Panel <em>multi-local</em></h3>
+        <p class="pt-tagline" data-en="Each shop logs in. HQ sees everything in real time.">Cada local registra. La central ve todo en tiempo real.</p>
+        <div class="pt-price-line">
+          <span class="pt-price" data-en="from €3,500">desde €3.500</span>
+          <span class="pt-price-meta" data-en="setup · +€120/mo">setup · +€120/mes</span>
+        </div>
+        <ul class="pt-features">
+          <li data-en="Login per shop with separate roles">Login por local con roles separados</li>
+          <li data-en="HQ aggregate view, realtime">Vista central agregada, tiempo real</li>
+          <li data-en="Wholesale tracking + per-shop inventory">Mayoreo + inventario por sede</li>
+          <li data-en="Excel / CSV export">Exportación a Excel / CSV</li>
+        </ul>
+        <a href="plataformas/#multilocal" class="pt-link" data-en="See details →">Ver detalles →</a>
+      </div>
+    </div>
+
+    <div class="pt-cta anim-fade-up">
+      <a href="plataformas/" class="btn btn-primary magnetic" data-en="See all platforms">Ver todas las plataformas</a>
+    </div>
+  </section>
+
+  <!-- Preguntas frecuentes -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section-header anim-fade-up">
+        <span class="section-label" data-en="FAQ">Preguntas</span>
+        <h2 class="section-title" data-en="Frequently asked questions">Preguntas frecuentes</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="How much does a website for a café cost?">¿Cuánto cuesta una web para una cafetería?</summary>
+          <div class="faq-body">
+            <p data-en="Our plans start at €395 (Presencia, 1 page), €890 (Carta Completa, 3 pages with inline menu), €1,290 (Marca Completa, multi-location and culture) and €2,490 (Tienda, with e-commerce). All include responsive design, bilingual ES/EN, domain and basic SEO.">Los planes parten de €395 (Presencia, 1 página), €890 (Carta Completa, 3 páginas con carta inline), €1.290 (Marca Completa, multi-local y cultura) y €2.490 (Tienda, con e-commerce). Todos incluyen diseño responsive, bilingüe ES/EN, dominio y SEO básico.</p>
+          </div>
+        </details>
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="How long does it take?">¿Cuánto tarda en estar lista?</summary>
+          <div class="faq-body">
+            <p data-en="Presencia ~1 week, Carta Completa ~2 weeks, Marca Completa ~3 weeks, Tienda ~4 weeks. Timelines depend on the volume of content you have ready (photos, menu, copy).">Presencia ~1 semana, Carta Completa ~2 semanas, Marca Completa ~3 semanas, Tienda ~4 semanas. Los plazos dependen del volumen de contenido que tengáis listo (fotos, carta, copy).</p>
+          </div>
+        </details>
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="What does the €50 maintenance include?">¿Qué incluye el mantenimiento de €50 al mes?</summary>
+          <div class="faq-body">
+            <p data-en="Domain and SSL, hosting and backups, contact form (up to 50 submissions/month), up to 2 content updates/month (hours, prices, menu, events) and technical support.">Dominio y SSL, hosting y copias de seguridad, formulario de contacto (hasta 50 envíos/mes), hasta 2 actualizaciones de contenido al mes (horarios, precios, carta, eventos) y soporte técnico.</p>
+          </div>
+        </details>
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="Do you do SEO and SEM?">¿Hacéis SEO y SEM?</summary>
+          <div class="faq-body">
+            <p data-en="Basic SEO is included in all plans (meta, schema, sitemap, performance). SEM (Google Ads) is a separate service: €290 setup + €150/month management. Advertising spend is paid directly by the client to Google (we recommend a minimum of €200/month).">SEO básico viene incluido en todos los planes (meta, schema, sitemap, performance). SEM (Google Ads) es un servicio aparte: €290 de configuración + €150/mes de gestión. La inversión publicitaria la paga el cliente directamente a Google (recomendamos mínimo €200/mes).</p>
+          </div>
+        </details>
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="Can you edit the menu after launch?">¿Podéis editar la carta después del lanzamiento?</summary>
+          <div class="faq-body">
+            <p data-en="Yes. In Carta Completa and Marca Completa, menu updates are included in maintenance. Send us changes via WhatsApp or email and we publish them within 24-48h.">Sí. En Carta Completa y Marca Completa las actualizaciones de carta están incluidas en el mantenimiento. Nos enviáis los cambios por WhatsApp o email y los publicamos en 24-48h.</p>
+          </div>
+        </details>
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="Is the site bilingual?">¿La web es bilingüe?</summary>
+          <div class="faq-body">
+            <p data-en="All plans are bilingual Spanish and English by default. Includes language toggle in the nav and translations managed by us.">Todos los planes son bilingües español e inglés por defecto. Incluye selector de idioma en el menú y traducciones gestionadas por nosotros.</p>
+          </div>
+        </details>
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="Where do you work?">¿Dónde trabajáis?</summary>
+          <div class="faq-body">
+            <p data-en="We're based in Madrid and work with specialty cafés and restaurants in Madrid and remotely across Spain.">Somos de Madrid y trabajamos con cafés de especialidad y restaurantes en Madrid y remoto para el resto de España.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="section contacto" id="contacto">
+    <div class="coffee-ring coffee-ring-contacto"></div>
+    <div class="container">
+      <div class="contacto-wrapper">
+        <div class="contacto-text anim-fade-up">
+          <span class="section-label" data-en="Contact">Contacto</span>
+          <h2 class="section-title" data-en="Let's talk about your website">Hablemos de tu web</h2>
+          <p data-en="Write to us and we'll send you a custom design concept for your café. No strings attached.">Escríbenos y te enviamos un concepto de diseño personalizado para tu cafetería. Sin compromiso.</p>
+          <div class="contacto-channels">
+            <a href="https://instagram.com/obrador.web" target="_blank" class="channel">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+              <span>@obrador.web</span>
+            </a>
+            <a href="mailto:hola@obradorweb.com" class="channel">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13L2 4"/></svg>
+              <span>hola@obradorweb.com</span>
+            </a>
+            <a href="https://wa.me/34621016344" target="_blank" rel="noopener" class="channel">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+              <span>+34 621 016 344</span>
+            </a>
+          </div>
+        </div>
+        <form class="contacto-form anim-fade-up" id="contactForm" action="https://formspree.io/f/xkopydnb" method="POST">
+          <div class="form-group">
+            <label for="nombre" data-en="Name">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre o el de tu cafetería" data-en-placeholder="Your name or your café's name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="hola@tucafe.com" data-en-placeholder="hello@yourcafe.com">
+          </div>
+          <div class="form-group">
+            <label for="mensaje" data-en="Message">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu cafetería..." data-en-placeholder="Tell us about your café..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" data-en="Send message">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-inner">
         <div class="footer-brand">
-          <a href="/" class="nav-logo">
-            <span class="nav-logo-text">obrador<span class="nav-logo-accent">.web</span></span>
-          </a>
-          <p data-en="Web studio for hospitality in Madrid">Estudio web para hostelería en Madrid</p>
+          <span class="nav-logo-text">obrador<span class="accent">.web</span></span>
+          <p data-en="Websites for cafés in Madrid">Webs para cafeterías en Madrid</p>
         </div>
         <div class="footer-links">
-          <a href="proyectos/" data-en="Projects">Proyectos</a>
-          <a href="compara/" data-en="Plans">Planes</a>
-          <a href="plataformas/" data-en="Platforms">Plataformas</a>
-          <a href="blog/" data-en="Blog">Blog</a>
+          <a href="proyectos/" data-en="All Projects">Todos los proyectos</a>
+          <a href="#proceso" data-en="Process">Proceso</a>
+          <a href="#planes" data-en="Web">Web</a>
+          <a href="#contacto" data-en="Contact">Contacto</a>
         </div>
         <div class="footer-social">
-          <a href="https://instagram.com/obrador.web" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          <a href="https://instagram.com/obrador.web" target="_blank" aria-label="Instagram">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
           </a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 · OBRADOR.WEB · MADRID</span>
-        <span class="footer-time" id="footerTime">MADRID · --:--:--</span>
+        <p>&copy; 2026 Obrador Web · obradorweb.com · Madrid</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260514-soft-gold"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>
