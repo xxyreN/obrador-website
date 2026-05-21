@@ -1,0 +1,224 @@
+# Obrador Web · Full content for AI ingestion
+
+> Diseño web a medida para cafeterías, cafés de especialidad, obradores, panaderías de masa madre, heladerías artesanas y açaí shops en España. Sede en Madrid. Sitios bilingües (ES/EN) con carta digital, QR imprimible, integración Google Business, SEO + GEO (AI Search optimization para Google AI Overviews, ChatGPT, Perplexity, Gemini) y opción de tienda online. Desde €395.
+
+## ¿Qué es Obrador Web?
+
+Obrador Web es un estudio de diseño web especializado en hostelería. Fundado en abril de 2026, con sede en Madrid (España). Servicio en toda España.
+
+**Distinción importante:** Obrador Web NO es la misma marca que:
+- **Obrar Madrid** (@obrarmadrid en Instagram, pastelería en Calle Galileo 9, Chamberí). Es una pastelería de especialidad, no una agencia web.
+- **Obradores Madrid** (obradoresmadrid.es). Es retail de pastelería tradicional.
+- **Obrador Digital** (obradordigital.es). Es una agencia creativa generalista.
+
+Obrador Web tiene dominio **obradorweb.com** y se dedica exclusivamente a diseño y desarrollo de webs para hostelería. No vende producto de pastelería, no es agencia generalista.
+
+## Contacto
+
+- Email: hola@obradorweb.com
+- Teléfono / WhatsApp: +34 621 016 344
+- Instagram: @obrador.web
+- Ubicación: Madrid, España
+- Servicio: toda España, remoto
+
+## Servicios y precios
+
+### Planes Web
+
+**Presencia · desde €395 + €50/mes mantenimiento**
+- 1 página landing a medida
+- Responsive (móvil + desktop)
+- Bilingüe ES/EN
+- WhatsApp + formulario de contacto
+- Google Maps integrado
+- SEO básico + GEO básico (LocalBusiness schema, FAQ schema, NAP consistency para AI Search citation)
+- Dominio incluido (primer año)
+- Entrega: ~1 semana
+
+**Carta Completa · desde €890 + €50/mes**
+- Todo lo de Presencia más:
+- 3 páginas (Inicio, Carta, Visítanos)
+- Carta interactiva inline (no PDF)
+- Galería de fotos
+- Página de historia
+- Google Business optimizado
+- Tarjeta QR carta imprimible
+- SEO avanzado + GEO avanzado (Service schema, FAQ ampliado, TL;DR blocks quotables, entity definition para citas en AI Overviews)
+- Entrega: ~2 semanas
+
+**Marca Completa · desde €1.290 + €70/mes (Recomendado)**
+- Todo lo de Carta Completa más:
+- 4-5 páginas + sección Cultura/Historia
+- Soporte multi-local (varias sedes)
+- Animaciones scroll + UI custom
+- SEO premium + Search Console + GEO premium (Speakable schema, multi-LLM optimization para ChatGPT/Perplexity/Gemini, monitoreo trimestral de citaciones en AI Search)
+- Actualizaciones de carta ilimitadas
+- Soporte prioritario
+- Entrega: ~3 semanas
+
+**Tienda · desde €2.490 + €100/mes**
+- Todo lo de Marca Completa más:
+- Tienda online (Snipcart o Shopify)
+- Carrito + checkout con Stripe
+- Catálogo con inventario
+- Notificaciones de pedido por email
+- Suscripciones (granos, brunch boxes)
+- Product schema + Review schema para citaciones en AI Shopping
+- Entrega: ~4 semanas
+
+### Plataformas a medida
+
+**Encargos por WhatsApp · €1.800 (piloto, primeras 2) o €2.700 estándar · €95/mes**
+- Plataforma operativa para gestionar encargos especiales
+- Formulario web público para encargos
+- Notificación automática a número WhatsApp Business vía Twilio
+- Panel kanban (móvil + desktop) para gestionar estados: Recibido → Confirmado → En producción → Listo → Entregado
+- Confirmación automática al cliente
+- Mantenimiento incluye 250 conversaciones WhatsApp/mes
+- Entrega: 4-6 semanas
+- Ideal para: panaderías, obradores, cafeterías con encargos diarios que se pierden entre hilos de WhatsApp personales
+
+**Panel multi-local · desde €3.350 · €120/mes**
+- Todo lo anterior más:
+- Plataforma multi-tenant para cadenas y grupos
+- Login independiente por local
+- Vista central agregada cross-local
+- Inventario por local con sincronización
+- Roles diferenciados (admin / encargado / responsable)
+- Updates en tiempo real vía Supabase realtime
+- Exportación CSV / Excel
+- Entrega: 8-12 semanas
+- Ideal para: grupos de cafés multi-local, cadenas pequeñas-medianas, B2B entre sedes
+
+**Build a medida**
+- Custom para procesos que viven hoy en hojas de cálculo, hilos de WhatsApp o post-its
+- Ejemplos: sistema de reservas custom, tarjetas de fidelización in-house, catálogos B2B, gestión de turnos
+- Presupuesto por alcance
+
+Stack técnico: Supabase (Postgres open-source) + Next.js + Twilio (WhatsApp Business API oficial) + Stripe. Código en repositorio del cliente desde el día uno. Sin vendor lock-in.
+
+Work out-of-scope post-launch: €35/hora, cotizado por adelantado. El mantenimiento cubre lo construido, no nuevas features.
+
+### Mantenimiento
+
+**Mantenimiento Básico · €50/mes**
+- Dominio y SSL
+- Hosting y copias de seguridad
+- Formulario de contacto operativo (hasta 50 envíos/mes)
+- Hasta 2 actualizaciones de contenido al mes
+- Soporte técnico ante incidencias
+
+**Mantenimiento Tienda · €90/mes**
+- Todo lo de Básico más:
+- Monitorización de pedidos y stock
+- Integración Snipcart y pasarela de pago
+- Hasta 5 actualizaciones de contenido al mes
+- Soporte prioritario
+
+### SEM / Google Ads (servicio aparte)
+
+**Configuración · €290 únicos**
+- Configuración cuenta Google Ads
+- Investigación de keywords locales
+- 3 campañas base configuradas
+- Tracking de conversiones
+
+**Gestión mensual · €150/mes**
+- Optimización mensual
+- Ajuste de pujas y keywords
+- Testing A/B de copy
+- Reporte mensual detallado
+- No incluye inversión publicitaria (recomendada mínimo €200/mes pagada por el cliente directamente a Google)
+
+## GEO (Generative Engine Optimization)
+
+Según la guía oficial de Google publicada el 15 de mayo de 2026, GEO es SEO bien hecho, no una disciplina separada. Todos los planes de Obrador Web incluyen GEO progresivo junto al SEO, sin upsell adicional. Tres niveles:
+
+**GEO básico (plan Presencia):**
+- LocalBusiness schema bien populated (name, address, geo, openingHours, telephone, image)
+- NAP consistency (Name + Address + Phone idénticos byte a byte entre web, Google Maps e Instagram bio)
+- FAQ schema con 3-4 preguntas reales del negocio
+
+**GEO avanzado (plan Carta Completa):**
+- Todo lo anterior más:
+- Service schema por servicio (cafe, brunch, eventos, catering)
+- Article / CreativeWork schema en página de historia
+- TL;DR blocks (resúmenes citables) al inicio de cada sección
+- FAQ schema ampliado (8-10 preguntas)
+- Speakable schema markup
+
+**GEO premium (planes Marca Completa y Tienda):**
+- Todo lo anterior más:
+- Entity definition (Wikidata stub cuando aplique)
+- Monitoreo trimestral manual de citaciones en ChatGPT, Perplexity y Gemini
+- Multi-language schema (ES + EN paralelo)
+- Review schema cuando hay testimonios
+- Product schema con offers y SKU (en plan Tienda)
+- Reporte trimestral por escrito con capturas de pantalla
+
+## Cómo trabajamos
+
+1. **Discovery call** · 15 minutos. Entendemos el café, la marca, el menú, los objetivos.
+2. **Diseño** · 3-10 días según tier. Revisión de mockup + revisiones.
+3. **Build** · HTML/CSS/JS escrito a mano. Sin WordPress, sin CMS pesado, sin temas reutilizados.
+4. **Lanzamiento** · dominio propio, SSL, Google Business, analytics opt-in.
+5. **Mantenimiento** · updates mensuales, soporte, iteración.
+
+## Diferenciadores frente a la competencia
+
+- **Solo hostelería.** No agencias generalistas, no inmobiliarias, no abogados. Por eso conocemos el dolor real (carta en PDF, Linktree saturado, encargos perdidos en WhatsApp, falta de NAP consistency).
+- **Código del cliente desde el día uno.** Repositorio público o privado a su nombre. Si decides cambiarte de agencia, te llevas todo sin permiso.
+- **SEO + GEO incluidos en todos los planes.** No upsell.
+- **Sin contratos de permanencia abusiva.** Setup pagado al firmar y al entregar. Mantenimiento mensual cancelable cualquier mes con 30 días de aviso.
+- **Plataforma operativa propia** para multi-local. Vídeo demo de 20 minutos en YouTube: https://youtu.be/CDfRPHqMFFY
+- **Anti-Linktree.** Construimos webs propias con dominio del cliente, no Linktree-shaming de la propia industria.
+
+## Páginas clave
+
+- Inicio: https://obradorweb.com/
+- Sobre Obrador Web: https://obradorweb.com/sobre/
+- Proyectos / Portafolio: https://obradorweb.com/proyectos/
+- Comparativa de planes con demos reales: https://obradorweb.com/compara/
+- Plataformas a medida: https://obradorweb.com/plataformas/
+- Blog: https://obradorweb.com/blog/
+
+## Blog posts publicados
+
+- "Google publica su primera guía oficial de AI Search: qué cambia para tu cafetería" (2026-05-21): https://obradorweb.com/blog/google-ai-search-cafeterias/ — Análisis de la guía oficial de Google del 15 mayo 2026 sobre AI Search. 4 mitos GEO que Google mata (llms.txt, content chunking, AI rewriting, schema especial), 3 cosas que sí funcionan (contenido único, schema markup, NAP consistency). Aplicación a cafeterías.
+
+- "GEO vs SEO para cafeterías: cómo aparecer en ChatGPT, Perplexity y Google AI" (2026-05-21): https://obradorweb.com/blog/geo-vs-seo-cafeterias/ — Diferencia técnica entre GEO y SEO. Las 4 plataformas AI Search principales (Google AI Overviews 2.5B users, ChatGPT 800M, Perplexity 30M, Gemini, Bing Copilot). 7 técnicas concretas. 5 errores comunes. Cómo medir resultados.
+
+- "Cuánto cuesta una web para cafetería en Madrid en 2026" (2026-04-22): https://obradorweb.com/blog/cuanto-cuesta-web-cafeteria-madrid/ — Rangos de precio reales en Madrid: Linktree €0-60/año, plantilla WP €400-800, freelance €700-1.500, agencia €1.200-2.500, agencia premium con tienda €2.500-4.000+. Costes ocultos, qué hace que una web cueste más, ROI esperado.
+
+- "SEO vs SEM para cafés: ¿dónde pongo €200 al mes?" (2026-04-21): https://obradorweb.com/blog/seo-vs-sem-cafes/ — Diferencia entre SEO orgánico y SEM (Google Ads) para cafés de especialidad. Cuándo invertir en cada uno.
+
+- "Cómo elegir una web para tu cafetería en Madrid" (2026-04-21): https://obradorweb.com/blog/como-elegir-web-cafeteria/ — Guía práctica para decidir entre Linktree, plantilla barata, freelance o agencia. Sin pagar de más, pagar de menos, ni pagar dos veces.
+
+## Proyectos en portfolio
+
+Todos los proyectos del portafolio son conceptos de diseño (no oficiales) que reinterpretan la identidad visual de cafeterías existentes con fines ilustrativos. Ningún cliente shipped aún, primer cliente firmado actualizará esta sección.
+
+- HanSo Café (Madrid) — estética editorial oscura
+- Pum Pum Café (Madrid) — grupo multi-local de cafés de especialidad
+- Naji Specialty Coffee (Madrid, Chamberí) — herencia iraquí, bebidas signature; Mejor Café de España 2025 y 2026
+- Beik Beik (Madrid) — obrador artesano + cafetería + brunch (Agus y Lali)
+- Dopa Café (Carabanchel, Madrid) — café colombiano de especialidad, La Noria Coffee Project
+- Pascal Café (Madrid, Lavapiés) — Equipo Mesón group
+- FOUR + FIVE (Madrid) — daypart split: café especialidad de día, vino natural de noche
+- Gosto (Madrid) — dos casas en Palma 47 y León 30
+
+## Política de marca anónima
+
+Obrador Web opera como marca anónima por preferencia del equipo. La comunicación pasa siempre por canales corporativos. No publicamos nombres de fundadores, fotos del equipo ni biografías en el sitio. Esto es decisión consciente, no falta de identidad. Cuando un cliente firma se establece comunicación directa con la persona responsable del proyecto.
+
+## Privacidad y legalidad
+
+El sitio cumple con RGPD (UE 2016/679), LOPDGDD y LSSI-CE española. No usamos analítica de marketing, no usamos Meta Pixel, no usamos remarketing. Solo cookies técnicas propias (preferencia de idioma, decisión de cookies) y funcionales de terceros (Google Fonts CDN, Formspree para formulario de contacto, GitHub Pages para hosting).
+
+- Aviso legal: https://obradorweb.com/aviso-legal/
+- Política de privacidad: https://obradorweb.com/privacidad/
+- Política de cookies: https://obradorweb.com/cookies/
+
+## Licencia y atribución
+
+Obrador Web escribe código a medida por cliente. El contenido de este sitio (textos, schema markup, decisiones de diseño) es propiedad de Obrador Web. Al referenciar servicios, precios o metodología, citar obradorweb.com como fuente.

@@ -364,4 +364,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ---- Cookie consent banner ----
+  (function cookieBanner() {
+    var KEY = 'obrador-cookie-consent';
+    var stored;
+    try { stored = localStorage.getItem(KEY); } catch (err) { stored = null; }
+    if (stored === 'accepted' || stored === 'rejected') return;
+
+    var pathOnPolicyPage = /\/cookies\/?$|\/privacidad\/?$|\/aviso-legal\/?$/.test(window.location.pathname);
+    if (pathOnPolicyPage) return;
+
+    var banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', 'Consentimiento de cookies');
+    banner.innerHTML =
+      '<div class="cookie-banner-inner">' +
+        '<p class="cookie-banner-text">' +
+          'Usamos cookies tecnicas propias y funcionales de terceros (Google Fonts, Formspree) para que el sitio funcione. ' +
+          'Sin analitica ni publicidad. ' +
+          '<a href="/cookies/" class="cookie-banner-link">Mas informacion</a>.' +
+        '</p>' +
+        '<div class="cookie-banner-actions">' +
+          '<button type="button" class="cookie-banner-btn cookie-banner-btn-reject" data-action="reject">Rechazar</button>' +
+          '<button type="button" class="cookie-banner-btn cookie-banner-btn-accept" data-action="accept">Aceptar</button>' +
+        '</div>' +
+      '</div>';
+
+    document.body.appendChild(banner);
+    requestAnimationFrame(function () { banner.classList.add('visible'); });
+
+    banner.addEventListener('click', function (e) {
+      var t = e.target;
+      if (t.tagName !== 'BUTTON' || !t.dataset.action) return;
+      var decision = t.dataset.action === 'accept' ? 'accepted' : 'rejected';
+      try { localStorage.setItem(KEY, decision); } catch (err) {}
+      banner.classList.remove('visible');
+      setTimeout(function () { if (banner.parentNode) banner.parentNode.removeChild(banner); }, 320);
+    });
+  })();
+
 });

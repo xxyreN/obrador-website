@@ -38,11 +38,23 @@
     "@type": "WebSite",
     "@id": "https://obradorweb.com/#website",
     "name": "Obrador Web",
-    "alternateName": "obrador.web",
+    "alternateName": ["obrador.web", "Obrador Web Madrid"],
     "url": "https://obradorweb.com/",
     "inLanguage": ["es-ES", "en-US"],
     "description": "Diseño web a medida para cafeterías y restaurantes en Madrid.",
-    "publisher": { "@id": "https://obradorweb.com/#organization" }
+    "publisher": { "@id": "https://obradorweb.com/#organization" },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://obradorweb.com/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".hero-title", ".section-subtitle", ".faq-body"]
+    }
   }
   </script>
 
@@ -58,19 +70,39 @@
     "logo": "https://obradorweb.com/img/logo.png",
     "image": "https://obradorweb.com/img/logo.png",
     "email": "hola@obradorweb.com",
+    "telephone": "+34621016344",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Madrid",
+      "addressRegion": "Comunidad de Madrid",
       "addressCountry": "ES"
     },
     "areaServed": [
       { "@type": "City", "name": "Madrid" },
+      { "@type": "City", "name": "Barcelona" },
+      { "@type": "City", "name": "Valencia" },
+      { "@type": "City", "name": "Sevilla" },
       { "@type": "Country", "name": "España" }
     ],
-    "serviceType": ["Diseño web", "Desarrollo web", "Carta digital", "QR carta", "SEO", "SEM", "Google Ads", "Tienda online", "Plataformas a medida", "Encargos por WhatsApp", "Panel multi-local"],
+    "foundingDate": "2026-04",
+    "knowsAbout": [
+      "Diseño web",
+      "SEO",
+      "GEO (Generative Engine Optimization)",
+      "AI Search optimization",
+      "Schema markup",
+      "Cafeterías de especialidad",
+      "Obradores y panaderías",
+      "Heladerías artesanas",
+      "Multi-local",
+      "Encargos por WhatsApp"
+    ],
+    "serviceType": ["Diseño web", "Desarrollo web", "Carta digital", "QR carta", "SEO", "GEO", "AI Search optimization", "SEM", "Google Ads", "Tienda online", "Plataformas a medida", "Encargos por WhatsApp", "Panel multi-local"],
     "priceRange": "€395 - €3500",
     "sameAs": [
-      "https://instagram.com/obrador.web"
+      "https://instagram.com/obrador.web",
+      "https://www.youtube.com/watch?v=CDfRPHqMFFY",
+      "https://github.com/xxyreN/obrador-website"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -922,6 +954,7 @@
           <a href="proyectos/" data-en="All Projects">Todos los proyectos</a>
           <a href="#proceso" data-en="Process">Proceso</a>
           <a href="#planes" data-en="Web">Web</a>
+          <a href="sobre/" data-en="About">Sobre</a>
           <a href="#contacto" data-en="Contact">Contacto</a>
         </div>
         <div class="footer-social">
@@ -931,7 +964,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Obrador Web · obradorweb.com · Madrid</p>
+        <p>&copy; 2026 Obrador Web · obradorweb.com · Madrid · <a href="aviso-legal/" style="color:inherit;text-decoration:underline;" data-en="Legal notice">Aviso legal</a> · <a href="privacidad/" style="color:inherit;text-decoration:underline;" data-en="Privacy">Privacidad</a> · <a href="cookies/" style="color:inherit;text-decoration:underline;">Cookies</a></p>
       </div>
     </div>
   </footer>
