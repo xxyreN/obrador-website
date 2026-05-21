@@ -79,28 +79,28 @@
         {
           "@type": "Offer",
           "name": "Presencia",
-          "description": "Landing page a medida (1 página), bilingüe ES/EN, WhatsApp, Google Maps, SEO básico, dominio incluido. Entrega ~1 semana.",
+          "description": "Landing page a medida (1 página), bilingüe ES/EN, WhatsApp, Google Maps, SEO básico + GEO básico (LocalBusiness schema, FAQ schema, AI Search ready para Google AI Overviews y ChatGPT), dominio incluido. Entrega ~1 semana.",
           "price": "395",
           "priceCurrency": "EUR"
         },
         {
           "@type": "Offer",
           "name": "Carta Completa",
-          "description": "3 páginas (Inicio, Carta, Visítanos), carta interactiva inline, galería, QR imprimible, SEO avanzado. Entrega ~2 semanas.",
+          "description": "3 páginas (Inicio, Carta, Visítanos), carta interactiva inline, galería, QR imprimible, SEO avanzado + GEO avanzado (Service schema, FAQ ampliado, TL;DR blocks quotables, entity definition para citas en AI Overviews). Entrega ~2 semanas.",
           "price": "890",
           "priceCurrency": "EUR"
         },
         {
           "@type": "Offer",
           "name": "Marca Completa",
-          "description": "4-5 páginas, Cultura/Historia, multi-local, animaciones y UI custom, SEO premium, Search Console, actualizaciones ilimitadas de carta. Entrega ~3 semanas.",
+          "description": "4-5 páginas, Cultura/Historia, multi-local, animaciones y UI custom, SEO premium + Search Console + GEO premium (multi-LLM optimization para ChatGPT/Perplexity/Gemini, Speakable schema, monitoreo trimestral de citaciones en AI Search), actualizaciones ilimitadas de carta. Entrega ~3 semanas.",
           "price": "1290",
           "priceCurrency": "EUR"
         },
         {
           "@type": "Offer",
           "name": "Tienda",
-          "description": "Marca Completa más tienda online (Snipcart/Shopify), checkout Stripe, catálogo con inventario, notificaciones de pedido, suscripciones. Entrega ~4 semanas.",
+          "description": "Marca Completa más tienda online (Snipcart/Shopify), checkout Stripe, catálogo con inventario, notificaciones de pedido, suscripciones. GEO premium incluye Product schema y Review schema para citaciones en AI Shopping. Entrega ~4 semanas.",
           "price": "2490",
           "priceCurrency": "EUR"
         },
@@ -186,6 +186,11 @@
         "@type": "Question",
         "name": "¿Hacéis SEO y SEM?",
         "acceptedAnswer": { "@type": "Answer", "text": "SEO básico viene incluido en todos los planes (meta, schema, sitemap, performance). SEM (Google Ads) es un servicio aparte: €290 de configuración + €150/mes de gestión. La inversión publicitaria la paga el cliente directamente a Google (recomendamos mínimo €200/mes)." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Optimizáis para Google AI Overviews y ChatGPT (GEO)?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Todos los planes incluyen GEO (Generative Engine Optimization) además de SEO clásico. GEO básico (Presencia) añade LocalBusiness schema, NAP consistency y FAQ schema para que Google AI Overviews y ChatGPT puedan citar tu café cuando alguien busca brunch o cafetería en tu zona. GEO avanzado (Carta Completa) añade Service schema, TL;DR blocks quotables y entity definition. GEO premium (Marca Completa, Tienda) añade Speakable schema, monitoreo trimestral de citaciones en ChatGPT, Perplexity y Gemini, y optimización multi-LLM. Según Google (guía oficial 15 mayo 2026), GEO es SEO bien hecho: las técnicas se solapan, no son disciplinas separadas." }
       },
       {
         "@type": "Question",
@@ -524,7 +529,7 @@
       <div class="section-header anim-fade-up">
         <span class="section-label" data-en="Plans">Planes</span>
         <h2 class="section-title" data-en="Choose your plan">Elige tu plan</h2>
-        <p class="section-subtitle" data-en="All plans include responsive design, basic SEO and support. Compare the plans with real demos →"><a href="compara/" style="color:inherit;text-decoration:underline;">Todos los planes incluyen diseño responsive, SEO básico y soporte. Compara los planes con demos reales →</a></p>
+        <p class="section-subtitle" data-en="All plans include responsive design, SEO + GEO (AI Search ready) and support. Compare the plans with real demos →"><a href="compara/" style="color:inherit;text-decoration:underline;">Todos los planes incluyen diseño responsive, SEO + GEO (AI Search ready) y soporte. Compara los planes con demos reales →</a></p>
       </div>
 
       <p class="planes-swipe-hint" data-en="← Swipe to see all plans →">← Desliza para ver todos los planes →</p>
@@ -546,6 +551,7 @@
             <li data-en="WhatsApp + contact form">WhatsApp + formulario</li>
             <li data-en="Google Maps integrated">Google Maps integrado</li>
             <li data-en="Basic SEO">SEO básico</li>
+            <li data-en="Basic GEO · AI Search ready (Google AI, ChatGPT)">GEO básico · visible en AI Search (Google AI, ChatGPT)</li>
             <li data-en="Domain included">Dominio incluido</li>
           </ul>
           <div class="plan-time" data-en="~ 1 week">~ 1 semana</div>
@@ -570,6 +576,7 @@
             <li data-en="Google Business optimised">Google Business optimizado</li>
             <li data-en="Printable QR menu card">Tarjeta QR carta imprimible</li>
             <li data-en="Advanced SEO">SEO avanzado</li>
+            <li data-en="Advanced GEO · cited in AI Overviews + entity definition">GEO avanzado · citas en AI Overviews + entidad definida</li>
           </ul>
           <div class="plan-time" data-en="~ 2 weeks">~ 2 semanas</div>
           <a href="#contacto" class="btn btn-outline btn-block" data-en="Get started">Empezar</a>
@@ -591,6 +598,7 @@
             <li data-en="Multi-location">Multi-local</li>
             <li data-en="Scroll animations + custom UI">Animaciones + UI custom</li>
             <li data-en="Premium SEO + Search Console">SEO premium + Search Console</li>
+            <li data-en="Premium GEO · multi-LLM + citation monitoring">GEO premium · multi-LLM + monitoreo de citaciones</li>
             <li data-en="Unlimited menu updates">Actualizaciones de carta ilimitadas</li>
             <li data-en="Printable QR menu card">Tarjeta QR carta imprimible</li>
             <li data-en="Priority support">Soporte prioritario</li>
@@ -615,6 +623,7 @@
             <li data-en="Product catalog with inventory">Catálogo con inventario</li>
             <li data-en="Order email notifications">Notificaciones de pedido</li>
             <li data-en="Subscriptions (beans, brunch)">Suscripciones (granos, brunch)</li>
+            <li data-en="Premium GEO · multi-LLM + citation monitoring + Product schema">GEO premium · multi-LLM + monitoreo + Product schema</li>
             <li data-en="Printable QR menu card">Tarjeta QR carta imprimible</li>
             <li data-en="Priority support">Soporte prioritario</li>
           </ul>
@@ -823,6 +832,13 @@
           <summary data-en="Do you do SEO and SEM?">¿Hacéis SEO y SEM?</summary>
           <div class="faq-body">
             <p data-en="Basic SEO is included in all plans (meta, schema, sitemap, performance). SEM (Google Ads) is a separate service: €290 setup + €150/month management. Advertising spend is paid directly by the client to Google (we recommend a minimum of €200/month).">SEO básico viene incluido en todos los planes (meta, schema, sitemap, performance). SEM (Google Ads) es un servicio aparte: €290 de configuración + €150/mes de gestión. La inversión publicitaria la paga el cliente directamente a Google (recomendamos mínimo €200/mes).</p>
+          </div>
+        </details>
+
+        <details class="faq-item anim-fade-up">
+          <summary data-en="Do you optimize for Google AI Overviews and ChatGPT (GEO)?">¿Optimizáis para Google AI Overviews y ChatGPT (GEO)?</summary>
+          <div class="faq-body">
+            <p data-en="Yes. All plans include GEO (Generative Engine Optimization) alongside classic SEO. Basic GEO (Presencia) adds LocalBusiness schema, NAP consistency and FAQ schema so Google AI Overviews and ChatGPT can cite your café when someone searches for brunch or cafetería in your area. Advanced GEO (Carta Completa) adds Service schema, quotable TL;DR blocks and entity definition. Premium GEO (Marca Completa, Tienda) adds Speakable schema, quarterly citation monitoring on ChatGPT, Perplexity and Gemini, and multi-LLM optimization. Per Google's official guide (May 15, 2026), GEO is just SEO done well: techniques overlap, they're not separate disciplines.">Sí. Todos los planes incluyen GEO (Generative Engine Optimization) además de SEO clásico. GEO básico (Presencia) añade LocalBusiness schema, NAP consistency y FAQ schema para que Google AI Overviews y ChatGPT puedan citar tu café cuando alguien busca brunch o cafetería en tu zona. GEO avanzado (Carta Completa) añade Service schema, TL;DR blocks quotables y entity definition. GEO premium (Marca Completa, Tienda) añade Speakable schema, monitoreo trimestral de citaciones en ChatGPT, Perplexity y Gemini, y optimización multi-LLM. Según Google (guía oficial del 15 mayo 2026), GEO es SEO bien hecho, las técnicas se solapan.</p>
           </div>
         </details>
 

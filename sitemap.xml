@@ -26,9 +26,21 @@
   </url>
   <url>
     <loc>https://obradorweb.com/blog/</loc>
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://obradorweb.com/blog/google-ai-search-cafeterias/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://obradorweb.com/blog/geo-vs-seo-cafeterias/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://obradorweb.com/blog/cuanto-cuesta-web-cafeteria-madrid/</loc>

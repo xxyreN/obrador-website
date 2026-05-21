@@ -1,15 +1,23 @@
 # Obrador Web
 
-> Diseño web a medida para cafeterías, cafés de especialidad y restaurantes en Madrid. Sitios bilingües (ES/EN) con carta digital, QR imprimible, integración con Google Business, SEO básico y opción de tienda online con pasarela de pago. Desde €395.
+> Diseño web a medida para cafeterías, cafés de especialidad y restaurantes en Madrid. Sitios bilingües (ES/EN) con carta digital, QR imprimible, integración con Google Business, SEO + GEO (AI Search optimization para Google AI Overviews, ChatGPT, Perplexity, Gemini) y opción de tienda online con pasarela de pago. Desde €395.
 
-Obrador Web is a small web design agency based in Madrid, Spain, specialising in custom websites for specialty coffee shops, cafés and restaurants. We build bilingual (Spanish and English) sites with digital menus, printable QR cards, Google Business integration, basic SEO, and optional online shop with Snipcart/Stripe checkout.
+Obrador Web is a small web design agency based in Madrid, Spain, specialising in custom websites for specialty coffee shops, cafés and restaurants. We build bilingual (Spanish and English) sites with digital menus, printable QR cards, Google Business integration, SEO + GEO (Generative Engine Optimization for AI Search: Google AI Overviews, ChatGPT, Perplexity, Gemini), and optional online shop with Snipcart/Stripe checkout.
 
 ## Services and pricing
 
-- **Presencia** — €395 (from). 1-page custom landing, responsive, bilingual ES/EN, WhatsApp + contact form, Google Maps integration, basic SEO, domain included. Delivery: ~1 week.
-- **Carta Completa** — €890 (from). 3 pages (Home, Menu, Visit). Full interactive inline menu, story page, photo gallery, Google Business optimisation, printable QR menu card, advanced SEO. Delivery: ~2 weeks.
-- **Marca Completa** — €1,290 (from). 4-5 pages including Culture/Story, multi-location support, scroll animations + custom UI, premium SEO + Search Console, unlimited menu updates, priority support. Delivery: ~3 weeks.
-- **Tienda** — €2,490 (from). Marca Completa + online store (Snipcart/Shopify), cart + Stripe checkout, product catalogue with inventory, order email notifications, subscriptions (beans, brunch). Delivery: ~4 weeks.
+- **Presencia** — €395 (from). 1-page custom landing, responsive, bilingual ES/EN, WhatsApp + contact form, Google Maps integration, basic SEO, basic GEO (LocalBusiness schema, FAQ schema, NAP consistency for AI Search citation), domain included. Delivery: ~1 week.
+- **Carta Completa** — €890 (from). 3 pages (Home, Menu, Visit). Full interactive inline menu, story page, photo gallery, Google Business optimisation, printable QR menu card, advanced SEO, advanced GEO (Service schema, expanded FAQ schema, TL;DR quotable blocks, entity definition for AI Overviews citation). Delivery: ~2 weeks.
+- **Marca Completa** — €1,290 (from). 4-5 pages including Culture/Story, multi-location support, scroll animations + custom UI, premium SEO + Search Console, premium GEO (Speakable schema, multi-LLM optimization for ChatGPT/Perplexity/Gemini, quarterly citation monitoring), unlimited menu updates, priority support. Delivery: ~3 weeks.
+- **Tienda** — €2,490 (from). Marca Completa + online store (Snipcart/Shopify), cart + Stripe checkout, product catalogue with inventory, order email notifications, subscriptions (beans, brunch). Premium GEO includes Product schema and Review schema for AI Shopping citation. Delivery: ~4 weeks.
+
+## GEO (Generative Engine Optimization)
+
+Per Google's official AI Search guide (15 May 2026), GEO is SEO done well, not a separate discipline. All Obrador Web plans include GEO alongside SEO. Three tiers:
+
+- **GEO básico** (Presencia): LocalBusiness schema bien populated (name, address, geo, openingHours, telephone, image), NAP consistency across web/Google Maps/Instagram bio, FAQ schema with 3-4 Q&A.
+- **GEO avanzado** (Carta Completa): everything above + Service schema per offering, Article/CreativeWork schema on story page, TL;DR blocks at section starts for citation quotability, expanded FAQ schema (8-10 Q&A), Speakable schema markup.
+- **GEO premium** (Marca Completa, Tienda): everything above + entity definition (Wikidata stub when applicable), quarterly manual monitoring of citations in ChatGPT, Perplexity and Gemini search, multi-language schema (ES + EN parallel), Review schema (when testimonials available), Product schema with offers and SKU (Tienda). Quarterly report of mentions in AI Overviews for the client's vertical and city.
 
 ## Maintenance
 

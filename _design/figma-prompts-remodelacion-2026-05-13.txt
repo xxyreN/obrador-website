@@ -1,0 +1,116 @@
+================================================================
+Figma Make prompts · Remodelación obrador.web
+Fecha: 2026-05-13
+Dirección: warm-craft (cream/copper/serif) ejecutado al nivel Nichita Condrea
+================================================================
+
+REGLAS DE META-PROMPT
+- Siempre empezar con palette restriction: cream #F5EDE0, dark #0D0D0D, copper #C4956A, NADA más
+- Tipografías: Libre Caslon Display (serif) + Outfit (sans) + JetBrains Mono (utility)
+- Negar explícito lo no deseado: "NO gradients on background, NO shadows, NO glow effects,
+  NO emoji, NO rounded corners over 12px, NO Material Design icons"
+- Si Figma Make tira patrón SaaS dashboard, reformular: "EDITORIAL magazine style,
+  NOT SaaS, NOT Material, NOT Tailwind generic"
+- Pedir motion sutil: "scale 1.015 on hover, 400ms ease"
+
+================================================================
+PROMPT 1 · HERO REMODELADO (warm-craft + Nichita scale)
+================================================================
+
+Hero section full-screen, background cream warm #F5EDE0. Top-center: small copper dot (8px) +
+"DISPONIBLE PARA NUEVOS PROYECTOS" in dark #0D0D0D uppercase, font Outfit, 13px, letter-spacing
+0.18em, weight 500. Center: massive display serif title "Hacemos webs para cafés" in dark, font
+Libre Caslon Display, 280px desktop / 120px mobile, weight 400, letter-spacing -0.04em, line-height
+0.85, stacked 2 lines. The words "cafeterías", "obradores", "heladerías" rendered in copper #C4956A
+with animated metallic gradient (200-degree linear gradient copper-dark to bright-gold-cream to
+copper-dark, sweeping infinite 7s). Bottom-left corner: "MADRID · ESP" 13px dark weight 700,
+letter-spacing 0.15em. Bottom-right corner: "ESTUDIO WEB + PLATAFORMA PARA HOSTELERÍA" weight 500,
+"+ PLATAFORMA" in copper, rest dark. NO gradients on background, NO decorative shapes, NO emoji.
+
+================================================================
+PROMPT 2 · PROJECT SHOWCASE GRID (warm-color photo + split editorial layout)
+================================================================
+REVISIÓN 2026-05-13: el draft anterior con fotos B&W full-bleed se descartó. B&W mata el color
+del producto (cafés viven de luz/marrones/verdes). Editorial split-layout reemplaza al overlay.
+
+2-column project grid on cream #F5EDE0 bg, gap 24px. Each card aspect 4:5, rounded corners 8px,
+hairline 1px copper border at #C4956A, subtle. Card layout SPLIT (not overlay):
+
+TOP 62% of card: full-bleed photo of the café in NATURAL COLOR with a warm grade (push warm
+oranges/yellows by 8%, lift blacks slightly to avoid crushed shadows). NO black and white,
+NO grayscale, NO heavy desaturation. The photo should feel like a print magazine spread
+(Kinfolk, Cereal, Apartamento), not a tech portfolio. Bright, warm, inviting.
+
+BOTTOM 38% of card: solid cream block #FAF6EB (lighter than the page bg for layering effect),
+padding 28px. Inside:
+- Project name in serif Libre Caslon Display, 36px, weight 400, color dark #0D0D0D, letter-spacing -0.01em
+- One blank line of vertical space (16px)
+- Meta line in sans Outfit 12px copper #C4956A uppercase letter-spacing 0.18em ("CAFÉ · MADRID · 2026")
+- Small year pill bottom-right of the cream block: fill dark #0D0D0D, cream text "01", padding 8px 14px,
+  radius 999px, font mono JetBrains Mono 12px
+
+On hover: the entire card lifts 4px with smooth 400ms ease, copper border thickens to 2px,
+photo brightness +3%. NO shadows, NO glow, NO scale animations on photo.
+
+This is EDITORIAL print magazine style applied to web. NOT SaaS dashboard, NOT Nichita-cold,
+NOT Material Design. Warm and inviting, photos celebrate light and color.
+
+KICKER si Figma Make insiste en monocromo:
+Reference aesthetic: Kinfolk magazine cover layouts, Cereal magazine spreads, Apartamento magazine
+editorial. Cards should evoke a printed café guidebook, not a portfolio of apps.
+
+================================================================
+PROMPT 3 · MARQUEE DIVIDER WARM
+================================================================
+
+Full-width horizontal marquee on dark #0D0D0D bg, height 180px, no padding inside. Repeating text
+"CAFETERÍAS · OBRADORES · HELADERÍAS · MADRID · CAFETERÍAS · OBRADORES · HELADERÍAS · MADRID"
+in display serif Libre Caslon Display, 160px, weight 400, color cream #F5EDE0, letter-spacing -0.02em.
+Alternar palabras: una sólida fill cream, siguiente outline-only (text-stroke 1.5px cream, fill
+transparent). Animación translateX infinita, 32s linear, derecha-a-izquierda. Overflow hidden.
+Middle dots between words en copper #C4956A. NO scroll-pause on hover.
+
+================================================================
+PROMPT 4 · PRICING TIERS ROW (4 tiers warm-craft)
+================================================================
+
+4-column grid on cream #F5EDE0, gap 0 (cards touch with hairline 1px copper borders). Each card
+height 480px, padding 40px. Top of card: small number "01" through "04" in serif 14px copper
+letter-spacing 0.2em. Below: tier name "Presencia / Carta Completa / Marca Completa / Tienda" in
+serif 36px dark. Big price display: "€395" / "€890" / "€1.290" / "€2.490" in serif 72px dark,
+weight 400, the "€" rendered 50% size and color copper. Below price: tier features as a list of
+5-8 items, sans Outfit 14px dark, line-height 1.7, with small copper "—" bullet markers. Bottom:
+"VER DEMO →" link in copper uppercase 12px letter-spacing 0.15em. The "Marca Completa" card
+(card 3) has background flip to dark #0D0D0D with cream text, and a small "RECOMENDADO" tag
+floating top-right in copper pill. NO gradients, NO glow, NO icons.
+
+================================================================
+PROMPT 5 · STATUS / AVAILABILITY STRIP
+================================================================
+
+Small floating strip, sticky-top or below nav, full-width, height 48px, background dark #0D0D0D
+text cream #F5EDE0. Centered content: small copper dot (animated pulse 2s ease infinite) +
+"AGENDA ABIERTA PARA NUEVOS PROYECTOS · 2 SLOTS EN JUNIO" in sans Outfit 13px weight 500
+letter-spacing 0.1em uppercase. Right side of strip: "HABLEMOS →" copper text. Pulse animation:
+the dot scales 1.0 to 1.4 with opacity 1.0 to 0.6 looping infinite.
+
+================================================================
+PROMPT 6 · EDITORIAL CASE STUDY LAYOUT (/proyectos/ detail page)
+================================================================
+
+Case study detail page, cream #F5EDE0 bg. Hero: project name in display serif 180px dark centered,
+underneath in copper sans uppercase 14px "CAFÉ · MADRID · TIER MARCA COMPLETA · ENTREGADO 2026".
+Below: 2-column asymmetric grid 60%/40%, gap 80px. Wider column: project screenshots stacked,
+each border-radius 12px, subtle 1px copper hairline border. Narrow column: body text sans Outfit
+17px line-height 1.75 max-width 50ch color dark-muted #4A3F35, h3 subheads in serif 28px dark.
+Pull quotes: serif 32px copper italic, no decorative quote marks, only 3px copper border-left
+padding-left 24px. Section breaks: 140px vertical space, NOT a divider line. Footer: marquee
+"MÁS PROYECTOS · MÁS PROYECTOS" on dark bg same as homepage divider.
+
+================================================================
+REFERENCIAS
+================================================================
+- Estilo target: nichita.dev (frontend dev + motion designer Dublin)
+- Brand actual obrador: cream/copper/Caslon (warm-craft)
+- Dirección elegida: A (warm-craft escalado al rigor editorial Nichita)
+- Descartado: B (rebrand a dark/black/editorial puro) — asusta al ICP
