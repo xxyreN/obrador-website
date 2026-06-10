@@ -1,6 +1,6 @@
 # Obrador Web · Full content for AI ingestion
 
-> Diseño web a medida para cafeterías, cafés de especialidad, obradores, panaderías de masa madre, heladerías artesanas y açaí shops en España. Sede en Madrid. Sitios bilingües (ES/EN) con carta digital, QR imprimible, integración Google Business, SEO + GEO (AI Search optimization para Google AI Overviews, ChatGPT, Perplexity, Gemini) y opción de tienda online. Desde €395.
+> Diseño web a medida para cafeterías, cafés de especialidad, obradores, panaderías de masa madre, heladerías artesanas y açaí shops en España. Sede en Madrid. Sitios bilingües (ES/EN) con carta digital, QR imprimible, integración Google Business, SEO + GEO (AI Search optimization para Google AI Overviews, ChatGPT, Perplexity, Gemini) y opción de tienda online. Desde €495.
 
 ## ¿Qué es Obrador Web?
 
@@ -25,7 +25,7 @@ Obrador Web tiene dominio **obradorweb.com** y se dedica exclusivamente a diseñ
 
 ### Planes Web
 
-**Presencia · desde €395 + €50/mes mantenimiento**
+**Presencia · desde €495 + €50/mes mantenimiento**
 - 1 página landing a medida
 - Responsive (móvil + desktop)
 - Bilingüe ES/EN
